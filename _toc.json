@@ -1,16 +1,17 @@
 {
-  "baseUrl": "http://markdownmonster.west-wind.com/docs/",
-  "language": "en-US",
-   "menu": [
+  "title": "Markdown Monster",
+  "menu": [
     {
       "title": "Docs Home",
       "link": "/"
     },
     {
-      "title": "Markdown Monster Home",
-      "link": "http://MarkdownMonster.west-wind.com"
-    },
+      "title": "Markdown Monster",
+      "link": "https://markdownmonster.west-wind.com"
+    }
   ],
+  "baseUrl": "http://markdownmonster.west-wind.com/docs/",
+  "language": "en-US",
   "topics": [
     {
       "id": "INDEX",
