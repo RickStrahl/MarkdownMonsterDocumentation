@@ -1,6 +1,6 @@
 ﻿Markdown Monster includes an inline spellchecker that highlights misspelled text as you type. 
 
-![](../images/spellchecking.png)
+![](../images/Spellchecking.png)
 
 Misspelled text underlines with a red, dotted line and you can right-click on the misspelled text to bring up a list of selections. Pick one of the items to auto-correct the misspelled word.
 
