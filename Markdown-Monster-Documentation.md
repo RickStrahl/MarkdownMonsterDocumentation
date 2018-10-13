@@ -1,11 +1,9 @@
-﻿<img src="images/markdownmonstermonstersplash.png" 
+﻿<img src="images/MarkdownMonsterMonsterSplash.png" 
      style="max-width: 700px;width: 100%" /> 
-
-![](images/markdownmonstermonstersplash.png)
 
 Markdown Monster is an easy to use and extensible Markdown Editor for Windows, that provides you with intuitive features to write Markdown content efficiently. 
 
-### Use the  Documentation, Luke
+### Use the Documentation, Luke
 This documentation isn't meant to cover **every** aspect of the user interface. We think that Markdown Monster is easy to use and works with without requiring much hand holding. 
 
 Rather these pages highlight some of the not so obvious features of Markdown Monster and provide a reference for configuration and common operations. You probably won't need it, but to **get the most out of Markdown Monster's features**, it's worthwhile to scan through the [common tasks](VFPS://Topic/_4XS11S2GW) and [editor features](VFPS://Topic/_4RD0XIGYS) to see if there features that can make you more productive and that you weren't aware of.
