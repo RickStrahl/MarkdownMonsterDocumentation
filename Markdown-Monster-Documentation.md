@@ -1,6 +1,8 @@
 ﻿<img src="images/markdownmonstermonstersplash.png" 
      style="max-width: 700px;width: 100%" /> 
 
+![](images/markdownmonstermonstersplash.png)
+
 Markdown Monster is an easy to use and extensible Markdown Editor for Windows, that provides you with intuitive features to write Markdown content efficiently. 
 
 ### Use the  Documentation, Luke
