@@ -1,4 +1,4 @@
-﻿Markdown Monster includes an inline spellchecker that highlights misspelled text as you type. 
+﻿Markdown Monster includes an inline spellchecker that highlights misspelled text as you type and lets you make corrections as you go. 
 
 ![](../images/SpellChecking.png)
 
