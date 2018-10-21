@@ -1,4 +1,4 @@
-﻿Markdown Monster's editor is based on <a href="https://ace.c9.io/#nav=about" target="top">ACE Editor</a> and inherits the core editing features from this awesome HTML based editor. ACE provides the basic editor behavior you'd expect for a full featured text editor, and Markdown Monster adds a few additional application specific keyboard shortcuts on top of that base behavior.
+﻿Markdown Monster's editor is based on <a href="https://ace.c9.io/#nav=about" target="top">ACE Editor</a> and inherits the core editing features from this awesome HTML based editor. ACE provides the basic editor behavior you'd expect for a full featured text editor, and Markdown Monster adds a few additional application specific keyboard shortcuts on top of that base behavior. 
 
 ### ACE Editor Keys
 You can find a list of core ACE editor features here:
