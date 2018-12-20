@@ -1,5 +1,8 @@
 {
   "title": "Markdown Monster",
+  "owner": "West Wind Technologies",
+  "baseUrl": "http://markdownmonster.west-wind.com/docs/",
+  "language": "en-US",
   "menu": [
     {
       "title": "Docs Home",
@@ -10,8 +13,6 @@
       "link": "https://markdownmonster.west-wind.com"
     }
   ],
-  "baseUrl": "http://markdownmonster.west-wind.com/docs/",
-  "language": "en-US",
   "topics": [
     {
       "id": "INDEX",
@@ -24,16 +25,12 @@
       "seeAlso": "",
       "remarks": "",
       "example": "",
-      "isLink": false,
       "sortOrder": 80,
-      "incomplete": false,
       "isExpanded": true,
-      "updated": "0001-01-01T00:00:00",
       "helpId": "2",
       "classInfo": {
         "assembly": "",
         "contract": "",
-        "static": false,
         "exceptions": ""
       },
       "topics": [
@@ -49,20 +46,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 40,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "10",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4S0144W3G",
@@ -76,20 +66,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 30,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "366",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4S014ECHA",
@@ -103,20 +86,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 20,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "367",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4T90RHFY9",
@@ -130,20 +106,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 10,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "375",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4UG0N96NS",
@@ -159,21 +128,14 @@
           "example": "",
           "isLink": true,
           "sortOrder": 50,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "1124",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         }
-      ],
-      "properties": {}
+      ]
     },
     {
       "id": "_4RD0XIGYS",
@@ -186,16 +148,12 @@
       "seeAlso": "",
       "remarks": "",
       "example": "",
-      "isLink": false,
       "sortOrder": 70,
-      "incomplete": false,
       "isExpanded": true,
-      "updated": "0001-01-01T00:00:00",
       "helpId": "356",
       "classInfo": {
         "assembly": "",
         "contract": "",
-        "static": false,
         "exceptions": ""
       },
       "topics": [
@@ -211,20 +169,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 150,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "349",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4NJ0WBOMY",
@@ -238,20 +189,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 50,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "350",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4RD0XJY44",
@@ -265,20 +209,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 10,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "357",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4RG0MZ918",
@@ -292,20 +229,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 70,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "360",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4RG0WJ7PB",
@@ -319,20 +249,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 140,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "365",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4S01EZTEQ",
@@ -346,20 +269,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 130,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "368",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4UE01XL6Q",
@@ -373,20 +289,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 100,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "1123",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4WU1CJYKA",
@@ -400,20 +309,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 80,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "1965",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4XP0YYGT2",
@@ -427,20 +329,14 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 40,
-          "incomplete": false,
           "isExpanded": true,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "1969",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4XS10GAUI",
@@ -454,20 +350,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 120,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "2971",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_53A0PFZ0T",
@@ -481,20 +370,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 90,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "5206",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_53E0PNHEA",
@@ -508,20 +390,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 110,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "5209",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_55O1BD4N1",
@@ -535,20 +410,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 60,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "5212",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_5730YWRTI",
@@ -562,20 +430,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 20,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "6629",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_58U0U6BNH",
@@ -589,23 +450,15 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 30,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "6635",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         }
-      ],
-      "properties": {}
+      ]
     },
     {
       "id": "_4XS11S2GW",
@@ -617,16 +470,11 @@
       "seeAlso": "",
       "remarks": "",
       "example": "",
-      "isLink": false,
       "sortOrder": 60,
-      "incomplete": false,
-      "isExpanded": false,
-      "updated": "0001-01-01T00:00:00",
       "helpId": "2972",
       "classInfo": {
         "assembly": "",
         "contract": "",
-        "static": false,
         "exceptions": ""
       },
       "topics": [
@@ -642,20 +490,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 30,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "352",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4NK02XRTK",
@@ -669,20 +510,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 110,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "353",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4NN17BFIC",
@@ -696,20 +530,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 80,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "354",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4RG0MW5C2",
@@ -723,20 +550,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 90,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "359",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4RG0PDKJ9",
@@ -750,20 +570,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 150,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "361",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4SV0NOB04",
@@ -777,20 +590,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 60,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "373",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4SV1EJ3ZO",
@@ -804,20 +610,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 100,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "374",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4TI0SBX65",
@@ -831,20 +630,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 70,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "377",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4U512GNGV",
@@ -858,20 +650,13 @@
           "seeAlso": "Save As PDF Dialog",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 140,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "379",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4WN1DITB5",
@@ -885,20 +670,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 50,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "1963",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4X20ODMU3",
@@ -912,20 +690,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 10,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "1966",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4X313DNEU",
@@ -939,20 +710,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 40,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "1967",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_53U1B1DSC",
@@ -966,20 +730,13 @@
           "seeAlso": "Printing and Generating PDF Output",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 130,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "5210",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_57W02I1F6",
@@ -993,20 +750,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 120,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "6632",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_59L0IZPOE",
@@ -1020,23 +770,15 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 20,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "6636",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         }
-      ],
-      "properties": {}
+      ]
     },
     {
       "id": "_5AB0ZT9JC",
@@ -1048,16 +790,11 @@
       "seeAlso": "",
       "remarks": "",
       "example": "",
-      "isLink": false,
       "sortOrder": 50,
-      "incomplete": false,
-      "isExpanded": false,
-      "updated": "0001-01-01T00:00:00",
       "helpId": "6638",
       "classInfo": {
         "assembly": "",
         "contract": "",
-        "static": false,
         "exceptions": ""
       },
       "topics": [
@@ -1073,23 +810,15 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 10,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "6639",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         }
-      ],
-      "properties": {}
+      ]
     },
     {
       "id": "_4NB0SER9F",
@@ -1101,16 +830,11 @@
       "seeAlso": "",
       "remarks": "",
       "example": "",
-      "isLink": false,
       "sortOrder": 40,
-      "incomplete": false,
-      "isExpanded": false,
-      "updated": "0001-01-01T00:00:00",
       "helpId": "4",
       "classInfo": {
         "assembly": "",
         "contract": "",
-        "static": false,
         "exceptions": ""
       },
       "topics": [
@@ -1126,20 +850,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 10,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "5",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4NK01B9MN",
@@ -1153,20 +870,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 40,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "351",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4RG0QZG1I",
@@ -1180,20 +890,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 70,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "362",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4RG0R0HMD",
@@ -1207,20 +910,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 60,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "363",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4WQ1DBSNH",
@@ -1234,23 +930,15 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 20,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "1964",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         }
-      ],
-      "properties": {}
+      ]
     },
     {
       "id": "_4NB0SE717",
@@ -1262,16 +950,11 @@
       "seeAlso": "",
       "remarks": "",
       "example": "",
-      "isLink": false,
       "sortOrder": 30,
-      "incomplete": false,
-      "isExpanded": false,
-      "updated": "0001-01-01T00:00:00",
       "helpId": "3",
       "classInfo": {
         "assembly": "",
         "contract": "",
-        "static": false,
         "exceptions": ""
       },
       "topics": [
@@ -1287,20 +970,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 100,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "7",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4NE1CGNOR",
@@ -1314,20 +990,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 80,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "8",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4NE1CH7WA",
@@ -1341,20 +1010,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 70,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "9",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4NF02Q0SZ",
@@ -1368,20 +1030,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 90,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "11",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4UT0J7XOE",
@@ -1395,20 +1050,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 50,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "1126",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4UT0J9CM6",
@@ -1422,20 +1070,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 25,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "1127",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4ZV0O3R46",
@@ -1449,20 +1090,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 60,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "2973",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_52A19RYGS",
@@ -1476,20 +1110,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 20,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "4097",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_5520TLAV7",
@@ -1503,20 +1130,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 40,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "5211",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_55O1DXZIA",
@@ -1530,23 +1150,15 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 10,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "5213",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         }
-      ],
-      "properties": {}
+      ]
     },
     {
       "id": "_4SD0LXFQ0",
@@ -1558,16 +1170,12 @@
       "seeAlso": "",
       "remarks": "",
       "example": "",
-      "isLink": false,
       "sortOrder": 10,
-      "incomplete": false,
       "isExpanded": true,
-      "updated": "0001-01-01T00:00:00",
       "helpId": "369",
       "classInfo": {
         "assembly": "",
         "contract": "",
-        "static": false,
         "exceptions": ""
       },
       "topics": [
@@ -1583,20 +1191,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 90,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "371",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4UJ0KFGLM",
@@ -1610,20 +1211,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 80,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "1125",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_4X314391I",
@@ -1637,20 +1231,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 70,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "1968",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_53D13I1ZJ",
@@ -1664,20 +1251,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 60,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "5207",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_53E0OOAVV",
@@ -1691,20 +1271,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 50,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "5208",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_5750QTGR2",
@@ -1718,20 +1291,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 40,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "6630",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_5781CV66S",
@@ -1745,20 +1311,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 10,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "6631",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_58Q0PCUZK",
@@ -1772,20 +1331,13 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 30,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "6634",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         },
         {
           "id": "_59L0MV2UW",
@@ -1799,23 +1351,15 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "isLink": false,
           "sortOrder": 20,
-          "incomplete": false,
-          "isExpanded": false,
-          "updated": "0001-01-01T00:00:00",
           "helpId": "6637",
           "classInfo": {
             "assembly": "",
             "contract": "",
-            "static": false,
             "exceptions": ""
-          },
-          "topics": [],
-          "properties": {}
+          }
         }
-      ],
-      "properties": {}
+      ]
     }
   ],
   "settings": {
