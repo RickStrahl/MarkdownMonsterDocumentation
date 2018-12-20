@@ -1389,6 +1389,6 @@
       "vstsworkitem": "VSTS work item",
       "vstsworkitemquery": "VSTS work item query"
     },
-    RenderProjectTitle: true
+    "RenderProjectTitle": true
   }
 }
