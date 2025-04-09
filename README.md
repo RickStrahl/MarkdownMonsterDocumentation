@@ -1,6 +1,6 @@
 # Markdown Monster Documentation Repository
 
-<img src="images/markdownmonstermonstersplash.png" width=600 />
+<img src="images/MarkdownMonsterSplash.png" width=600 />
 
 This repo contains the **documentation sources** from which the Markdown Monster online documentation is generated. 
 

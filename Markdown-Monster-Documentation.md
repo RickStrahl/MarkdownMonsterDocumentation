@@ -1,4 +1,4 @@
-﻿![Markdown Monster Banner](/images/markdownmonstermonstersplash.png){style="max-width: 600px; width: 100%"}
+![Markdown Monster Banner](/images/MarkdownMonsterSplash.png){style="max-width: 600px; width: 100%"}
 
 Markdown Monster is an easy to use and extensible Markdown Editor for Windows, that provides you with intuitive features to write Markdown content efficiently.
 
