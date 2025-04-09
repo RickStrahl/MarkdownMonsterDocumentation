@@ -1,9 +1,13 @@
 # Markdown Monster Documentation Repository
 
-![Markdown Monster Banner](/images/markdownmonstermonstersplash.png){style="max-width: 600px; width: 100%"}
-  
-This repo contains the documentation from which the online documentation is generated. The tooling used is [Documentation Monster](https://documenationmonster.com/) which consists of mostly Markdown content plus additional meta data stored in a separate .json topic file index.
+![Markdown Monster Banner](images/markdownmonstermonstersplash.png)
 
-The full documentation can be viewed at:
+This repo contains the **documentation sources** from which the Markdown Monster online documentation is generated. 
+
+You can find the published online documentation at:
 
 * [Markdown Monster Online Documentation](https://markdownmonster.west-wind.com/docs/)
+
+This repo holds the source documents - mostly Markdown topic content plus an index/metadata json file - that are used to generate the documentation using [Documentation Monster](https://documenationmonster.com/). 
+
+
