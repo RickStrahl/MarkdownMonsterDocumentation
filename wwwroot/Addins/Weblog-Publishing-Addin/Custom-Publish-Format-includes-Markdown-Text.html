@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>Custom Publish Format includes Markdown Text - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Custom Publish Format includes Markdown Text
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Custom Publish Format includes Markdown Text
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>The Weblog publishing tools push standard WordPress and MetaWeblog API requests to the server. The default content format for posts in these formats use rendered HTML to send to the server. This works fine for rendering, but if you want to customize the render process and use the raw Markdown, or you want to pass the Markdown back and forth between server and client via Weblog Post downloads converting to and from HTML results in loss of document fidelity.</p>
+<h3 id="custom-mt_markdown-field">Custom <code>mt_markdown</code> Field</h3>
+<p>However, Markdown Monster always pushes a customer <code>mt_markdown</code> field with every Weblog publish operation, and also looks for an <code>mt_publish</code> custom field on downloaded blog posts. This makes it possible to send Markdown to a server, and retrieve the original Markdown back in Markdown Monster when downloading a post.</p>
+<p>Keep in mind, <code>mt_markdown</code> is a non-standard field, which likely means that this is only useful in custom implementations that can access this field data as part of the WordPress or MetaWeblogApi interfaces.</p>
+<h3 id="sending-posts">Sending Posts</h3>
+<p>When posting to the server Markdown Monster passes:</p>
+<ul>
+<li>The <code>custom_fields</code> array</li>
+<li>Sets the <code>mt_markdown</code> entry</li>
+</ul>
+<p>Note that this is not a standard, but Markdown Monster always sends the <code>mt_markdown</code> value regardless of whether your server understands it or not - it'll just be ignored if the server doesn't know what to do with it.</p>
+<h3 id="retrieving-posts">Retrieving Posts</h3>
+<p>Likewise Markdown Monster also checks for the <code>mt_markdown</code> custom field on incoming posts that are downloaded from a Weblog. If the custom  <code>mt_markdown</code> field exists, it is used to populate the post text placed in the editor, instead of converting the content from HTML to Markdown.</p>
+<p>This preserves the fidelity of the document and makes it possible to safely pass Markdown between client and server over multiple iterations.</p>
+<blockquote>
+<p>Note: If you store your posts locally and don't delete them another option for reliably updating server posts is to simply republish. Markdown Monster makes it very quick and easy to republish posts simply by resubmitting.</p>
+</blockquote>
+
+    </div>
+
+
+
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-24
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Custom Publish Format includes Markdown Text&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Custom%20Publish%20Format%20includes%20Markdown%20Text%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_4NB0SG47P.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

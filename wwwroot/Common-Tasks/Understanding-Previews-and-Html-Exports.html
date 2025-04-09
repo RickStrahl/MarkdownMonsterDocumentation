@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>Understanding Previews and Html Exports - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Understanding Previews and Html Exports
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Understanding Previews and Html Exports
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>The main point of Markdown is to render your document into HTML and display it, but there are a number of different ways that you might use Markdown.</p>
+<p>Most commonly you'll edit Markdown files for documentation in a <strong>source code repository</strong> or in a <strong>documentation solution</strong>. Other times you need to capture and export the actual HTML generated.</p>
+<p>Markdown Monster gives a number of options for previewing your Markdown as HTML and actually capturing the rendered HTML.</p>
+<h3 id="toggle-the-preview-browser-f12">Toggle the Preview Browser (F12)</h3>
+<p>When editing Markdown documents the default view shows the Preview Browser that shows you the rendered HTML as you are working on the document.</p>
+<p>The Preview Browser can be toggled on or off via the World icon on the Window's Title bar.</p>
+<p><img src="/docs/images/togglepreview.png" alt="" /></p>
+<p>The setting you choose is remembered for all Windows and across restarts of Markdown Monster.</p>
+<p>You can also find this option on the menu at <strong>View | Toggle Preview Browser</strong>.</p>
+<h3 id="view-in-web-browser-shift-f12">View in Web Browser (Shift-F12)</h3>
+<p>You can also preview the current Markdown document in your Windows default Web browser by choosing the <strong>View in Web Browser</strong> option from the <strong>View</strong> menu.</p>
+<p>This opens your Web Browser where you can see the rendered Markdown including the theming for the active Preview Theme.</p>
+<p>The Web Browser is also an excellent place where you can <strong>save fully rendered HTML</strong> - including the themed styles - along with all formatting and related resources - scripts, css and javascript - to save the HTML locally to display just as you see it with the preview theme applied.</p>
+<p>Remember Markdown is just a text format that converts to HTML - it knows nothing about themes, so the raw output is just HTML. But if you want to preserve a fully self contained document with all associated resources using browser <strong>Save As...</strong> options provide that capability from most modern browsers.</p>
+<blockquote>
+<h4 id="--select-your-web-browser"><i class="fas fa-info-circle" style="font-size: 1.1em"></i>  Select your Web Browser</h4>
+<p>The Web Browser used is configurable via <code>WebBrowserPreviewExecutable</code> configuration setting.
+Why not just use the Shell Preference? Windows seems to have a mind of its own and constantly is resetting the browser to Edge - using a fixed setting guarantees you get the browser you configure to open always. On install MM searches for browser looking for Chrome, FireFox and if that fails leaves the value blank which uses the system default.</p>
+</blockquote>
+<h3 id="save-as-html">Save As Html</h3>
+<p>If you want to save <strong>just the raw HTML</strong> that your Markdown document generates - without any of the related styling - you can use the <strong>Save As Html</strong> option from the File menu.</p>
+<p>This generates just the raw HTML output from the rendered Markdown which is essentially an HTML fragment that lacks the HTML doc headers and closing tags.</p>
+<h3 id="copy-markdown-selection-as-html-ctrl-shift-c">Copy Markdown Selection as HTML (Ctrl-Shift-C)</h3>
+<p>Alternately you can also use the <strong>Copy Markdown Selection as HTML</strong> menu option on the Edit menu, to take any selection in your Markdown document and turn it into HTML and put it on the clipboard. From there you can paste it into another document.</p>
+<p>This is a great way to type a large block of formatted text in Markdown Monster, and then paste the rendered HTML into an HTML document or template.</p>
+
+    </div>
+
+
+
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-23
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Understanding Previews and Html Exports&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Understanding%20Previews%20and%20Html%20Exports%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_4RG0PDKJ9.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>Creating a custom Markdown Parser in an Addin - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Creating a custom Markdown Parser in an Addin
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Creating a custom Markdown Parser in an Addin
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>Markdown Monster allows you to create custom Markdown Parsers that can be plugged into the Markdown Editor and that show up in a drop down on the statusbar:</p>
+<p><img src="/docs/images/CustomMarkdownParsers.png" alt="" /></p>
+<p>We've provided a <a href="https://github.com/RickStrahl/Pandoc-MarkdownMonster-Addin">PanDoc Add-in</a> that you can check out to see how to add a custom Markdown parser for Markdown Monster.</p>
+<p>Custom markdown editors are useful for specialized tasks that the default parser doesn't do, or even if you want to extend the behavior of the default <a href="https://github.com/lunet-io/markdig" target="top">MarkDig parser</a> with additional functionality.</p>
+<blockquote>
+<h4 id="--markdig-extension-preferred"><i class="fas fa-info-circle" style="font-size: 1.1em"></i>  Markdig Extension Preferred</h4>
+<p>Markdown Monster uses the <a href="https://github.com/lunet-io/markdig" target="top">Markdig parser</a> and it's the preferred parser to use as it also provides features used in preview rendering. You can extend Markdig via Markdig Pipeline extensions, or extend via code in a Markdown Monster addin using string/RegEx manipulation of the input markdown or html output.</p>
+</blockquote>
+<h3 id="creating-a-custom-markdown-parser-addin">Creating a Custom Markdown Parser Addin</h3>
+<p>Custom parsers are created as an <strong>Addin</strong> that simply override the <code>GetMarkdownParser()</code> method and provide an <code>IMarkdownParser</code> interface.</p>
+<p>The easiest way to is to use <a href="https://marketplace.visualstudio.com/items?itemname=rickstrahl.markdownmonsteraddinproject" target="top">Visual Studio Markdown Monster Addin Project Template</a> to create a new Addin.</p>
+<p>Here are the steps:</p>
+<ul>
+<li>Create a new Markdown Monster Addin Project</li>
+<li>Name the project CustomMarkdownParser<strong>Addin</strong></li>
+<li>In generated class change the <code>Id</code> and <code>Name</code> properties<br />
+in <code>OnApplicationInitialized()</code> (remove the rest)</li>
+<li>Override the <code>GetMarkdownParser()</code> method</li>
+<li>Implement your parser and return it in that method</li>
+</ul>
+<h3 id="the-addin-class-implement-getmarkdownparser">The Addin Class: Implement GetMarkdownParser()</h3>
+<p>The addin class for a custom parser addin is simple:</p>
+<pre><code class="language-csharp">public class CustomMarkdownParserAddin : MarkdownMonster.AddIns.MarkdownMonsterAddin
+{
+    public override Task OnApplicationInitialized(AppModel model)
+    {
+        // Remove 'Addin' from the Id
+        Id = &quot;CustomMarkdownParser&quot;;
+        Name = &quot;Custom Markdown Parser&quot;;            
+        
+        return Task.CompletedTask;
+    }
+
+    public override IMarkdownParser GetMarkdownParser(bool usePragmaLines, bool force)
+    {
+        return new CustomMarkdownParser();
+    }
+}    
+</code></pre>
+<p>This mostly involves removing code from <code>OnApplicationInitialized()</code> and implementing <code>GetMarkdownParser(bool usePragmaLines, bool force)</code>.</p>
+<h3 id="creating-a-custom-markdown-parser-class">Creating a custom Markdown Parser Class</h3>
+<p>Creating a new markdown parser is also easy: Simply implement the <code>IMarkdownParser</code> interface which merely consists of the <code>Parse(markdown)</code> method. You can inherit from <code>MarkdownParserBase</code> to get some base functionality but that is optional.</p>
+<pre><code class="language-csharp">public class PandocMarkdownParser : IMarkdownParser
+{
+        public override string Parse(string markdown) 
+        {
+            string html;
+            
+            // do your markdown conversion logic
+            
+            return html;
+        }
+}
+</code></pre>
+<p>You can create your own from scratch or you can subclass from either <code>MarkdownParserBase</code> (which includes some markup features), or the <code>MarkdownParserMarkdig</code> which is the default parser Markdown Monster uses based on Markdig. This is useful if you want to add custom functionality ontop of existing functionality such as special markup that can be injected before or after the markdown parsing occurs.</p>
+<pre><code class="language-csharp">public class CustomMarkdownParser : MarkdownParserMarkdig
+{
+    public CustomMarkdownParser(bool pragmaLines = false, bool forceLoad = false) 
+                        : base(pragmaLines, forceLoad)
+    { }
+        
+    public override string Parse(string markdown)
+    {
+        // inject some additional text
+        return &quot;&amp;copy; Custom Markdown Inc&lt;hr /&gt;&quot; + 
+        base.Parse(markdown);
+    }
+}
+</code></pre>
+<p>And that's it!</p>
+<p>Compile the project and make sure it goes into its own folder in (if you used the template this should be set by default):</p>
+<pre><code class="language-txt">%appdata%\Markdown Monster\Addins
+</code></pre>
+<p>and that the addin <code>.dll</code> ends in <strong>Addin.dll</strong> (ie. MyCustomMarkdownParser<strong>Addin</strong>.dll).</p>
+<h3 id="switching-parsers-in-markdown-monster">Switching parsers in Markdown Monster</h3>
+<p>The parser dropdown on the status bar only shows up if there are custom parsers registered. If there are you can use the dropdown to select your parser, which should immediately re-render the current document with the new parser.</p>
+<h3 id="scroll-syncing-considerations">Scroll Syncing Considerations</h3>
+<p>Markdown Monster's preview window relies on line information in the generated HTML to sync the editor location and preview. This takes the form of <code>pragma-line-x</code> Ids being generated into the parser when previewing:</p>
+<pre><code class="language-html">&lt;h1 id=&quot;pragma-line-2&quot;&gt;Markdown Monster Change Log&lt;/h1&gt;
+&lt;p id=&quot;pragma-line-3&quot;&gt;&lt;small&gt;
+  &lt;a href=&quot;https://markdownmonster.west-wind.com/download.aspx&quot;&gt;download latest version&lt;/a&gt; • 
+  &lt;a href=&quot;https://chocolatey.org/packages/MarkdownMonster&quot;&gt;install from Chocolatey&lt;/a&gt; • 
+  &lt;a href=&quot;https://markdownmonster.west-wind.com&quot;&gt;Web Site&lt;/a&gt;&lt;/small&gt;
+&lt;/p&gt;
+&lt;h3 id=&quot;pragma-line-6&quot;&gt;1.8.15&lt;/h3&gt;
+&lt;p id=&quot;pragma-line-7&quot;&gt;&lt;em&gt;&lt;small&gt;not released yet&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;
+</code></pre>
+<p>Markdown Monster uses the excellent <a href="https://github.com/lunet-io/markdig" target="top">Markdig</a> parser for creating markdown and it includes a <strong>pragma-lines</strong> option. If you use another Markdown Parser it may or may not support this functionality and <strong>if it doesn't preview syncing will not work</strong>.</p>
+<p>If possible we'd recommend overriding the Markdig parser either via a Markdig extension or by extending the custom MarkdownParser functionality (most likely via string and RegEx manipulation of the generated output) inside of your C# addin code.</p>
+
+    </div>
+
+
+
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-23
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Creating a custom Markdown Parser in an Addin&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Creating%20a%20custom%20Markdown%20Parser%20in%20an%20Addin%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_4UT0J7XOE.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

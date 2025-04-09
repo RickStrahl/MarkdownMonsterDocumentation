@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>Editing Huge Documents - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Editing Huge Documents
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Editing Huge Documents
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>When editing very large documents - especially those that include a large number of code snippets - you may find that the Markdown editor starts to have issues with the preview refresh and potentially also some editor hesitation while the preview is being refreshed.</p>
+<p>The performance slowdown is due to the time it takes to render the large HTML document in the preview browser - it's the time the HTML DOM takes to refresh the display. Due to architectural limitations of the Web Browser Control used by this application the preview ties up processing while the preview is being rendered. For normal sized documents up to a megabyte or so, this process is pretty fast and practically unnoticed, but once documents reach a certain size, the preview loading takes so much time that it effects the rest of the editor.</p>
+<p>There are a few workarounds that allow you turn off automatic preview refreshing:</p>
+<ul>
+<li>Less frequent Preview Refresh Intervals</li>
+<li>Turn off Preview Refresh</li>
+<li>Turn on Navigation Only Preview Refresh</li>
+</ul>
+<h3 id="less-frequent-preview-refreshes">Less Frequent Preview Refreshes</h3>
+<p>The preview timeout is fired when you pause typing for a specified amount of time. By default this timeout is ~200 milliseconds, which is only a brief break in typing and that works well for most documents.</p>
+<p>To mitigate huge document rendering mentioned above MM slows preview updates considerably when documents reach 2000 lines in the editor. This means you have to pause typing for 2 full seconds before the preview will refresh. This is meant as a very deliberate action.</p>
+<p>Note that the preview will likely still render slowly for the large document and may still affect typing if you start typing again while the preview is still updating. But since the updates happen much less frequently you can continue to type text at normal input speeds in most situations without getting interrupted by the normal refresh that fires every 120ms or so.</p>
+<h3 id="workaround---use-preview-refresh-none-or-navigation-only">Workaround - Use Preview Refresh <code>None</code> or <code>Navigation Only</code></h3>
+<p>Another option is to use Preview Refresh <code>None</code> or <code>Navigation Only</code> neither of which will automatically update the document as you type. Instead you can use the <strong>Edit → Refresh Preview (Alt-E-R)</strong> to explicitly refresh the preview.</p>
+<p>This allows you to type your text without interruptions and whenever you're ready to see the updated preview you can use the menu or hotkey to see the changes at the cursor.</p>
+<p>You can set the Preview Mode using the icon on the very right of the Status Bar next to the size corner to select the Preview Sync Mode or the <code>PreviewSyncMode</code> property in the Markdown Monster Settings:</p>
+<pre><code class="language-json">{
+    &quot;PreviewSyncMode&quot;: &quot;NavigationOnly&quot;  // or &quot;None&quot;
+}
+</code></pre>
+<p>Note that <code>Navigation Only</code> will show you document navigation changes so you can still scroll through the document and have the preview pane update. However, if you've typed new text it's possible that the preview might be out of sync, so if you type it's recommended to use the explicit <strong>Preview Refresh</strong> menu option to force a refresh to ensure the document is up to date when navigating.</p>
+<blockquote>
+<p><i class="fas fa-info-circle" style="font-size: 1.1em"></i>  We recommend using <strong>Navigation Only</strong> as the mode for huge documents.</p>
+</blockquote>
+<h3 id="workaround---turn-off-the-preview">Workaround - Turn off the Preview</h3>
+<p>If this problem affects your regular typing input, you can optionally <strong>turn off the Preview Pane (F12)</strong>. Turning off the previewer while you're typing lets you edit your document at full speed without any slow downs whatsoever, and you can press F12 to preview the document when you're ready to see the current changes. Press F12 again to hide the preview.</p>
+<h3 id="workaround---break-up-your-documents">Workaround - Break up your Documents</h3>
+<p>This may be obvious, but we don't recommend creating massively large single Markdown documents, but rather to break up your content into logically related documents along with a Table of Contents to consolidate multiple documents into a more manageable documentation solution and structure.</p>
+<p>Not only is it easier to edit and find content in smaller documents, but it also makes it much easier to collaborate for multiple people as document changes can be much more focused.</p>
+<h3 id="were-looking-into-it">We're looking into it</h3>
+<p>We realize this isn't ideal and we're looking into alternatives for the future. Unfortunately other alternatives like DOM diffing have other problems (slow and buggy), but we're still reviewing options.</p>
+<p>Then again, documents so large that they actually cause this problem tend to be very rare and it's unlikely you're going to hit this particular problem with typical content.</p>
+<blockquote>
+<h4 id="--break-up-your-content"><i class="fas fa-info-circle" style="font-size: 1.1em"></i>  Break up your Content</h4>
+<p>Note: When talking about huge documents we're talking of documents that are larger than 500k or include lots of code snippets or other script expanded elements.</p>
+</blockquote>
+
+    </div>
+
+
+
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-24
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Editing Huge Documents&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Editing%20Huge%20Documents%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_5CH1BV9EN.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

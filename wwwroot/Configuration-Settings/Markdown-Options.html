@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>Markdown Options - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Markdown Options
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Markdown Options
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <h4 id="autolinks">AutoLinks</h4>
+<p>Determines whether URLs are automatically turned into links. <code>true</code></p>
+<h4 id="abbreviations">Abbreviations</h4>
+<p>Determines whether common abbreviations are expanded. <code>false</code></p>
+<h4 id="stripyamlfrontmatter">StripYamlFrontMatter</h4>
+<p>Strips Yaml FrontMatter from any Markdown content. <code>true</code></p>
+<h4 id="emojiandsmiley">EmojiAndSmiley</h4>
+<p>Interprets common emoji and smiley characters like <code>:smile:</code> or <code>:-)</code> and turns it into Emoji. <code>true</code></p>
+<h4 id="listextras">ListExtras</h4>
+<p>Provides features like Github Check lists and nested lists: <code>true</code></p>
+<h4 id="figures">Figures</h4>
+<p>Allows for figure referencing in a location other than the current location. true</p>
+<h4 id="githubtasklists">GithubTaskLists</h4>
+<p>Allows for Github checkable task lists by using <code>[ ]</code> and <code>[x]</code>.</p>
+<h4 id="smartypants">SmartyPants</h4>
+<p>Converts common typographic characters to proper typographic publishing settings. Quotes to curly quotes dashes to em dashes etc. Use for print publishing of literature - leave off for technical content. <code>false</code></p>
+<h4 id="diagrams">Diagrams</h4>
+<p>Support for Mermaid markup. Note the MM preview doesn't support Mermaid, but the renderer produces it and you can preview in the external browser.</p>
+<h4 id="renderlinksasexternal">RenderLinksAsExternal</h4>
+<p>Renders all links with a target=&quot;_blank&quot; to force links to be externally opened in a new tab/window. Useful in some documentation scenarios where you don't want to lose your place in the document. <code>false</code></p>
+<h4 id="allowrenderscripttags">AllowRenderScriptTags</h4>
+<p>By default script tags are stripped from Markdown content. Set to true if you need to explicitly run scripts as part of your markdown for things like embedded Gists for example. <code>false</code></p>
+<h4 id="markdownparsername">MarkdownParserName</h4>
+<p>This is the name of the Markdown Parser used. MM ships with <code>MarkDig</code> which is the default parser, but addins can add additional parsers which are selectable from the dropdown on the status bar. <code>Markdown</code></p>
+<h4 id="genericattributes">GenericAttributes</h4>
+<p>Allows attaching generic HTML attributes to the active 'element'. Example: <code>{ class='error-message' id=&quot;MyHeader&quot;}</code> using explicit attributes or using CSS Selector style syntax <code>{ .error-message #MyHeader }</code>. The attributes are  appended to the generated HTML element on the same line (ie. header, list item, paragraph etc.).
+<a href="https://github.com/lunet-io/markdig/blob/master/src/Markdig.Tests/Specs/GenericAttributesSpecs.md">more info</a></p>
+<h4 id="customcontainers">CustomContainers</h4>
+<p>Allows wrapping a Markdown element or element group with a container element. Using a block like <code>:::note</code> and <code>:::</code> to denote a block will generate a <code>&lt;div class=&quot;note&quot;&gt;&lt;/div&gt;</code> around the Markdown block it surrounds.</p>
+<h4 id="parsedocfx">ParseDocFx</h4>
+<p>If set parses several common DocFx 'commands' like file inclusion, link expansion and a few others.</p>
+<h4 id="markdigextensions">MarkdigExtensions</h4>
+<p>Allows you to explicitly specify MarkDig extensions to load. MM loads a default set, but you can modify this list which allows you to add custom extensions.
+<code>emphasisextras,pipetables,gridtables,footers,footnotes,citations,attributes</code></p>
+
+    </div>
+
+
+
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-24
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Markdown Options&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Markdown%20Options%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_5K40LGMIF.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

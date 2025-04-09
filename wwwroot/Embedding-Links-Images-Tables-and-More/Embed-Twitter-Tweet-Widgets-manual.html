@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>Embed Twitter Tweet Widgets (manual) - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Embed Twitter Tweet Widgets (manual)
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Embed Twitter Tweet Widgets (manual)
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>Markdown Monster doesn't have any special tools for embedding Tweets as Widgets into a Markdown document. The reason for this is that Twitter provides a fairly easy mechanism for creating these Widgets as part of various Web and Twitter clients by using the <strong>Twitter Embed</strong> feature which produces simple <strong>embeddable Html with a script link that can be directly pasted into Markdown content</strong>.</p>
+<h2 id="twitter-embed">Twitter Embed</h2>
+<p>The Twitter embedding feature can be accessed on any tweet in the Web browser. Start by clicking on the <code>...</code> <strong>more</strong> button in the Twitter UI:</p>
+<p><img src="/docs/images/TwitterEmbed_MoreButton.png" alt="" /></p>
+<p>Then select <strong>Embed Tweet</strong>:</p>
+<p><img src="/docs/images/TwitterEmbed_EmbedTweet.png" alt="" /></p>
+<p>This brings up a form that previews the tweet widget along with the Html and Script code that can be embedded into any Html or... Markdown document:</p>
+<p><img src="/docs/images/TwitterEmbed_CopyToClipboard.png" alt="" /></p>
+<p>If the Widget looks good as is click on <strong>Copy Code</strong> otherwise use the <strong>set customization options</strong> link to customize which allows you to set the theme (light or dark), language and a couple of other options. I like to use the dark theme so I customized that in this capture.</p>
+<p>Next switch back to Markdown Monster and position the cursor at the location you'd like to see the embedded Tweet and then paste from clipboard (<code>ctrl-v</code>):</p>
+<p><img src="/docs/images/TwitterEmbed_PastedIntoMM.png" alt="" /></p>
+<blockquote>
+<p>Note that Widget is <em>live</em>, meaning all the links and buttons - Like, Reply and Share buttons work although they all link back to the original Tweet.</p>
+</blockquote>
+<p>The screen shot shows both the dark and light versions of the tweet embedded in the document. Note that the only difference between the two is the <code>data-theme=&quot;dark&quot;</code> attribute in the Html so it's easy to switch between the two even without using the embed tweet options.</p>
+<p>Here's what typical embedded tweet Html looks like (formatting added):</p>
+<pre><code class="language-html">&lt;blockquote class=&quot;twitter-tweet&quot; data-theme=&quot;dark&quot;&gt;
+    &lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;
+        Finally a couple of wind and big wave days again. It’s been too long!
+        &lt;a href=&quot;https://t.co/z2kLC9G6IL&quot;&gt;pic.twitter.com/z2kLC9G6IL&lt;/a&gt;
+    &lt;/p&gt;
+    &amp;mdash; Rick Strahl (@RickStrahl) 
+    &lt;a href=&quot;https://twitter.com/RickStrahl/status/1471368532294201344?ref_src=twsrc%5Etfw&quot;&gt;December 16, 2021&lt;/a&gt;
+&lt;/blockquote&gt; 
+&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h2 id="requirements-and-limitations">Requirements and Limitations</h2>
+<p>There are a couple of issues you have to be aware of with rendering Twitter Widgets inside of Markdown, as these components require active JavaScript to render as Html.</p>
+<blockquote>
+<h4 id="--requires-that-script-and-iframe-rendering-is-enabled"><i class="fas fa-warning" style="font-size: 1.1em"></i>  Requires that Script and <code>&lt;iframe&gt;</code> Rendering is Enabled</h4>
+<p>Twitter Widgets rely on an embedded <code>&lt;script&gt;</code> tag, rendering of which is disabled in MM by default. You can enable <code>&lt;script&gt;</code> rendering using the <strong>Allow Script Tags in Markdown</strong> option on the menu or in Settings.</p>
+<p>You can enable this global setting here:</p>
+<p><img src="/docs/images/AllowRenderScriptTags.png" alt="" /></p>
+</blockquote>
+<blockquote>
+<h4 id="--embedded-tweets-only-work-if-markdown-server-supports-embedded-html"><i class="fas fa-warning" style="font-size: 1.1em"></i>  Embedded Tweets only work if Markdown Server supports embedded Html</h4>
+<p>MM can always render this feature as it supports embedded Html and scripts (optionally). However, any server hosting platform that renders your Markdown may not.</p>
+<p>Since the Tweet Widget is raw Html with a <code>&lt;script&gt;</code> tag that handles the formatting and interactions, whatever server platform ends up rendering the Markdown has to support rendering these tags.</p>
+<p>For example, GitHub <strong>does not allow</strong> script tags to be rendered to avoid XSS attacks on the GitHub site, so embedded tweets do not work on GitHub. However, most Blog Engines like WordPress and Medium or static site generators like Jekyll or Statiq do support embedded Html and script, so you can use it there.</p>
+<p>Before going nuts with embedded Tweets in Markdown, make sure that your target hosting platform supports it.</p>
+</blockquote>
+<h2 id="embed-tweet-info-toolbar-button">Embed Tweet Info Toolbar Button</h2>
+<p>In case you need to embed a Tweet in a month or two after you've forgotten these steps, MM also has a toolbar option that takes you directly to this help topic.</p>
+<p><img src="/docs/images/TwitterEmbed_ToolbarInfo.jpg" alt="" /></p>
+<h3 id="why-is-there-no-user-interface-for-tweets">Why is there No User Interface for Tweets?</h3>
+<p>We thought about it, since tweets are very popular to embed into Markdown documents. However, Twitter's public API makes it very difficult to get the detailed tweet information that Twitter makes available. The embeddable Widgets are nice because they exactly match the Twitter UI.</p>
+<p>The other issue is that one way or another you have to get some sort of Tweet Id in order to create a widget. If you already have to use Twitter to pick up this ID it's only one additional quick step to get the full widget that can be pasted. In short, it's actually easier to grab and paste the Widget HTML from Twitter than it would be to present a UI for it in Markdown Monster.</p>
+
+    </div>
+
+
+
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-23
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Embed Twitter Tweet Widgets (manual)&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Embed%20Twitter%20Tweet%20Widgets%20(manual)%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_69E0RCHVH.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

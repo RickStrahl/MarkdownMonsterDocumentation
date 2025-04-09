@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>Adding Custom Fields to a Weblog Post - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Adding Custom Fields to a Weblog Post
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Adding Custom Fields to a Weblog Post
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>The Weblog Publishing addin supports custom fields when publishing posts to MetaWeblog API and WordPress blogs, using the <strong>CustomFields</strong> extensions to these two APIs.</p>
+<p>You can edit CustomFields as part of the Weblog Post Form which includes a section to add a key name and value for any custom fields you want to send to the server.</p>
+<p><img src="/docs//images/CustomFields.png" alt="" /></p>
+<p>Use the <i class="fas fa-plus-circle" style="font-size: 1.1em"></i>  icon to add a new Custom Field to the list and <i class="fas fa-remove" style="font-size: 1.1em"></i>  icon to remove the <strong>selected</strong> custom field from the list.</p>
+<p>You can edit the custom field entries in the list. Changes are saved when you <strong>Post to Weblog</strong> or <strong>Save Metadata</strong>.</p>
+<h3 id="customfield-meta-data">CustomField Meta Data</h3>
+<p>CustomFields data is stored as part of the Meta Data associated with a post, which is created when you either <strong>Post to Weblog</strong> or <strong>Save Metadata</strong>. This adds the meta data YAML to the beginning of the post:</p>
+<pre><code class="language-yaml">---
+title: IIS and ASP.NET Core Rewrite Rules for Static Files and Html 5 Routing
+abstract: If...
+keywords: Static Content, Html 5 Routes, IIS Rewrite, Angular, Kestrel, IIS, ASP.NET
+categories: ASP.NET Core, IIS
+weblogName: West Wind Web Log
+postId: 220994
+customFields:
+  mt_publishon:
+    key: mt_publishon
+    value: 05/10/2017 08:00
+  mt_location:
+    key: mt_location
+    value: Hood River, OR
+---
+</code></pre>
+<blockquote>
+<h4 id="customfields-yaml-format-object-collection">customFields Yaml Format: Object Collection</h4>
+<p>Note that the <strong>customFields</strong> structure is a bit more complex than just a key value pair, as there is an additional Id field that might have to be stored as part of a post. The <strong>customFields</strong> key is followed by a list of keys with an object that has <strong>key</strong>, <strong>value</strong> and <strong>id</strong> fields.</p>
+</blockquote>
+
+    </div>
+
+
+
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-23
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Adding Custom Fields to a Weblog Post&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Adding%20Custom%20Fields%20to%20a%20Weblog%20Post%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_4WQ1DBSNH.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

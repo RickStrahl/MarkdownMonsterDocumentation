@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">    
+    <title>Markdown Monster local Web Server - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css">
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet">
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic"></topictype>
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars" title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo">
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Markdown Monster local Web Server
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Markdown Monster local Web Server
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>Markdown Monster includes an optional local HTTP server that can be used to launch Markdown Monster with preset content remotely, when the server is running. The server has to be started in order for this to work, although you can request starting the server in a number of manual and automated ways.</p>
+<p>The following demonstrates some of the external operation with an HTTP REST Client (<a href="https://websurge.west-wind.com">WebSurge</a>)</p>
+<p><img src="https://raw.githubusercontent.com/RickStrahl/ImageDrop/refs/heads/master/MarkdownMonster/WebServerAutomation.gif" alt="Markdown Monster internal Web Server Interaction"></p>
+<p>Using the Web Server you can remotely:</p>
+<ul>
+<li>Open a new Document with content text</li>
+<li>Open a new Empty document</li>
+<li>Open a document from a path</li>
+<li>Retrieve the contents of the active document</li>
+</ul>
+<p>By default the Web Server <strong>is not enabled</strong> and you have to start it. To start the Markdown Monster Web Server you can do one of the following:</p>
+<ul>
+<li>Toggle the <code>Tools -&gt; Web Server</code> menu checkbox configuration setting on</li>
+<li>Set the <code>WebServer.IsRunning=true</code> configuration flag</li>
+<li>Set the <code>WebServer.AutoStart=true</code> configuration flag to auto-start the server on startup</li>
+<li>Run <code>mm -startwebserver</code> from the Terminal to explicitly start the server</li>
+<li>Use the <code>markdownmonster:webserver</code> Web Protocol Handler from browser or shell (toggles)</li>
+</ul>
+<p>Once the server is running you can open and retrieve open document text in Markdown Monster from a Web Browser via HTTP requests. Opening text in a new document in Markdown Monster can be triggered via a relatively simple fetch script that is provided as a sample.</p>
+<blockquote>
+<h4 id="--web-sample-page-and-support-javascript-library"><i class="fas fa-info-circle" style="font-size: 1.1em"></i>  Web Sample Page and Support JavaScript Library</h4>
+<p>An example of what you can do with the Protocol Handler and Web Server to automate Markdown Monster from a browser, you can look at the examples in <code>/SampleDocuments/BrowserIntegration</code>. A library that helps with integration operations can be found in <code>markdownmonster-integration.js</code>.</p>
+</blockquote>
+<blockquote>
+<h4 id="--security"><i class="fas fa-lock" style="font-size: 1.1em"></i>  Security?</h4>
+<p>The Web Server Markdown Monster uses is a local only Web Server, so security issues at most are limited to the local machine. Additionally the server startup from a browser will always force a browser prompt of some sort, although if you opt to run the MM Web Server in always-on mode there will not be a prompt. It's best to start the server on demand even if that requires an extra operation if security is a concern.</p>
+</blockquote>
+<h3 id="using-in-a-web-page">Using in a Web Page</h3>
+<p>The server can be accessed from client side code via a <code>markdownmonster-integration.js</code> file which provides a global <code>window.MarkdownMonster</code> object instance. This library has the following operations:</p>
+<ul>
+<li><strong>openNewDocument(newDocText)</strong>  - opens a new document with the specified text</li>
+<li><strong>loadMarkdownMonster()</strong> - uses an application protocol to explicitly launch Markdown Monster</li>
+<li><strong>checkServer(onCompleted)</strong> - checks to see if the MM Web Server is running</li>
+<li><strong>openDocument(localDocFilename,onCompleted)</strong> - opens a file in Markdown Monster</li>
+<li><strong>openNew(markdownText,onCompleted)</strong> - opens a new document with optional text</li>
+<li><strong>getDocument(onCompleted)</strong> - retrieves the content of the active editor window in Markdown Monster.</li>
+</ul>
+<p>In most cases <code>openNewDocument()</code> is the only function required - it will check whether the server is running and if not prompt you and try to launch it.</p>
+<p>The following example uses a text box with Markdown text and a button which when clicked opens the text in Markdown Monster:</p>
+<pre><code class="language-html">&lt;textarea id=&quot;MarkdownText2&quot;  &gt;# Markdown text to edit&lt;/textarea&gt;
+
+&lt;button id=&quot;btnOpenInMarkdownMonster2&quot; class=&quot;btn btn-primary mt-2&quot; onclick=&quot;openInMmWithWebServer()&quot;&gt;
+&lt;img src=&quot;images/MarkdownMonster_Icon_32.png&quot; style=&quot;height: 20px;margin-right: 10px&quot; /&gt;
+Open in Markdown Monster&lt;/button&gt;
+
+&lt;!-- support library that can call the Web server (in `/SampleDocuments/BrowserIntegration/`) --&gt;
+&lt;script src=&quot;markdownmonster-integration.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+    // initialize object during page load
+    var mm = window.MarkdownMonster;            // global instance
+    //mm.serverUrl = &quot;http://localhost:15000&quot;     // if you changed the port in mm :5009 is default
+    mm.initialize();                            // checks for server
+    function openInMmWithWebServer() {
+        var text = document.getElementById(&quot;MarkdownText2&quot;).value;        
+        
+        // if server is running opens a new doc in Markdown Monster
+        // if server is not running prompts to run MM and open in Web Server mode
+        mm.openNewDocument(text);               
+    }
+&lt;/script&gt;
+</code></pre>
+<p>You can find an example you can run in the <code>&lt;installFolder&gt;\SampleDocuments\BrowserIntegration</code> folder.</p>
+<h3 id="message-format">Message Format</h3>
+<p>The messages sent to the server are <code>POST</code> operations using a JSON request pay load. For now this is very simple and abstracted by the JavaScript <code>markdownmonster-integration.js</code> script library.</p>
+<p>To access the server assuming it's running:</p>
+<ul>
+<li>Make an HTTP POST request to <code>http://localhost:5009/</code></li>
+<li>JSON: <code>{ operation: &quot;open&quot;, data: &quot;untitled.base64,VGhpcyBpcyBhIHRlc3Qgc3RyaW5nIG9mIHRleHQu&quot; }</code></li>
+</ul>
+<p>This opens a new document with the base64 text content preset in the editor. This works with any of the single command <a href="#__0">command line options</a> in MM.</p>
+<ul>
+<li>Open a new blank document</li>
+<li>Open new document with pre-set text</li>
+<li>You can open a file from a file system path</li>
+</ul>
+<h3 id="http-request-traces">Http Request Traces</h3>
+<p>Following are examples of HTTP request traces that can be used to interact with Markdown Monster.</p>
+<pre><code class="language-http">POST http://localhost:5009/markdownmonster HTTP/1.1
+Content-Type: application/json
+
+{
+  &quot;Operation&quot;: &quot;open&quot;,
+  &quot;Data&quot;: &quot;untitled.json,'# New Document\n\n\&quot;This\&quot; is a test **document**!'&quot;,
+  &quot;Type&quot;: &quot;text&quot;,
+  &quot;Activate&quot;: true
+}
+
+------------------------------------------------------------------
+
+POST http://localhost:5009/markdownmonster HTTP/1.1
+Content-Type: application/json
+
+{
+  &quot;Operation&quot;: &quot;openNew&quot;,
+  &quot;Data&quot;: &quot;# New Document\n\n\&quot;This\&quot; is a test **document**!&quot;,
+  &quot;Type&quot;: &quot;text&quot;,
+  &quot;Activate&quot;: true
+}
+
+------------------------------------------------------------------
+
+POST http://localhost:5009/markdownmonster HTTP/1.1
+Content-Type: application/json
+
+{
+  &quot;Operation&quot;: &quot;openDocument&quot;,
+  &quot;Data&quot;: &quot;c:\\temp\\test.md&quot;,
+  &quot;Type&quot;: &quot;text&quot;,
+  &quot;Activate&quot;: true
+}
+
+------------------------------------------------------------------
+
+POST http://localhost:5009/markdownmonster HTTP/1.1
+Content-Type: application/json
+
+{
+   Operation: &quot;getDocument&quot;,
+   Data: null,
+   Type: &quot;json&quot;
+}
+</code></pre>
+<p>Remember in order for these operations to work the server has to be running.</p>
+<h3 id="web-server-configuration">Web Server Configuration</h3>
+<p>The Web Server can be configured with 3 values in the configuration settings:</p>
+<pre><code class="language-json">{
+  &quot;WebServer&quot;: {
+    &quot;Port&quot;: 5009,
+    &quot;AutoStart&quot;: false
+  },
+}
+</code></pre>
+<blockquote>
+<p>Additionally there's an internal <code>IsRunning</code> property which <strong>is not persisted</strong> over shutdowns. This setting controls the manual toggle on the <strong>Tools-&gt;Web Server</strong> menu. Unless you have <code>AutoStart=true</code> this setting is not persisted over Markdown Monster restarts, so to always run Web Server you need to set <code>AutoStart=true</code>.</p>
+</blockquote>
+
+    </div>
+
+
+
+                </article>
+
+                <hr>
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-24
+                    <br>
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Markdown Monster local Web Server&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Markdown%20Monster%20local%20Web%20Server%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_5S1009YX1.html">Comment or report problem with topic</a>
+                
+                <br class="clearfix">
+                <br>
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</div></body>
+</html>
+

@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>Spellchecking - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Spellchecking
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Spellchecking
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>Markdown Monster includes an inline spellchecker that highlights misspelled text as you type.</p>
+<p><img src="/docs/images/spellchecking.png" alt="" /></p>
+<p>Misspelled text underlines with a red, dotted line and you can right-click on the misspelled text to bring up a list of selections. Pick one of the items to auto-correct the misspelled word.</p>
+<h3 id="adding-words-to-the-dictionary">Adding Words to the Dictionary</h3>
+<p>If you find misspelled words that aren't in the dictionary, but are words that shouldn't be flagged, you can add to the dictionary. Once added the word added will no longer be shown as misspelled.</p>
+<p>Dictionary extensions are stored in your <code>AppData</code> folder:</p>
+<pre><code>%appdata%\West Wind Markdown Monster
+</code></pre>
+<p>as <code>en-US_custom.txt</code> or whatever the base dictionary is.</p>
+<h3 id="turning-spell-checking-on-and-off">Turning Spell Checking On and Off</h3>
+<p>Spell checking can be turned on and off using the Check toggle in the Window's right hand control box:</p>
+<p><img src="/docs/images/spellcheckingtoggle.png" alt="" /></p>
+<p>Click to toggle between active and inactive state for spell checking.</p>
+<p>The value can also be configured in the Settings:</p>
+<pre><code class="language-json">Editor {
+   &quot;EnableSpellcheck&quot;: true
+}
+</code></pre>
+<h3 id="dictionary-selection">Dictionary Selection</h3>
+<p>You can also use the drop down next to the toggle to select from a number of supported spell checking dictionaries for different languages.</p>
+<p>Markdown Monster comes with 4 pre-installed dictionaries:</p>
+<ul>
+<li>en-US</li>
+<li>de</li>
+<li>fr</li>
+<li>es</li>
+</ul>
+<p>along with 60+ additional dictionaries that can be downloaded.</p>
+<p>To switch dictionaries use the drop down next to the spell checking toggle:</p>
+<p><img src="/docs/images/spellcheckingdictionaryselection.png" alt="" /></p>
+<p>The down arrow means that dictionaries have to be downloaded, which happens automatically when you select a non-present dictionary.</p>
+<blockquote>
+<h4 id="--file-permissions-to-save-dictionaries"><i class="fas fa-info-circle" style="font-size: 1.1em"></i>  File Permissions to save Dictionaries</h4>
+<p>Note that you need to have write file permissions in the install folder in order to install a downloaded dictionary. The default <code>%appdata%</code> install location should allow of this. In other locations like <code>Program Files</code> you may need <strong>Run as Administrator</strong> to write out downloaded dictionaries.</p>
+</blockquote>
+<h3 id="installing-a-custom-dictionary">Installing a Custom Dictionary</h3>
+<p>If the dictionary you want to use isn't on the list provided you can add additional dictionaries into the <code>%appdata%\Markdown Monster\Editor</code> folder.</p>
+<p>Markdown Monster uses standard <a href="https://hunspell.github.io/" target="top">hunspell</a> dictionaries for spell checking and so can use standard <a href="http://extensions.openoffice.org/" target="top">Open Office dictionaries</a>.</p>
+<p>To install custom dictionaries find the <code>.dic</code> and <code>.aff</code> files and save them to the <code>Editor</code> folder in the MM installation folder. Use a name that describes the locale. Once installed the new dictionary will show up on the language drop down by its filename.</p>
+<h3 id="open-office-dictionaries">Open Office Dictionaries</h3>
+<p>If you want to add dictionaries for other languages, or specific locales (like  <code>en_GB</code> or <code>fr_CA</code>) you can download and install custom dictionaries that are in the standard Open Office (4.0 preferably) format. Open Office also uses hunspell and so Open Office dictionaries are compatible.</p>
+<p>You can find dictionaries on the Open Office Extensions Site:</p>
+<ul>
+<li><a href="http://extensions.openoffice.org/en/search?f%5B0%5D=field_project_tags%3A157">Open Office Dictionary Extensions</a></li>
+</ul>
+<p>Here are a few direct links for some common specific libraries:</p>
+<ul>
+<li><a href="http://extensions.openoffice.org/en/project/english-dictionaries-apache-openoffice">English (us,gb,au,ca)</a></li>
+<li><a href="http://extensions.openoffice.org/en/project/italian-dictionary-thesaurus-hyphenation-patterns">Italian</a></li>
+<li><a href="http://extensions.openoffice.org/en/project/russian-dictionary">Russian</a></li>
+</ul>
+<h3 id="using-open-office-dictionary-extensions-in-markdown-monster">Using Open Office Dictionary Extensions in Markdown Monster</h3>
+<p>Open Office Extensions often come as <code>.oxt</code> (Open Office Extension) files, which are really just Zip files. You can rename the extension to <code>.zip</code>, open the archive and extract the <code>.dic</code> and <code>.aff</code> files out of it and copy to your <code>%LocalAppData%\Markdown Monster\Editor</code> folder.</p>
+
+    </div>
+
+
+
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-23
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Spellchecking&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Spellchecking%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_4RG0WJ7PB.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

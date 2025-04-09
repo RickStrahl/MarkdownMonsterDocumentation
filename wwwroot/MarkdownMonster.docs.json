@@ -1,0 +1,2803 @@
+{
+  "title": "Markdown Monster",
+  "owner": "West Wind Technologies",
+  "language": "en-US",
+  "topics": [
+    {
+      "id": "_INDEX",
+      "title": "Markdown Monster Documentation",
+      "slug": "Markdown-Monster-Documentation",
+      "link": "Markdown-Monster-Documentation.md",
+      "displayType": "index",
+      "type": "markdown",
+      "keywords": "",
+      "seeAlso": "",
+      "remarks": "",
+      "example": "",
+      "sortOrder": 110,
+      "isExpanded": true,
+      "updated": "2025-03-12T12:28:35.1985072-10:00",
+      "helpId": "2",
+      "classInfo": {
+        "assembly": "",
+        "contract": "",
+        "exceptions": ""
+      },
+      "topics": [
+        {
+          "id": "_4UG0N96NS",
+          "parentId": "_INDEX",
+          "title": "What's New",
+          "slug": "Markdown-Monster-Documentation/Whats-New",
+          "link": "Markdown-Monster-Documentation/Whats-New.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "isLink": true,
+          "sortOrder": 60,
+          "updated": "2025-02-24T16:38:20.5404247-10:00",
+          "helpId": "1124",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_6TB0XEY49",
+          "parentId": "_INDEX",
+          "title": "An Introduction to Markdown",
+          "slug": "Markdown-Monster-Documentation/An-Introduction-to-Markdown",
+          "link": "Markdown-Monster-Documentation/An-Introduction-to-Markdown.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 50,
+          "updated": "2025-03-06T22:36:48.2297308-10:00",
+          "helpId": "16912",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4S0144W3G",
+          "parentId": "_INDEX",
+          "title": "Support",
+          "slug": "Markdown-Monster-Documentation/Support",
+          "link": "Markdown-Monster-Documentation/Support.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 40,
+          "updated": "2025-03-04T08:57:04.5237398-10:00",
+          "helpId": "366",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4S014ECHA",
+          "parentId": "_INDEX",
+          "title": "License",
+          "slug": "Markdown-Monster-Documentation/License",
+          "link": "Markdown-Monster-Documentation/License.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 30,
+          "updated": "2025-03-06T10:56:36.6932628-10:00",
+          "helpId": "367",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5V515OS5Z",
+          "parentId": "_INDEX",
+          "title": "Data Privacy in Markdown Monster",
+          "slug": "Markdown-Monster-Documentation/Data-Privacy-in-Markdown-Monster",
+          "link": "Markdown-Monster-Documentation/Data-Privacy-in-Markdown-Monster.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 20,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "13648",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4T90RHFY9",
+          "parentId": "_INDEX",
+          "title": "Markdown Monster Portable Version",
+          "slug": "Markdown-Monster-Documentation/Markdown-Monster-Portable-Version",
+          "link": "Markdown-Monster-Documentation/Markdown-Monster-Portable-Version.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 10,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "375",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "_4RD0XIGYS",
+      "title": "Features",
+      "slug": "Features",
+      "link": "Features.md",
+      "displayType": "header",
+      "type": "markdown",
+      "keywords": "",
+      "seeAlso": "",
+      "remarks": "",
+      "example": "",
+      "sortOrder": 100,
+      "isExpanded": true,
+      "updated": "2025-03-12T12:00:52.0407241-10:00",
+      "helpId": "356",
+      "classInfo": {
+        "assembly": "",
+        "contract": "",
+        "exceptions": ""
+      },
+      "topics": [
+        {
+          "id": "_4NI0V22AD",
+          "parentId": "_4RD0XIGYS",
+          "title": "Working with the HTML Preview",
+          "slug": "Features/Working-with-the-HTML-Preview",
+          "link": "Features/Working-with-the-HTML-Preview.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 150,
+          "updated": "2025-03-20T22:55:37.8196452-10:00",
+          "helpId": "349",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4RG0WJ7PB",
+          "parentId": "_4RD0XIGYS",
+          "title": "Spellchecking",
+          "slug": "Features/Spellchecking",
+          "link": "Features/Spellchecking.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 140,
+          "updated": "2025-02-23T14:15:27.0646868-10:00",
+          "helpId": "365",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4WU1CJYKA",
+          "parentId": "_4RD0XIGYS",
+          "title": "The Folder Browser",
+          "slug": "Features/The-Folder-Browser",
+          "link": "Features/The-Folder-Browser.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 130,
+          "updated": "2025-03-12T11:46:43.0881236-10:00",
+          "helpId": "1965",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          },
+          "topics": [
+            {
+              "id": "_6BW0K5A23",
+              "parentId": "_4WU1CJYKA",
+              "title": "Folder Browser Preview Document Modes",
+              "slug": "Features/The-Folder-Browser/Folder-Browser-Preview-Document-Modes",
+              "link": "Features/The-Folder-Browser/Folder-Browser-Preview-Document-Modes.md",
+              "displayType": "topic",
+              "type": "markdown",
+              "keywords": "",
+              "seeAlso": "",
+              "remarks": "This is a **note**. ou as you save it soassdasdasd asasdasddsa",
+              "example": "",
+              "sortOrder": 10,
+              "updated": "2025-03-12T11:43:30.6492386-10:00",
+              "helpId": "16444",
+              "classInfo": {
+                "assembly": "",
+                "contract": "",
+                "exceptions": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "_4RG0MZ918",
+          "parentId": "_4RD0XIGYS",
+          "title": "File and Folder Navigation via Tab Menu",
+          "slug": "Features/File-and-Folder-Navigation-via-Tab-Menu",
+          "link": "Features/File-and-Folder-Navigation-via-Tab-Menu.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 120,
+          "updated": "2025-02-23T14:15:27.0650985-10:00",
+          "helpId": "360",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_55O1BD4N1",
+          "parentId": "_4RD0XIGYS",
+          "title": "The Document Outline/Table of Content Generator",
+          "slug": "Features/The-Document-OutlineTable-of-Content-Generator",
+          "link": "Features/The-Document-OutlineTable-of-Content-Generator.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 110,
+          "updated": "2025-02-23T14:15:27.0652122-10:00",
+          "helpId": "5212",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_72K0UWLQP",
+          "parentId": "_4RD0XIGYS",
+          "title": "Check Document Links",
+          "slug": "Features/Check-Document-Links",
+          "link": "Features/Check-Document-Links.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 100,
+          "updated": "2025-02-23T14:30:24.0036158-10:00",
+          "helpId": "16918",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_6Z50U8E3Y",
+          "parentId": "_4RD0XIGYS",
+          "title": "AI Integration  Features",
+          "slug": "Features/AI-Integration-Features",
+          "link": "Features/AI-Integration-Features/AI-Integration-Features.md",
+          "displayType": "header",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 90,
+          "updated": "2025-02-23T14:15:27.065324-10:00",
+          "helpId": "16915",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          },
+          "topics": [
+            {
+              "id": "_6RZ0SMZC0",
+              "parentId": "_6Z50U8E3Y",
+              "title": "OpenAI Image Generation",
+              "slug": "Features/AI-Integration-Features/OpenAI-Image-Generation",
+              "link": "Features/AI-Integration-Features/OpenAI-Image-Generation.md",
+              "displayType": "topic",
+              "type": "markdown",
+              "keywords": "",
+              "seeAlso": "",
+              "remarks": "",
+              "example": "",
+              "sortOrder": 30,
+              "updated": "2025-02-23T20:45:10.0975437-10:00",
+              "helpId": "16911",
+              "classInfo": {
+                "assembly": "",
+                "contract": "",
+                "exceptions": ""
+              }
+            },
+            {
+              "id": "_6Z50U9437",
+              "parentId": "_6Z50U8E3Y",
+              "title": "OpenAI Completion Features",
+              "slug": "Features/AI-Integration-Features/OpenAI-Completion-Features",
+              "link": "Features/AI-Integration-Features/OpenAI-Completion-Features.md",
+              "displayType": "topic",
+              "type": "markdown",
+              "keywords": "",
+              "seeAlso": "",
+              "remarks": "",
+              "example": "",
+              "sortOrder": 20,
+              "updated": "2025-02-23T14:15:27.0655966-10:00",
+              "helpId": "16916",
+              "classInfo": {
+                "assembly": "",
+                "contract": "",
+                "exceptions": ""
+              }
+            },
+            {
+              "id": "_6Y41CLPFE",
+              "parentId": "_6Z50U8E3Y",
+              "title": "OpenAI Provider Configuration",
+              "slug": "Features/AI-Integration-Features/OpenAI-Provider-Configuration",
+              "link": "Features/AI-Integration-Features/OpenAI-Provider-Configuration.md",
+              "displayType": "topic",
+              "type": "markdown",
+              "keywords": "",
+              "seeAlso": "",
+              "remarks": "",
+              "example": "",
+              "sortOrder": 10,
+              "updated": "2025-02-23T14:23:42.2724996-10:00",
+              "helpId": "16914",
+              "classInfo": {
+                "assembly": "",
+                "contract": "",
+                "exceptions": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "_4NJ0WBOMY",
+          "parentId": "_4RD0XIGYS",
+          "title": "Screen Captures",
+          "slug": "Features/Screen-Captures",
+          "link": "Features/Screen-Captures.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 80,
+          "updated": "2025-02-23T14:15:27.0658262-10:00",
+          "helpId": "350",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4XP0YYGT2",
+          "parentId": "_4RD0XIGYS",
+          "title": "Git Integration",
+          "slug": "Features/Git-Integration",
+          "link": "Features/Git-Integration.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 70,
+          "updated": "2025-02-23T14:15:27.0659504-10:00",
+          "helpId": "1969",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5I51E89DW",
+          "parentId": "_4RD0XIGYS",
+          "title": "Use Projects to remember Documents and Folders",
+          "slug": "Features/Use-Projects-to-remember-Documents-and-Folders",
+          "link": "Features/Use-Projects-to-remember-Documents-and-Folders.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 60,
+          "updated": "2025-02-23T14:15:27.0660903-10:00",
+          "helpId": "8941",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_58U0U6BNH",
+          "parentId": "_4RD0XIGYS",
+          "title": "Use Favorites to link Frequently Used Files and Folders",
+          "slug": "Features/Use-Favorites-to-link-Frequently-Used-Files-and-Folders",
+          "link": "Features/Use-Favorites-to-link-Frequently-Used-Files-and-Folders.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 50,
+          "updated": "2025-02-23T14:15:27.0662029-10:00",
+          "helpId": "6635",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5730YWRTI",
+          "parentId": "_4RD0XIGYS",
+          "title": "Open Markdown Documents from the Web",
+          "slug": "Features/Open-Markdown-Documents-from-the-Web",
+          "link": "Features/Open-Markdown-Documents-from-the-Web.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 40,
+          "updated": "2025-02-23T14:15:27.0663402-10:00",
+          "helpId": "6629",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4RD0XJY44",
+          "parentId": "_4RD0XIGYS",
+          "title": "Editor Shortcut Keys and Selection Gestures",
+          "slug": "Features/Editor-Shortcut-Keys-and-Selection-Gestures",
+          "link": "Features/Editor-Shortcut-Keys-and-Selection-Gestures.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "Shortcut Key Remapping and Custom Shortcut Operations\r",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 30,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "357",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_59L0IZPOE",
+          "parentId": "_4RD0XIGYS",
+          "title": "Shortcut Key Remapping and Custom Shortcut Operations",
+          "slug": "Features/Shortcut-Key-Remapping-and-Custom-Shortcut-Operations",
+          "link": "Features/Shortcut-Key-Remapping-and-Custom-Shortcut-Operations.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "Editor Shortcut Keys and Selection Gestures\r",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 20,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "6636",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5IM10BJPW",
+          "parentId": "_4RD0XIGYS",
+          "title": "Add Custom Icons and Commands on the Editor Toolbar",
+          "slug": "Features/Add-Custom-Icons-and-Commands-on-the-Editor-Toolbar",
+          "link": "Features/Add-Custom-Icons-and-Commands-on-the-Editor-Toolbar.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 10,
+          "isExpanded": true,
+          "updated": "2025-02-23T14:15:27.0664512-10:00",
+          "helpId": "8942",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_cmujr2d84a",
+          "parentId": "_4RD0XIGYS",
+          "title": "Voice Dictation (preview)",
+          "slug": "Features/Voice-Dictation",
+          "link": "Features/Voice-Dictation.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "isExpanded": true,
+          "updated": "2025-03-26T17:29:42.9838203-10:00",
+          "classInfo": {}
+        }
+      ]
+    },
+    {
+      "id": "_69J1049IO",
+      "title": "Embedding Links, Images, Tables and More",
+      "slug": "Embedding-Links-Images-Tables-and-More",
+      "link": "Embedding-Links-Images-Tables-and-More.md",
+      "displayType": "header",
+      "type": "markdown",
+      "keywords": "",
+      "seeAlso": "",
+      "remarks": "",
+      "example": "",
+      "sortOrder": 90,
+      "updated": "2025-03-25T12:03:21.0275228-10:00",
+      "helpId": "16442",
+      "classInfo": {
+        "assembly": "",
+        "contract": "",
+        "exceptions": ""
+      },
+      "topics": [
+        {
+          "id": "_4XS10GAUI",
+          "parentId": "_69J1049IO",
+          "title": "Embedding Links",
+          "slug": "Embedding-Links-Images-Tables-and-More/Embedding-Links",
+          "link": "Embedding-Links-Images-Tables-and-More/Embedding-Links.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 100,
+          "updated": "2025-02-23T23:03:51.460974-10:00",
+          "helpId": "2971",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4S01EZTEQ",
+          "parentId": "_69J1049IO",
+          "title": "Embedding Images",
+          "slug": "Embedding-Links-Images-Tables-and-More/Embedding-Images",
+          "link": "Embedding-Links-Images-Tables-and-More/Embedding-Images.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 90,
+          "updated": "2025-03-12T12:36:11.3936836-10:00",
+          "helpId": "368",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_53E0PNHEA",
+          "parentId": "_69J1049IO",
+          "title": "Embedding Code Snippets",
+          "slug": "Embedding-Links-Images-Tables-and-More/Embedding-Code-Snippets",
+          "link": "Embedding-Links-Images-Tables-and-More/Embedding-Code-Snippets.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 80,
+          "updated": "2025-03-12T14:33:41.6893597-10:00",
+          "helpId": "5209",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_53A0PFZ0T",
+          "parentId": "_69J1049IO",
+          "title": "Embedding Tables",
+          "slug": "Embedding-Links-Images-Tables-and-More/Embedding-Tables",
+          "link": "Embedding-Links-Images-Tables-and-More/Embedding-Tables.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 70,
+          "updated": "2025-02-23T22:49:27.7377838-10:00",
+          "helpId": "5206",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_69J0ZWHCR",
+          "parentId": "_69J1049IO",
+          "title": "Embedding Gists as Code Snippets",
+          "slug": "Embedding-Links-Images-Tables-and-More/Embedding-Gists-as-Code-Snippets",
+          "link": "Embedding-Links-Images-Tables-and-More/Embedding-Gists-as-Code-Snippets.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 60,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "16441",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_69D0ZWCK0",
+          "parentId": "_69J1049IO",
+          "title": "Embedding YouTube Videos",
+          "slug": "Embedding-Links-Images-Tables-and-More/Embedding-YouTube-Videos",
+          "link": "Embedding-Links-Images-Tables-and-More/Embedding-YouTube-Videos.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 50,
+          "updated": "2025-02-23T14:15:27.0671604-10:00",
+          "helpId": "16439",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_6NV0S4FUS",
+          "parentId": "_69J1049IO",
+          "title": "Embedding Audio and Video Files",
+          "slug": "Embedding-Links-Images-Tables-and-More/Embedding-Audio-and-Video-Files",
+          "link": "Embedding-Links-Images-Tables-and-More/Embedding-Audio-and-Video-Files.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 40,
+          "updated": "2025-03-12T14:35:28.3194437-10:00",
+          "helpId": "16909",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4UE01XL6Q",
+          "parentId": "_69J1049IO",
+          "title": "Embedding FontAwesome Icons",
+          "slug": "Embedding-Links-Images-Tables-and-More/Embedding-FontAwesome-Icons",
+          "link": "Embedding-Links-Images-Tables-and-More/Embedding-FontAwesome-Icons.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 30,
+          "updated": "2025-02-25T12:28:11.77583-10:00",
+          "helpId": "1123",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_69E0RCHVH",
+          "parentId": "_69J1049IO",
+          "title": "Embed Twitter Tweet Widgets (manual)",
+          "slug": "Embedding-Links-Images-Tables-and-More/Embed-Twitter-Tweet-Widgets-manual",
+          "link": "Embedding-Links-Images-Tables-and-More/Embed-Twitter-Tweet-Widgets-manual.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 20,
+          "updated": "2025-02-23T14:15:27.0673942-10:00",
+          "helpId": "16440",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_6B10L43HF",
+          "parentId": "_69J1049IO",
+          "title": "Using the Command Palatte to execute Commands",
+          "slug": "Embedding-Links-Images-Tables-and-More/Using-the-Command-Palatte-to-execute-Commands",
+          "link": "Embedding-Links-Images-Tables-and-More/Using-the-Command-Palatte-to-execute-Commands.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 10,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "16443",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "_73G0O77VR",
+      "title": "Markdown Rendering Extensions",
+      "slug": "Markdown-Rendering-Extensions",
+      "link": "Markdown-Rendering-Extensions.md",
+      "displayType": "header",
+      "type": "markdown",
+      "keywords": "",
+      "seeAlso": "",
+      "remarks": "",
+      "example": "",
+      "sortOrder": 80,
+      "isExpanded": true,
+      "updated": "2025-02-24T18:55:19.4412138-10:00",
+      "helpId": "16919",
+      "classInfo": {
+        "assembly": "",
+        "contract": "",
+        "exceptions": ""
+      },
+      "topics": [
+        {
+          "id": "_5EF0X96OR",
+          "parentId": "_73G0O77VR",
+          "title": "Rendering Mermaid Charts",
+          "slug": "Markdown-Rendering-Extensions/Rendering-Mermaid-Charts",
+          "link": "Markdown-Rendering-Extensions/Rendering-Mermaid-Charts.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 40,
+          "updated": "2025-04-03T11:28:38.3945811-10:00",
+          "helpId": "8484",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_6X60QVPVI",
+          "parentId": "_73G0O77VR",
+          "title": "Rendering PlantUml Diagrams",
+          "slug": "Markdown-Rendering-Extensions/Rendering-PlantUml-Diagrams",
+          "link": "Markdown-Rendering-Extensions/Rendering-PlantUml-Diagrams.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 30,
+          "updated": "2025-02-23T14:15:27.0677554-10:00",
+          "helpId": "16913",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_73G0O81GE",
+          "parentId": "_73G0O77VR",
+          "title": "Admonitions Extension",
+          "slug": "Markdown-Rendering-Extensions/Admonitions-Extension",
+          "link": "Markdown-Rendering-Extensions/Admonitions-Extension.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 20,
+          "updated": "2025-02-23T14:15:27.0678744-10:00",
+          "helpId": "16920",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_59L0MV2UW",
+          "parentId": "_73G0O77VR",
+          "title": "Rendering Mathematics Equations (MathTex, MML, Latex)",
+          "slug": "Markdown-Rendering-Extensions/Rendering-Mathematics-Equations-MathTex-MML-Latex",
+          "link": "Markdown-Rendering-Extensions/Rendering-Mathematics-Equations-MathTex-MML-Latex.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 5,
+          "updated": "2025-02-23T14:15:27.0681052-10:00",
+          "helpId": "6637",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "_4XS11S2GW",
+      "title": "Common Tasks",
+      "slug": "Common-Tasks",
+      "link": "Common-Tasks.md",
+      "displayType": "header",
+      "type": "markdown",
+      "keywords": "",
+      "seeAlso": "",
+      "remarks": "",
+      "example": "",
+      "sortOrder": 70,
+      "updated": "2025-02-23T14:15:27.068237-10:00",
+      "helpId": "2972",
+      "classInfo": {
+        "assembly": "",
+        "contract": "",
+        "exceptions": ""
+      },
+      "topics": [
+        {
+          "id": "_4U512GNGV",
+          "parentId": "_4XS11S2GW",
+          "title": "Generating PDF Output",
+          "slug": "Common-Tasks/Generating-PDF-Output",
+          "link": "Common-Tasks/Generating-PDF-Output.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "Save As PDF Dialog\r",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 180,
+          "updated": "2025-02-24T17:06:02.8869551-10:00",
+          "helpId": "379",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_57W02I1F6",
+          "parentId": "_4XS11S2GW",
+          "title": "Save Markdown Output as HTML",
+          "slug": "Common-Tasks/Save-Markdown-Output-as-HTML",
+          "link": "Common-Tasks/Save-Markdown-Output-as-HTML.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 170,
+          "updated": "2025-02-23T14:15:27.0684927-10:00",
+          "helpId": "6632",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4RG0PDKJ9",
+          "parentId": "_4XS11S2GW",
+          "title": "Understanding Previews and Html Exports",
+          "slug": "Common-Tasks/Understanding-Previews-and-Html-Exports",
+          "link": "Common-Tasks/Understanding-Previews-and-Html-Exports.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 165,
+          "updated": "2025-02-23T14:15:27.0686146-10:00",
+          "helpId": "361",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4NK02XRTK",
+          "parentId": "_4XS11S2GW",
+          "title": "Import Markdown as HTML",
+          "slug": "Common-Tasks/Import-Markdown-as-HTML",
+          "link": "Common-Tasks/Import-Markdown-as-HTML.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 150,
+          "updated": "2025-02-23T14:15:27.0687287-10:00",
+          "helpId": "353",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4SV1EJ3ZO",
+          "parentId": "_4XS11S2GW",
+          "title": "Printing Html Output",
+          "slug": "Common-Tasks/Printing-Html-Output",
+          "link": "Common-Tasks/Printing-Html-Output.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 140,
+          "updated": "2025-02-23T14:15:27.0688366-10:00",
+          "helpId": "374",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4RG0MW5C2",
+          "parentId": "_4XS11S2GW",
+          "title": "Markdown Monster Theme Support",
+          "slug": "Common-Tasks/Markdown-Monster-Theme-Support",
+          "link": "Common-Tasks/Markdown-Monster-Theme-Support.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 130,
+          "updated": "2025-02-23T14:15:27.0689737-10:00",
+          "helpId": "359",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4NN17BFIC",
+          "parentId": "_4XS11S2GW",
+          "title": "Switching and Customizing Preview Themes",
+          "slug": "Common-Tasks/Switching-and-Customizing-Preview-Themes",
+          "link": "Common-Tasks/Switching-and-Customizing-Preview-Themes.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 120,
+          "updated": "2025-02-23T14:15:27.0690909-10:00",
+          "helpId": "354",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4TI0SBX65",
+          "parentId": "_4XS11S2GW",
+          "title": "Vim and Emacs Keyboard Handlers",
+          "slug": "Common-Tasks/Vim-and-Emacs-Keyboard-Handlers",
+          "link": "Common-Tasks/Vim-and-Emacs-Keyboard-Handlers.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 110,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "377",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5EA0Q9NE2",
+          "parentId": "_4XS11S2GW",
+          "title": "Split Editor View",
+          "slug": "Common-Tasks/Split-Editor-View",
+          "link": "Common-Tasks/Split-Editor-View.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 100,
+          "updated": "2025-02-23T14:15:27.0692511-10:00",
+          "helpId": "8481",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5I10RQUXC",
+          "parentId": "_4XS11S2GW",
+          "title": "Open Document in New Window and Drag & Drop between Instances",
+          "slug": "Common-Tasks/Open-Document-in-New-Window-and-Drag-Drop-between-Instances",
+          "link": "Common-Tasks/Open-Document-in-New-Window-and-Drag-Drop-between-Instances.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 90,
+          "updated": "2025-02-23T14:15:27.0693669-10:00",
+          "helpId": "8939",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4SV0NOB04",
+          "parentId": "_4XS11S2GW",
+          "title": "Auto-Save and Auto-Backup of Topics",
+          "slug": "Common-Tasks/Auto--Save-and-Auto--Backup-of-Topics",
+          "link": "Common-Tasks/Auto--Save-and-Auto--Backup-of-Topics.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 80,
+          "updated": "2025-02-23T14:15:27.0694743-10:00",
+          "helpId": "373",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5FD0QOPXQ",
+          "parentId": "_4XS11S2GW",
+          "title": "Save Encrypted Documents",
+          "slug": "Common-Tasks/Save-Encrypted-Documents",
+          "link": "Common-Tasks/Save-Encrypted-Documents.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 70,
+          "updated": "2025-02-23T14:15:27.0695814-10:00",
+          "helpId": "8934",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4WN1DITB5",
+          "parentId": "_4XS11S2GW",
+          "title": "Editor Display Modes: Distraction Free and Presentation Mode",
+          "slug": "Common-Tasks/Editor-Display-Modes-Distraction-Free-and-Presentation-Mode",
+          "link": "Common-Tasks/Editor-Display-Modes-Distraction-Free-and-Presentation-Mode.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 60,
+          "updated": "2025-02-23T14:15:27.0696831-10:00",
+          "helpId": "1963",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5ED0RJ891",
+          "parentId": "_4XS11S2GW",
+          "title": "Editor Padding and Centered Layout",
+          "slug": "Common-Tasks/Editor-Padding-and-Centered-Layout",
+          "link": "Common-Tasks/Editor-Padding-and-Centered-Layout.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "Split Editor View\r",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 50,
+          "updated": "2025-02-23T14:15:27.0697897-10:00",
+          "helpId": "8483",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4X20ODMU3",
+          "parentId": "_4XS11S2GW",
+          "title": "Sharing Configuration Settings on DropBox, OneDrive etc.",
+          "slug": "Common-Tasks/Sharing-Configuration-Settings-on-DropBox-OneDrive-etc",
+          "link": "Common-Tasks/Sharing-Configuration-Settings-on-DropBox-OneDrive-etc.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 40,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "1966",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5NE1CCV4T",
+          "parentId": "_4XS11S2GW",
+          "title": "Insert Page Breaks into your Documents",
+          "slug": "Common-Tasks/Insert-Page-Breaks-into-your-Documents",
+          "link": "Common-Tasks/Insert-Page-Breaks-into-your-Documents.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 30,
+          "updated": "2025-02-23T14:15:27.0698947-10:00",
+          "helpId": "11270",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5XX0NR61G",
+          "parentId": "_4XS11S2GW",
+          "title": "File Change Detection in the Editor",
+          "slug": "Common-Tasks/File-Change-Detection-in-the-Editor",
+          "link": "Common-Tasks/File-Change-Detection-in-the-Editor.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 20,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "13650",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5Y715T8CO",
+          "parentId": "_4XS11S2GW",
+          "title": "Searching Files and Find in Files",
+          "slug": "Common-Tasks/Searching-Files-and-Find-in-Files",
+          "link": "Common-Tasks/Searching-Files-and-Find-in-Files.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 10,
+          "updated": "2025-02-23T14:15:27.0700219-10:00",
+          "helpId": "13651",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "_6C30O12H5",
+      "title": "Addins",
+      "slug": "Addins",
+      "link": "Addins.md",
+      "displayType": "header",
+      "type": "markdown",
+      "keywords": "",
+      "seeAlso": "",
+      "remarks": "",
+      "example": "",
+      "sortOrder": 60,
+      "updated": "2025-02-24T00:00:00Z",
+      "helpId": "16445",
+      "classInfo": {
+        "assembly": "",
+        "contract": "",
+        "exceptions": ""
+      },
+      "topics": [
+        {
+          "id": "_4NB0SER9F",
+          "parentId": "_6C30O12H5",
+          "title": "Weblog Publishing Addin",
+          "slug": "Addins/Weblog-Publishing-Addin",
+          "link": "Addins/Weblog-Publishing-Addin/Weblog-Publishing-Addin.md",
+          "displayType": "header",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "updated": "2025-03-12T12:24:43.8681551-10:00",
+          "helpId": "4",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          },
+          "topics": [
+            {
+              "id": "_4RG0QZG1I",
+              "parentId": "_4NB0SER9F",
+              "title": "Setting up a Weblog",
+              "slug": "Addins/Weblog-Publishing-Addin/Setting-up-a-Weblog",
+              "link": "Addins/Weblog-Publishing-Addin/Setting-up-a-Weblog/Setting-up-a-Weblog.md",
+              "displayType": "header",
+              "type": "markdown",
+              "keywords": "",
+              "seeAlso": "",
+              "remarks": "",
+              "example": "",
+              "sortOrder": 70,
+              "updated": "2025-02-23T14:15:27.0704694-10:00",
+              "helpId": "362",
+              "classInfo": {
+                "assembly": "",
+                "contract": "",
+                "exceptions": ""
+              },
+              "topics": [
+                {
+                  "id": "_4UW00NUIZ",
+                  "parentId": "_4RG0QZG1I",
+                  "title": "WordPress and MetaWeblog API Weblogs",
+                  "slug": "Addins/Weblog-Publishing-Addin/Setting-up-a-Weblog/WordPress-and-MetaWeblog-API-Weblogs",
+                  "link": "Addins/Weblog-Publishing-Addin/Setting-up-a-Weblog/WordPress-and-MetaWeblog-API-Weblogs.md",
+                  "displayType": "topic",
+                  "type": "markdown",
+                  "keywords": "",
+                  "seeAlso": "",
+                  "remarks": "",
+                  "example": "",
+                  "sortOrder": 40,
+                  "updated": "2025-02-23T14:15:27.0706173-10:00",
+                  "helpId": "1128",
+                  "classInfo": {
+                    "assembly": "",
+                    "contract": "",
+                    "exceptions": ""
+                  }
+                },
+                {
+                  "id": "_5RV00RX4I",
+                  "parentId": "_4RG0QZG1I",
+                  "title": "Local Jekyll Publishing",
+                  "slug": "Addins/Weblog-Publishing-Addin/Setting-up-a-Weblog/Local-Jekyll-Publishing",
+                  "link": "Addins/Weblog-Publishing-Addin/Setting-up-a-Weblog/Local-Jekyll-Publishing.md",
+                  "displayType": "topic",
+                  "type": "markdown",
+                  "keywords": "",
+                  "seeAlso": "",
+                  "remarks": "",
+                  "example": "",
+                  "sortOrder": 30,
+                  "updated": "2025-02-23T14:15:27.0707468-10:00",
+                  "helpId": "13646",
+                  "classInfo": {
+                    "assembly": "",
+                    "contract": "",
+                    "exceptions": ""
+                  }
+                },
+                {
+                  "id": "_4UW03TMCU",
+                  "parentId": "_4RG0QZG1I",
+                  "title": "Limited Medium Support",
+                  "slug": "Addins/Weblog-Publishing-Addin/Setting-up-a-Weblog/Limited-Medium-Support",
+                  "link": "Addins/Weblog-Publishing-Addin/Setting-up-a-Weblog/Limited-Medium-Support.md",
+                  "displayType": "topic",
+                  "type": "markdown",
+                  "keywords": "",
+                  "seeAlso": "",
+                  "remarks": "",
+                  "example": "",
+                  "sortOrder": 15,
+                  "updated": "2025-02-23T14:15:27.0709056-10:00",
+                  "helpId": "1129",
+                  "classInfo": {
+                    "assembly": "",
+                    "contract": "",
+                    "exceptions": ""
+                  }
+                },
+                {
+                  "id": "_4RG0V8JPO",
+                  "parentId": "_4RG0QZG1I",
+                  "title": "Weblog Publishing Configuration Format",
+                  "slug": "Addins/Weblog-Publishing-Addin/Setting-up-a-Weblog/Weblog-Publishing-Configuration-Format",
+                  "link": "Addins/Weblog-Publishing-Addin/Setting-up-a-Weblog/Weblog-Publishing-Configuration-Format.md",
+                  "displayType": "topic",
+                  "type": "markdown",
+                  "keywords": "",
+                  "seeAlso": "",
+                  "remarks": "",
+                  "example": "",
+                  "sortOrder": 10,
+                  "updated": "2025-02-24T00:00:00Z",
+                  "helpId": "364",
+                  "classInfo": {
+                    "assembly": "",
+                    "contract": "",
+                    "exceptions": ""
+                  }
+                }
+              ]
+            },
+            {
+              "id": "_4RG0R0HMD",
+              "parentId": "_4NB0SER9F",
+              "title": "Publishing a Blog Post",
+              "slug": "Addins/Weblog-Publishing-Addin/Publishing-a-Blog-Post",
+              "link": "Addins/Weblog-Publishing-Addin/Publishing-a-Blog-Post.md",
+              "displayType": "topic",
+              "type": "markdown",
+              "keywords": "",
+              "seeAlso": "",
+              "remarks": "",
+              "example": "",
+              "sortOrder": 60,
+              "updated": "2025-02-23T14:15:27.0710212-10:00",
+              "helpId": "363",
+              "classInfo": {
+                "assembly": "",
+                "contract": "",
+                "exceptions": ""
+              }
+            },
+            {
+              "id": "_4NK01B9MN",
+              "parentId": "_4NB0SER9F",
+              "title": "Updating Blog Posts",
+              "slug": "Addins/Weblog-Publishing-Addin/Updating-Blog-Posts",
+              "link": "Addins/Weblog-Publishing-Addin/Updating-Blog-Posts.md",
+              "displayType": "topic",
+              "type": "markdown",
+              "keywords": "",
+              "seeAlso": "",
+              "remarks": "",
+              "example": "",
+              "sortOrder": 40,
+              "updated": "2025-02-23T14:15:27.0711374-10:00",
+              "helpId": "351",
+              "classInfo": {
+                "assembly": "",
+                "contract": "",
+                "exceptions": ""
+              }
+            },
+            {
+              "id": "_4WQ1DBSNH",
+              "parentId": "_4NB0SER9F",
+              "title": "Adding Custom Fields to a Weblog Post",
+              "slug": "Addins/Weblog-Publishing-Addin/Adding-Custom-Fields-to-a-Weblog-Post",
+              "link": "Addins/Weblog-Publishing-Addin/Adding-Custom-Fields-to-a-Weblog-Post.md",
+              "displayType": "topic",
+              "type": "markdown",
+              "keywords": "",
+              "seeAlso": "",
+              "remarks": "",
+              "example": "",
+              "sortOrder": 20,
+              "updated": "2025-02-23T14:15:27.0712481-10:00",
+              "helpId": "1964",
+              "classInfo": {
+                "assembly": "",
+                "contract": "",
+                "exceptions": ""
+              }
+            },
+            {
+              "id": "_4NB0SG47P",
+              "parentId": "_4NB0SER9F",
+              "title": "Custom Publish Format includes Markdown Text",
+              "slug": "Addins/Weblog-Publishing-Addin/Custom-Publish-Format-includes-Markdown-Text",
+              "link": "Addins/Weblog-Publishing-Addin/Custom-Publish-Format-includes-Markdown-Text.md",
+              "displayType": "topic",
+              "type": "markdown",
+              "keywords": "",
+              "seeAlso": "",
+              "remarks": "",
+              "example": "",
+              "sortOrder": 10,
+              "updated": "2025-02-24T00:00:00Z",
+              "helpId": "5",
+              "classInfo": {
+                "assembly": "",
+                "contract": "",
+                "exceptions": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "_5GS0UC49H",
+          "parentId": "_6C30O12H5",
+          "title": "Snippets Addin: Snippet Template Expansion",
+          "slug": "Addins/Snippets-Addin-Snippet-Template-Expansion",
+          "link": "Addins/Snippets-Addin-Snippet-Template-Expansion.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 10,
+          "updated": "2025-02-23T14:15:27.0713652-10:00",
+          "helpId": "8938",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "_5RJ1DOIXD",
+      "title": "Startup and Command Line Options",
+      "slug": "Startup-and-Command-Line-Options",
+      "link": "Startup-and-Command-Line-Options.md",
+      "displayType": "header",
+      "type": "markdown",
+      "keywords": "",
+      "seeAlso": "",
+      "remarks": "",
+      "example": "",
+      "sortOrder": 50,
+      "updated": "2025-02-24T00:00:00Z",
+      "helpId": "13645",
+      "classInfo": {
+        "assembly": "",
+        "contract": "",
+        "exceptions": ""
+      },
+      "topics": [
+        {
+          "id": "_4X313DNEU",
+          "parentId": "_5RJ1DOIXD",
+          "title": "Open Files from the Command Line",
+          "slug": "Startup-and-Command-Line-Options/Open-Files-from-the-Command-Line",
+          "link": "Startup-and-Command-Line-Options/Open-Files-from-the-Command-Line.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "Command Line Operations\r",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 40,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "1967",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5FP0XP68P",
+          "parentId": "_5RJ1DOIXD",
+          "title": "Command Line Operations",
+          "slug": "Startup-and-Command-Line-Options/Command-Line-Operations",
+          "link": "Startup-and-Command-Line-Options/Command-Line-Operations.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "Open Files from the Command Line\r",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 30,
+          "updated": "2025-02-24T18:45:52.4101286-10:00",
+          "helpId": "8935",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5S1009YX1",
+          "parentId": "_5RJ1DOIXD",
+          "title": "Markdown Monster local Web Server",
+          "slug": "Startup-and-Command-Line-Options/Markdown-Monster-local-Web-Server",
+          "link": "Startup-and-Command-Line-Options/Markdown-Monster-local-Web-Server.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 10,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "13647",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "_4NK01YQ6Q",
+      "title": "Configuration Settings",
+      "slug": "Configuration-Settings",
+      "link": "Configuration-Settings.md",
+      "displayType": "header",
+      "type": "markdown",
+      "keywords": "",
+      "seeAlso": "",
+      "remarks": "",
+      "example": "",
+      "sortOrder": 40,
+      "updated": "2025-02-23T14:15:27.0715035-10:00",
+      "helpId": "352",
+      "classInfo": {
+        "assembly": "",
+        "contract": "",
+        "exceptions": ""
+      },
+      "topics": [
+        {
+          "id": "_5K40LG3RO",
+          "parentId": "_4NK01YQ6Q",
+          "title": "Application Settings",
+          "slug": "Configuration-Settings/Application-Settings",
+          "link": "Configuration-Settings/Application-Settings.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 80,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "8943",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_6D70WIJGP",
+          "parentId": "_4NK01YQ6Q",
+          "title": "Window Presets: Restore Window Layouts",
+          "slug": "Configuration-Settings/Window-Presets-Restore-Window-Layouts",
+          "link": "Configuration-Settings/Window-Presets-Restore-Window-Layouts.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 70,
+          "updated": "2025-02-23T14:15:27.0716203-10:00",
+          "helpId": "16907",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5K40LGC6Q",
+          "parentId": "_4NK01YQ6Q",
+          "title": "Editor Settings",
+          "slug": "Configuration-Settings/Editor-Settings",
+          "link": "Configuration-Settings/Editor-Settings.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 60,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "8944",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5K40LGMIF",
+          "parentId": "_4NK01YQ6Q",
+          "title": "Markdown Options",
+          "slug": "Configuration-Settings/Markdown-Options",
+          "link": "Configuration-Settings/Markdown-Options.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 50,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "8945",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5K40LGZHX",
+          "parentId": "_4NK01YQ6Q",
+          "title": "Git Settings",
+          "slug": "Configuration-Settings/Git-Settings",
+          "link": "Configuration-Settings/Git-Settings.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 40,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "8946",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5K40LH9J3",
+          "parentId": "_4NK01YQ6Q",
+          "title": "Folder Browser Settings",
+          "slug": "Configuration-Settings/Folder-Browser-Settings",
+          "link": "Configuration-Settings/Folder-Browser-Settings.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 30,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "8947",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5K40LHIN3",
+          "parentId": "_4NK01YQ6Q",
+          "title": "Image Settings",
+          "slug": "Configuration-Settings/Image-Settings",
+          "link": "Configuration-Settings/Image-Settings.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 20,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "8948",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_6IF1EPHJM",
+          "parentId": "_4NK01YQ6Q",
+          "title": "Run External Programs via Open With...",
+          "slug": "Configuration-Settings/Run-External-Programs-via-Open-With",
+          "link": "Configuration-Settings/Run-External-Programs-via-Open-With.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 10,
+          "updated": "2025-03-02T12:51:28.3010594-10:00",
+          "helpId": "16908",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "_5AB0ZT9JC",
+      "title": "Recipes",
+      "slug": "Recipes",
+      "link": "Recipes.md",
+      "displayType": "header",
+      "type": "markdown",
+      "keywords": "",
+      "seeAlso": "",
+      "remarks": "",
+      "example": "",
+      "sortOrder": 30,
+      "updated": "2025-02-24T00:00:00Z",
+      "helpId": "6638",
+      "classInfo": {
+        "assembly": "",
+        "contract": "",
+        "exceptions": ""
+      },
+      "topics": [
+        {
+          "id": "_4SF0MAY9M",
+          "parentId": "_5AB0ZT9JC",
+          "title": "Source Code Syntax Highlighting in exported HTML",
+          "slug": "Recipes/Source-Code-Syntax-Highlighting-in-exported-HTML",
+          "link": "Recipes/Source-Code-Syntax-Highlighting-in-exported-HTML.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 90,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "371",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_61G0YZN1Y",
+          "parentId": "_5AB0ZT9JC",
+          "title": "Custom Attributes on Markdown Tags",
+          "slug": "Recipes/Custom-Attributes-on-Markdown-Tags",
+          "link": "Recipes/Custom-Attributes-on-Markdown-Tags.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 85,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "13652",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_58Q0PCUZK",
+          "parentId": "_5AB0ZT9JC",
+          "title": "Customizing Editor Styling CSS",
+          "slug": "Recipes/Customizing-Editor-Styling-CSS",
+          "link": "Recipes/Customizing-Editor-Styling-CSS.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 70,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "6634",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4X314391I",
+          "parentId": "_5AB0ZT9JC",
+          "title": "Customizing Configuration Folder Location",
+          "slug": "Recipes/Customizing-Configuration-Folder-Location",
+          "link": "Recipes/Customizing-Configuration-Folder-Location.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 60,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "1968",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_61P1709VR",
+          "parentId": "_5AB0ZT9JC",
+          "title": "Overriding Configuration Setting in Projects or Folders",
+          "slug": "Recipes/Overriding-Configuration-Setting-in-Projects-or-Folders",
+          "link": "Recipes/Overriding-Configuration-Setting-in-Projects-or-Folders.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 50,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "13653",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5GL0UDOM4",
+          "parentId": "_5AB0ZT9JC",
+          "title": "Implementing an Open in Markdown Monster Behavior",
+          "slug": "Recipes/Implementing-an-Open-in-Markdown-Monster-Behavior",
+          "link": "Recipes/Implementing-an-Open-in-Markdown-Monster-Behavior.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 40,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "8937",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5FZ0OZKLN",
+          "parentId": "_5AB0ZT9JC",
+          "title": "Configuring Site Relative Base Paths",
+          "slug": "Recipes/Configuring-Site-Relative-Base-Paths",
+          "link": "Recipes/Configuring-Site-Relative-Base-Paths.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "BasePath\rRoot",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 30,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "8936",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5RJ1CKNRJ",
+          "parentId": "_5AB0ZT9JC",
+          "title": "Open from Browser with `markdownmonster:` Protocol Handler",
+          "slug": "Recipes/Open-from-Browser-with-markdownmonster-Protocol-Handler",
+          "link": "Recipes/Open-from-Browser-with-markdownmonster-Protocol-Handler.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 20,
+          "updated": "2025-02-23T14:15:27.0718965-10:00",
+          "helpId": "13644",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5AB0ZU71B",
+          "parentId": "_5AB0ZT9JC",
+          "title": "Intercepting Rendered HTML using the Commander Addin",
+          "slug": "Recipes/Intercepting-Rendered-HTML-using-the-Commander-Addin",
+          "link": "Recipes/Intercepting-Rendered-HTML-using-the-Commander-Addin.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 10,
+          "updated": "2025-02-23T14:15:27.0720273-10:00",
+          "helpId": "6639",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "_4NB0SE717",
+      "title": "Creating Markdown Monster Addins with .NET",
+      "slug": "Creating-Markdown-Monster-Addins-with-NET",
+      "link": "Creating-Markdown-Monster-Addins-with-NET.md",
+      "displayType": "header",
+      "type": "markdown",
+      "keywords": "",
+      "seeAlso": "",
+      "remarks": "",
+      "example": "",
+      "sortOrder": 20,
+      "updated": "2025-02-24T18:42:24.2571823-10:00",
+      "helpId": "3",
+      "classInfo": {
+        "assembly": "",
+        "contract": "",
+        "exceptions": ""
+      },
+      "topics": [
+        {
+          "id": "_4NE0S0QOI",
+          "parentId": "_4NB0SE717",
+          "title": "Creating a Markdown Monster Add-in",
+          "slug": "Creating-Markdown-Monster-Addins-with-NET/Creating-a-Markdown-Monster-Add--in",
+          "link": "Creating-Markdown-Monster-Addins-with-NET/Creating-a-Markdown-Monster-Add--in.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 120,
+          "updated": "2025-02-23T14:15:27.0721651-10:00",
+          "helpId": "7",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4NF02Q0SZ",
+          "parentId": "_4NB0SE717",
+          "title": "Accessing and manipulating the Active Editor Document",
+          "slug": "Creating-Markdown-Monster-Addins-with-NET/Accessing-and-manipulating-the-Active-Editor-Document",
+          "link": "Creating-Markdown-Monster-Addins-with-NET/Accessing-and-manipulating-the-Active-Editor-Document.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 110,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "11",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4NE1CGNOR",
+          "parentId": "_4NB0SE717",
+          "title": "Addin Lifecycle Event Handlers",
+          "slug": "Creating-Markdown-Monster-Addins-with-NET/Addin-Lifecycle-Event-Handlers",
+          "link": "Creating-Markdown-Monster-Addins-with-NET/Addin-Lifecycle-Event-Handlers.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 100,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "8",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4NE1CH7WA",
+          "parentId": "_4NB0SE717",
+          "title": "Bringing up UI from your Markdown Monster Add-in",
+          "slug": "Creating-Markdown-Monster-Addins-with-NET/Bringing-up-UI-from-your-Markdown-Monster-Add--in",
+          "link": "Creating-Markdown-Monster-Addins-with-NET/Bringing-up-UI-from-your-Markdown-Monster-Add--in.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 90,
+          "updated": "2025-02-23T14:15:27.0723645-10:00",
+          "helpId": "9",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4ZV0O3R46",
+          "parentId": "_4NB0SE717",
+          "title": "Adding Menu Items to the Markdown Monster Menu",
+          "slug": "Creating-Markdown-Monster-Addins-with-NET/Adding-Menu-Items-to-the-Markdown-Monster-Menu",
+          "link": "Creating-Markdown-Monster-Addins-with-NET/Adding-Menu-Items-to-the-Markdown-Monster-Menu.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 80,
+          "isExpanded": true,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "2973",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4UT0J7XOE",
+          "parentId": "_4NB0SE717",
+          "title": "Creating a custom Markdown Parser in an Addin",
+          "slug": "Creating-Markdown-Monster-Addins-with-NET/Creating-a-custom-Markdown-Parser-in-an-Addin",
+          "link": "Creating-Markdown-Monster-Addins-with-NET/Creating-a-custom-Markdown-Parser-in-an-Addin.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 70,
+          "updated": "2025-02-23T14:15:27.0724844-10:00",
+          "helpId": "1126",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5I30SBA89",
+          "parentId": "_4NB0SE717",
+          "title": "Create a Markdown RenderExtension to customize Html output",
+          "slug": "Creating-Markdown-Monster-Addins-with-NET/Create-a-Markdown-RenderExtension-to-customize-Html-output",
+          "link": "Creating-Markdown-Monster-Addins-with-NET/Create-a-Markdown-RenderExtension-to-customize-Html-output.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 55,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "8940",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5520TLAV7",
+          "parentId": "_4NB0SE717",
+          "title": "Addin Configuration Class",
+          "slug": "Creating-Markdown-Monster-Addins-with-NET/Addin-Configuration-Class",
+          "link": "Creating-Markdown-Monster-Addins-with-NET/Addin-Configuration-Class.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 50,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "5211",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4UT0J9CM6",
+          "parentId": "_4NB0SE717",
+          "title": "Creating non-Visual Addins",
+          "slug": "Creating-Markdown-Monster-Addins-with-NET/Creating-non--Visual-Addins",
+          "link": "Creating-Markdown-Monster-Addins-with-NET/Creating-non--Visual-Addins.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 40,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "1127",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5P41DSZQQ",
+          "parentId": "_4NB0SE717",
+          "title": "Use the Statusbar and Console Output Panel to display Information",
+          "slug": "Creating-Markdown-Monster-Addins-with-NET/Use-the-Statusbar-and-Console-Output-Panel-to-display-Information",
+          "link": "Creating-Markdown-Monster-Addins-with-NET/Use-the-Statusbar-and-Console-Output-Panel-to-display-Information.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 30,
+          "updated": "2025-02-23T14:15:27.0726295-10:00",
+          "helpId": "11271",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_52A19RYGS",
+          "parentId": "_4NB0SE717",
+          "title": "Addin Creation FAQ",
+          "slug": "Creating-Markdown-Monster-Addins-with-NET/Addin-Creation-FAQ",
+          "link": "Creating-Markdown-Monster-Addins-with-NET/Addin-Creation-FAQ/Addin-Creation-FAQ.md",
+          "displayType": "header",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 20,
+          "updated": "2025-02-23T14:15:27.0727522-10:00",
+          "helpId": "4097",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          },
+          "topics": [
+            {
+              "id": "_52A19SBGX",
+              "parentId": "_52A19RYGS",
+              "title": "Customizing the Addin Icon and Menu Button",
+              "slug": "Creating-Markdown-Monster-Addins-with-NET/Addin-Creation-FAQ/Customizing-the-Addin-Icon-and-Menu-Button",
+              "link": "Creating-Markdown-Monster-Addins-with-NET/Addin-Creation-FAQ/Customizing-the-Addin-Icon-and-Menu-Button.md",
+              "displayType": "topic",
+              "type": "markdown",
+              "keywords": "",
+              "seeAlso": "Attach additional Menu Items from your Addin\r",
+              "remarks": "",
+              "example": "",
+              "sortOrder": 30,
+              "updated": "2025-02-23T14:15:27.0728779-10:00",
+              "helpId": "4098",
+              "classInfo": {
+                "assembly": "",
+                "contract": "",
+                "exceptions": ""
+              }
+            },
+            {
+              "id": "_58J1CGNQR",
+              "parentId": "_52A19RYGS",
+              "title": "Create a new Left Sidebar Tab",
+              "slug": "Creating-Markdown-Monster-Addins-with-NET/Addin-Creation-FAQ/Create-a-new-Left-Sidebar-Tab",
+              "link": "Creating-Markdown-Monster-Addins-with-NET/Addin-Creation-FAQ/Create-a-new-Left-Sidebar-Tab.md",
+              "displayType": "topic",
+              "type": "markdown",
+              "keywords": "",
+              "seeAlso": "",
+              "remarks": "",
+              "example": "",
+              "sortOrder": 20,
+              "updated": "2025-02-23T14:15:27.073013-10:00",
+              "helpId": "6633",
+              "classInfo": {
+                "assembly": "",
+                "contract": "",
+                "exceptions": ""
+              }
+            },
+            {
+              "id": "_52A1AG0PW",
+              "parentId": "_52A19RYGS",
+              "title": "Attach additional Menu Items from your Addin",
+              "slug": "Creating-Markdown-Monster-Addins-with-NET/Addin-Creation-FAQ/Attach-additional-Menu-Items-from-your-Addin",
+              "link": "Creating-Markdown-Monster-Addins-with-NET/Addin-Creation-FAQ/Attach-additional-Menu-Items-from-your-Addin.md",
+              "displayType": "topic",
+              "type": "markdown",
+              "keywords": "",
+              "seeAlso": "Customizing the Addin Icon and Menu Button\r",
+              "remarks": "",
+              "example": "",
+              "sortOrder": 10,
+              "updated": "2025-02-24T00:00:00Z",
+              "helpId": "4099",
+              "classInfo": {
+                "assembly": "",
+                "contract": "",
+                "exceptions": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "_4SD0LXFQ0",
+      "title": "FAQ",
+      "slug": "FAQ",
+      "link": "FAQ.md",
+      "displayType": "header",
+      "type": "markdown",
+      "keywords": "",
+      "seeAlso": "",
+      "remarks": "",
+      "example": "",
+      "sortOrder": 10,
+      "updated": "2025-03-12T12:02:07.6138013-10:00",
+      "helpId": "369",
+      "classInfo": {
+        "assembly": "",
+        "contract": "",
+        "exceptions": ""
+      },
+      "topics": [
+        {
+          "id": "_68D0R8REJ",
+          "parentId": "_4SD0LXFQ0",
+          "title": "Using Markdown Monster with Long Path Names",
+          "slug": "FAQ/Using-Markdown-Monster-with-Long-Path-Names",
+          "link": "FAQ/Using-Markdown-Monster-with-Long-Path-Names.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 190,
+          "updated": "2025-02-23T14:15:27.0734838-10:00",
+          "helpId": "16438",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5EA0SD8QX",
+          "parentId": "_4SD0LXFQ0",
+          "title": "Font Support - Monospaced Fonts Only",
+          "slug": "FAQ/Font-Support-Monospaced-Fonts-Only",
+          "link": "FAQ/Font-Support-Monospaced-Fonts-Only.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 180,
+          "isExpanded": true,
+          "updated": "2025-02-25T12:54:07.5421437-10:00",
+          "helpId": "8482",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5M80NN4HU",
+          "parentId": "_4SD0LXFQ0",
+          "title": "Editor Extension Mapping",
+          "slug": "FAQ/Editor-Extension-Mapping",
+          "link": "FAQ/Editor-Extension-Mapping.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 170,
+          "updated": "2025-02-23T14:15:27.0736475-10:00",
+          "helpId": "8949",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_53D13I1ZJ",
+          "parentId": "_4SD0LXFQ0",
+          "title": "Reset Markdown Monster Settings to Default",
+          "slug": "FAQ/Reset-Markdown-Monster-Settings-to-Default",
+          "link": "FAQ/Reset-Markdown-Monster-Settings-to-Default.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 160,
+          "updated": "2025-02-23T23:28:10.3981053-10:00",
+          "helpId": "5207",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_53E0OOAVV",
+          "parentId": "_4SD0LXFQ0",
+          "title": "Uninstalling Markdown Monster",
+          "slug": "FAQ/Uninstalling-Markdown-Monster",
+          "link": "FAQ/Uninstalling-Markdown-Monster.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 150,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "5208",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5750QTGR2",
+          "parentId": "_4SD0LXFQ0",
+          "title": "DocFx Support",
+          "slug": "FAQ/DocFx-Support",
+          "link": "FAQ/DocFx-Support.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 140,
+          "updated": "2025-02-23T14:15:27.0737602-10:00",
+          "helpId": "6630",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5781CV66S",
+          "parentId": "_4SD0LXFQ0",
+          "title": "Special Rendering Features",
+          "slug": "FAQ/Special-Rendering-Features",
+          "link": "FAQ/Special-Rendering-Features.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 100,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "6631",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5CH1BV9EN",
+          "parentId": "_4SD0LXFQ0",
+          "title": "Editing Huge Documents",
+          "slug": "FAQ/Editing-Huge-Documents",
+          "link": "FAQ/Editing-Huge-Documents.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 90,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "6640",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5DU1F0STF",
+          "parentId": "_4SD0LXFQ0",
+          "title": "ACE Editor JavaScript and CSS Extensions",
+          "slug": "FAQ/ACE-Editor-JavaScript-and-CSS-Extensions",
+          "link": "FAQ/ACE-Editor-JavaScript-and-CSS-Extensions.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 80,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "6641",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5EG1BRC0Z",
+          "parentId": "_4SD0LXFQ0",
+          "title": "Escape Markdown Fenced Code Blocks",
+          "slug": "FAQ/Escape-Markdown-Fenced-Code-Blocks",
+          "link": "FAQ/Escape-Markdown-Fenced-Code-Blocks.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 70,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "8485",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_5PL0RUCQM",
+          "parentId": "_4SD0LXFQ0",
+          "title": "Software Registration and Key Storage",
+          "slug": "FAQ/Software-Registration-and-Key-Storage",
+          "link": "FAQ/Software-Registration-and-Key-Storage.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 60,
+          "updated": "2025-02-23T14:15:27.0738855-10:00",
+          "helpId": "13643",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_4UJ0KFGLM",
+          "parentId": "_4SD0LXFQ0",
+          "title": "Blank Screen On Startup (DUCE.Channel Errors)",
+          "slug": "FAQ/Blank-Screen-On-Startup-DUCE-Channel-Errors",
+          "link": "FAQ/Blank-Screen-On-Startup-DUCE-Channel-Errors.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "DUCE\rDUCE.Channel",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 50,
+          "updated": "2025-02-23T14:15:27.0740092-10:00",
+          "helpId": "1125",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_64M0MXXL7",
+          "parentId": "_4SD0LXFQ0",
+          "title": "Missing Images when copying from HTML Preview",
+          "slug": "FAQ/Missing-Images-when-copying-from-HTML-Preview",
+          "link": "FAQ/Missing-Images-when-copying-from-HTML-Preview.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 40,
+          "updated": "2025-02-23T14:15:27.0741289-10:00",
+          "helpId": "13654",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_65W0QDV1E",
+          "parentId": "_4SD0LXFQ0",
+          "title": "Overriding Editor Styling and Behavior",
+          "slug": "FAQ/Overriding-Editor-Styling-and-Behavior",
+          "link": "FAQ/Overriding-Editor-Styling-and-Behavior.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 30,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "13655",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_6Q00MLYQB",
+          "parentId": "_4SD0LXFQ0",
+          "title": "Running Markdown Monster on Preview Releases of .NET",
+          "slug": "FAQ/Running-Markdown-Monster-on-Preview-Releases-of-NET",
+          "link": "FAQ/Running-Markdown-Monster-on-Preview-Releases-of-NET.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 20,
+          "updated": "2025-02-23T14:15:27.074243-10:00",
+          "helpId": "16910",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
+          "id": "_71J18NS1V",
+          "parentId": "_4SD0LXFQ0",
+          "title": "Limited RegEx Find and Replace Support: No multi-line matches",
+          "slug": "FAQ/Limited-RegEx-Find-and-Replace-Support-No-multi--line-matches",
+          "link": "FAQ/Limited-RegEx-Find-and-Replace-Support-No-multi--line-matches.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 10,
+          "updated": "2025-02-24T00:00:00Z",
+          "helpId": "16917",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "_m12v0hahx5",
+      "title": "Class Reference",
+      "slug": "Class-Reference",
+      "link": "Class-Reference.md",
+      "displayType": "weblink",
+      "type": "markdown",
+      "isLink": true,
+      "updated": "2025-02-25T14:17:36.9138157-10:00",
+      "classInfo": {}
+    }
+  ],
+  "settings": {
+    "topicTypes": {
+      "index": "Top level topic for the documentation.",
+      "header": "Header topic for sub-topics",
+      "topic": "Generic topic",
+      "whatsnew": "What's new",
+      "weblink": "External link",
+      "classheader": "Class Header",
+      "interface": "Interface",
+      "namespace": "Namespace",
+      "classmethod": "Class method",
+      "classproperty": "Class property",
+      "classfield": "Class field",
+      "classevent": "Class event",
+      "classconstructor": "Class constructor",
+      "enum": "Enumeration",
+      "delegate": "Delegate",
+      "webservice": "Web Service",
+      "database": "Database",
+      "datacolumn": "Data columns",
+      "datafunction": "Data function",
+      "datastoredproc": "Data stored procedure",
+      "datatable": "Data table",
+      "dataview": "Data view"
+    },
+    "webSiteBaseUrl": "https://markdownmonster.west-wind.com/",
+    "relativeBaseUrl": "/docs/",
+    "supportEmail": "support@west-wind.com",
+    "upload": {
+      "hostname": "west-wind.com",
+      "uploadFtpPath": "/Westwind_SysRoot/Web Sites/markdownmonster.west-wind.com/docs/",
+      "webSiteUrl": "https://markdownmonster.west-wind.com/docs/",
+      "openWebSite": true,
+      "username": "rstrahl",
+      "maxUploadConnections": 5
+    }
+  }
+}

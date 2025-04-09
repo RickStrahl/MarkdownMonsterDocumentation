@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">    
+    <title>Weblog Publishing Addin - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css">
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet">
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="header"></topictype>
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars" title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo">
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/header.png">
+                Weblog Publishing Addin
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    <h1 class="content-title">
+    <img src="/docs/_kavadocs/icons/header.png">    
+    Weblog Publishing Addin
+</h1>
+
+
+
+
+<div class="content-body" id="body">
+            <p>Markdown Monster supports publishing your Markdown content to various supported Weblog providers or tools. You can readily publish content from the active Markdown document to:</p>
+<ul>
+<li><a href="#__0">MetaWebLog API</a></li>
+<li><a href="#__0">WordPress</a></li>
+<li><a href="#__0">Medium</a></li>
+<li><a href="/docs/Addins/Weblog-Publishing-Addin/Setting-up-a-Weblog/Local-Jekyll-Publishing.html">Local Jekyll Project</a></li>
+</ul>
+<p>The publishing process lets you publish a Post from <strong>any Markdown document</strong> to a configured Weblog with a simple Publishing operation:</p>
+<p><img src="/docs/images/WeblogPublishingDialog.png" alt=""></p>
+<p>In order for this to work, you need to:</p>
+<ul>
+<li>Write your Markdown content</li>
+<li>Link any images from a relative folder or from online URLs</li>
+<li>Configure a Weblog Configuration</li>
+<li>Publish your post <small>(alt-l-p)</small></li>
+</ul>
+<p>The <i class="fas fa-rss" style="font-size: 1.1em"></i>  toolbar button or any of the menu options on the <strong>Weblog</strong> menu bar bring up the Weblog Publishing dialog which provides the following features:</p>
+<ul>
+<li>Posting to a Weblog</li>
+<li>Creating a new Blog Entry (creates new doc and folder)</li>
+<li>Downloading existing Posts</li>
+<li>Managing your Weblogs to publish to (add, edit, delete)</li>
+</ul>
+<h3 id="create-a-weblog-post">Create a Weblog Post</h3>
+<p>In Markdown Monster a blog post is simply a Markdown document with some associated YAML meta data. The YAML data doesn't have to exist in your document - but it is added or updated as part of the publishing process.</p>
+<p>There are a few ways you can create a blog post:</p>
+<ul>
+<li>Create a new using <strong>New Weblog Post</strong> in MM</li>
+<li>Create a new blank document and just start writing</li>
+<li>Use any existing Markdown document</li>
+</ul>
+<p>You can take <strong>any existing document</strong> and publish it as a Weblog post.</p>
+<h4 id="new-weblog-post">New Weblog Post</h4>
+<p>More formally - you can use the <strong>New Weblog Post</strong> dialog to create a Post.</p>
+<p><img src="/docs/images/NewWeblogPost.png" alt=""></p>
+<p>This option generates a file name from your title and creates a file on disk in a pre-configured location where Weblog posts are stored. These default to DropBox, OneDrive or the Documents folder, but the <a href="#__0">location is configurable</a>. MM uses a <code>Markdown Monster Weblog Posts</code> folder with sub-folders broken down by year and month with individual posts inside of those folder. Each post has its own dedicated folder:</p>
+<p><img src="/docs/images/JekyllNewBlogPostFolderStructure.png" alt=""></p>
+<p>This works great to store all of your blog posts in one place. It's easy to store them in a Git repository like this, it's easy to search using the Explorer search dialog, and because the content is separated from the publishing platform and each post is self-contained it's easy to re-purpose the content for either republishing to multiple Weblogs or for migrating to a different publishing engine in the future.</p>
+<p>This structure and the <strong>New Weblog Post</strong> flow is <strong>totally optional</strong>, but as somebody who's had to manage nearly 2000 posts over the years this has been easy to maintain and work with over the years.</p>
+<h3 id="write-your-content">Write your Content</h3>
+<p>Next - write your post in plain Markdown. There's nothing special about the markdown, nothing special you have to write or add. Although MM uses YAML metadata you don't have to add this manually - it'll be created when you publish your post and then added to the document.</p>
+<p>One small recommendation is to use either relative links for related resources like images, or store them in a remote location like Azure Blob Storage, Imgur or a Github Image dump repository and link them as fully qualified URLs.</p>
+<h3 id="set-up-a-weblog-configuration">Set up a WebLog Configuration</h3>
+<p>Before you can publish your post to a Weblog site you need to configure the site by specifying what type of API it is using a URL or local folder to access, credentials and an optional preview URL. To access this you can use the Weblog Dialog from the <i class="fas fa-rss" style="font-size: 1.1em"></i>  toolbar button or via <strong>Weblog → Weblog Configuration</strong> from the menu.</p>
+<p><img src="/docs/images/CreateEditWebLog.png" alt=""></p>
+<p>Configuration varies slightly based on the Weblog engine you're publishing to so please use the links at the top of the page to jump to your specific API used.</p>
+<h3 id="publish-your-weblog">Publish your Weblog</h3>
+<p>Once your blog is configured you're ready to publish your first post. Click on the <i class="fas fa-rss" style="font-size: 1.1em"></i>  button in the toolbar to bring up the Post dialog and make sure you select the <strong>Web Site to post to</strong> and choose your configured site if it isn't already set.</p>
+<p>The title is auto-filled from your content and you can provide an short paragraph as an abstract (for some blog types). Categories and Keywords are comma delimited lists of values you can provide to organize and tag your posts.</p>
+<p>It's also possible to add custom fields to your your post data which is useful if you control the Web site code and you can run custom code to extract these custom fields on the server.</p>
+<p><img src="/docs/images/WeblogPublishingDialog.png" alt=""></p>
+<p>When you publish your post with <strong>Post to Weblog</strong> or you click on the <strong>Save Metadata</strong> button the post is updated with a YAML block that holds the data that is displayed in the dialog.</p>
+<blockquote>
+<p><strong>Note:</strong> The meta data is stripped out before your post is published to the server. It is available in the raw Markdown posted in the <code>custom_fields:mt_markdown</code> field that implicitly gets sent with each post to the server.</p>
+</blockquote>
+<p>When the post is published the meta data is updated with a <code>postId</code> and <code>permalink</code> provided by server (if available) and MM will navigate to the URL that was received.</p>
+    
+    </div>
+
+
+
+
+
+
+
+ 
+                </article>
+
+                <hr>
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-03-12
+                    <br>
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Weblog Publishing Addin&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Weblog%20Publishing%20Addin%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_4NB0SER9F.html">Comment or report problem with topic</a>
+                
+                <br class="clearfix">
+                <br>
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</div></body>
+</html>
+

@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">    
+    <title>DocFx Support - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css">
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet">
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic"></topictype>
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars" title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo">
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                DocFx Support
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    DocFx Support
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>Markdown Monster supports a subset of DocFx functionality for previewing, so that the preview reflects some of the features available in DocFx documents.</p>
+<ul>
+<li>TIP, WARNING, NOTE, IMPORTANT box display support</li>
+<li>File and Code includes (<code>[!include]</code> and <code>[!code-csharp]</code>)</li>
+<li>Minimal <code>xref</code> support</li>
+</ul>
+<p>There are two separate implementations:</p>
+<ul>
+<li>DocFx Render Extension (enabled in Settings)</li>
+<li>Official Microsoft DocFx Parser (enabled via Markdown Parser dropdown on status bar)</li>
+</ul>
+<h3 id="the-docfx-markdown-render-extension">The DocFx Markdown Render Extension</h3>
+<p>This implementation uses a Markdown Monster specific Render Extension that implements the supported DocFx features using a custom implementation of DocFx features. This is a more lightweight implementation that works directly with Markdown Monsters Markdown pipeline. This extension can happily co-exist with non-DocFx Markdown content with all MM features available.</p>
+<p>To enable this feature:</p>
+<ul>
+<li>Go to <strong>Tools-&gt;Settings</strong></li>
+<li>Type <strong>DocFx</strong> into the search box</li>
+<li>Check the <strong>Parse DocFx</strong> checkbox</li>
+</ul>
+<h3 id="the-official-microsoft-docfx-markdown-parser">The Official Microsoft DocFx Markdown Parser</h3>
+<p>This implementation uses the official Microsoft DocFx Markdown Parser extensions for MarkDig (which is the same parser the MM uses) to render DocFx content. This implementation creates a custom Markdown Monster parser implementation that defers core rendering to the DocFx parser.</p>
+<p>To enable this feature:</p>
+<ul>
+<li>Go to Status Bar</li>
+<li>Find the the <strong>Markdown Parser Dropdown</strong> (MarkDig or DocFx)</li>
+<li>Set to <strong>DocFx</strong></li>
+</ul>
+<p>Although this is the official solution from Microsoft it's not directly geared towards rendering single documents as it's meant for generating entire sites of content, so not all features work in the context of previews. It also doesn't respect some of the Markdown Monster Markdown and document options so it should be used exclusively for DocFx content.</p>
+<blockquote>
+<p>When the <strong>DocFx Markdown Parser</strong> is enabled, it overrides the <strong>Parse DocFx</strong> Render Extension setting.</p>
+</blockquote>
+<h3 id="supported-features">Supported Features</h3>
+<h4 id="include-content-files">Include Content Files</h4>
+<p>DocFx supports loading nested content from externally stored files using the following syntax:</p>
+<pre><code class="language-markdown">[!include&amp;#91;&amp;#93;(includeFile.md)]
+</code></pre>
+<p>You can also specify files as relative paths:</p>
+<pre><code class="language-markdown">[!include&amp;#91;&amp;#93;(../includeFile.md)]
+</code></pre>
+<p>or as 'site' relative paths (both work the same):</p>
+<pre><code class="language-markdown">[!include&amp;#91;&amp;#93;(~/includeFile.md)]
+[!include&amp;#91;&amp;#93;(/includeFile.md)]
+</code></pre>
+<blockquote>
+<h4 id="--root-folder-resolution-for--and-"><i class="fas fa-info-circle" style="font-size: 1.1em"></i>  Root Folder Resolution for <code>~/</code> and <code>/</code></h4>
+<p>Site Relative Paths are determined using the active documents <code>WebRootPreviewPath</code> which is set based on the document location and probing for specific files or settings in a project. Please see <a href="#__0">this topic</a> on how the root path is resolved for <code>~/</code> and <code>/</code>. For DocFx typically this is the <code>docfx.json</code> in the DocFx project's root folder.</p>
+</blockquote>
+<h4 id="include-code-files">Include Code Files</h4>
+<p>Likewise you can also inject code files with  specific syntax:</p>
+<pre><code class="language-markdown">[!code-csharp&amp;#91;&amp;#93;(~/includeCode.cs)]
+</code></pre>
+<h4 id="tip-note-warning-info-important">TIP, NOTE, WARNING, INFO, IMPORTANT</h4>
+<p>DocFx supports a number of special display boxes that let you highlight text and notes:</p>
+<p><img src="/docs/images/DocFxHighlightBoxes.png" alt=""></p>
+<p>You can use the following syntax:</p>
+<pre><code class="language-markdown">&lt;div class=&quot;WARNING&quot;&gt;
+&lt;h5&gt;WARNING&lt;/h5&gt;
+
+This is some Note Text  
+that spreads across two lines
+
+&lt;/div&gt;
+
+
+
+&lt;div class=&quot;NOTE&quot;&gt;
+&lt;h5&gt;NOTE&lt;/h5&gt;
+
+Singe line note.
+
+&lt;/div&gt;
+
+
+
+A block of text between note boxes.
+
+&lt;div class=&quot;TIP&quot;&gt;
+&lt;h5&gt;TIP&lt;/h5&gt;
+
+Tipping my hat to the clown
+
+&lt;/div&gt;
+
+
+
+&lt;div class=&quot;IMPORTANT&quot;&gt;
+&lt;h5&gt;IMPORTANT&lt;/h5&gt;
+
+Don't forget to screw on your hat!
+
+&lt;/div&gt;
+
+
+
+</code></pre>
+
+    </div>
+
+
+
+                </article>
+
+                <hr>
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-23
+                    <br>
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - DocFx Support&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20DocFx%20Support%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_5750QTGR2.html">Comment or report problem with topic</a>
+                
+                <br class="clearfix">
+                <br>
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</div></body>
+</html>
+

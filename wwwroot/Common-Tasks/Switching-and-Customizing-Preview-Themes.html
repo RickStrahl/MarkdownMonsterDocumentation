@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">    
+    <title>Switching and Customizing Preview Themes - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css">
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet">
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic"></topictype>
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars" title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo">
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Switching and Customizing Preview Themes
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Switching and Customizing Preview Themes
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>Preview Themes control how the Preview Window renders your Markdown text into HTML. Because Markdown is a text representation of an HTML document, some sort of engine has to render the Markdown into HTML and then apply HTML and CSS styling to render that HTML into what you see in the browser.</p>
+<p>This process <strong>may vary significantly</strong> depending on where you display your Markdown. For example, GitHub renders Markdown very differently than BitBucket. If you're using Markdown on your blog, you probably also have some very custom styling and potentially use a completely different Markdown parser to parse Markdown into HTML.</p>
+<p>While there will always be some differences between Markdown implementations on different platforms, Preview Themes can help you create or use themes that more closely match your target Markdown platform's layout and styling.</p>
+<h3 id="changing-preview-themes">Changing Preview Themes</h3>
+<p>In Markdown Monster you can easily change themes in the editor's UI by using the status bar theme selector on the lower right:</p>
+<p><img src="https://github.com/RickStrahl/ImageDrop/raw/master/MarkdownMonster/PreviewThemes.gif" alt=""></p>
+<p>Theme settings are stored in the configuration under:</p>
+<pre><code class="language-json">{
+    &quot;Preview&quot;: {
+        &quot;PreviewTheme&quot;: &quot;GitHub&quot;
+    }
+}
+</code></pre>
+<p>You can easily flip between the provided themes which include <code>Github</code>, <code>Github Dark</code>, <code>Dharkan</code>, <code>Blackout</code>, <code>Medium</code>, <code>Westwind</code> and <code>Hipster</code>. It's also quite easy to create custom themes by copying and modifying existing Preview Themes.</p>
+<blockquote>
+<h5 id="--if-you-customize-create-a-new-theme"><i class="fas fa-info-circle" style="font-size: 1.1em"></i>  If you Customize create a new Theme!</h5>
+<p>Default themes are installed and updated with Markdown Monster releases, so if you make changes in any of the default themes, any changes can and will be overwritten by updates.</p>
+<p>To avoid this issue, <strong>always</strong> create a new theme from an existing one by copying the theme to a new folder. Give it a descriptive name and it will show up in the drop down list next time you restart.</p>
+<p>Any custom themes you create are not overwritten on updates.</p>
+</blockquote>
+<h3 id="theme-customization">Theme Customization</h3>
+<p>A theme is nothing more than a sub-folder in the <code>PreviewThemes</code> folder of your <strong>Markdown Monster installation path</strong> which typically is <code>c:\Program Files\Markdown Monster\PreviewThemes\Theme-Name</code> (<em>the base folder may vary depending on where MM is installed</em>).</p>
+<p>The easiest way to find the folder is by using the Previewer's context menu and using the Edit Preview Theme option:</p>
+<p><img src="/docs/images/PreviewThemeFromContextMenu.png" alt=""></p>
+<p>That folder contains a <code>Theme.html</code> and related <code>Theme.css</code> file which make up the theme. There's also a <code>../scripts</code> folder that contains a few dependencies like FontAwesome for icon support and HighlightJs for code sytnax highlighting.</p>
+<p>Here's what the PreviewThemes folder looks like:</p>
+<p><img src="/docs/images/PreviewThemeFolder.png" alt=""></p>
+<p>You can easily create custom Preview Themes or change existing themes by simply changing the HTML and CSS files that are provided.</p>
+<h4 id="how-themes-work">How Themes work</h4>
+<p>Themes are found based on the folder name in the <code>PreviewThemes</code> folder. Any sub-folder in the <code>PreviewThemes</code> folder will be available in the Preview theme selector:</p>
+<p><img src="/docs/images/PreviewThemeSelections.png" alt=""></p>
+<p>Any folder you add to <code>PreviewThemes</code> automatically shows up in this dropdown list. A theme folder is expected to hold <code>Theme.html</code> file which is used as a template to render the markdown by essentially embedding the rendered Markdown into the base page HTML layout. You can think of <code>Theme.html</code> as the site chrome or master layout. This page is mostly boiler plate, but you can customize it to add custom CSS or scripts etc.</p>
+<p>The HTML in this file is minimal as most of the HTML comes from the rendered Markdown, but the default template includes a link to <code>Theme.css</code> which provides the page styling, as well as links to the dependent scripts and FontAwesome icon CSS:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;base href=&quot;{$docPath}&quot;/&gt;
+    &lt;title&gt;{$docTitle}&lt;/title&gt;
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+    &lt;meta charset=&quot;utf-8&quot;/&gt;
+
+    &lt;link href=&quot;{$themePath}..\scripts\fontawesome\css\font-awesome.min.css&quot; rel=&quot;stylesheet&quot;/&gt;
+    &lt;link href=&quot;{$themePath}Theme.css&quot; rel=&quot;stylesheet&quot;/&gt;
+
+    &lt;script src=&quot;{$themePath}..\scripts\jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;link href=&quot;{$themePath}..\scripts\highlightjs\styles\vs2015.css&quot; rel=&quot;stylesheet&quot;/&gt;
+    &lt;script src=&quot;{$themePath}..\scripts\highlightjs\highlight.pack.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;{$themePath}..\scripts\highlightjs-badge.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;{$themePath}..\scripts\preview.js&quot; id=&quot;PreviewScript&quot;&gt;&lt;/script&gt;
+
+    {$extraHeaders}
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;MainContent&quot;&gt;
+  &lt;!-- Markdown Monster Content --&gt;
+  {$markdownHtml}
+  &lt;!-- End Markdown Monster Content --&gt;
+&lt;/div&gt;
+
+&lt;/body&gt; 
+&lt;/html&gt;
+</code></pre>
+<p>If you want to add site branding or other items, in order to match an online site that will eventually host your Markdown you can add it around your Markdown content. <strong>Just make sure to leave the <code>&lt;div id=&quot;MainContent&quot;&gt;&lt;/div&gt;</code> in your document</strong>, as that's where MM expects to Markdown content to go - some of the script code depends on the tag name and block tags to update content efficiently.</p>
+<p>If you create a new theme, maintain the overall structure of this document. Typical customization just involves modifying the <code>Theme.css</code> styling, but some people like to add site branding into the preview and for that you can customize <code>Theme.html</code>.</p>
+<p>There are a four template variables:</p>
+<ul>
+<li><p><strong>{$markdownHtml}</strong>
+This is where your rendered HTML is injected.</p>
+</li>
+<li><p><strong>{$themePath}</strong><br>
+This is the physical disk path to the preview folder (with a trailing slash). Markdown Monster renders HTML from this template into the folder where the Markdown file lives so that it can find any relative images and links properly. In order to find the related theme resources they have to be known and <code>{$themePath}</code> provides this known location.</p>
+</li>
+<li><p><strong>{$docPath}</strong><br>
+This is the HTML base path for the rendered HTML which by default is <code>./</code> (ie. the current path), but it can also be a custom value that is overridden. This value can be changed to allow referencing an external location like a Web site and can then render related resources like images or styling from those locations. <code>docPath</code> can be changed per document via <a href="#__0">YAML properties and via Project settings</a> - or if your template always relies on external resources you can just hard code the <code>basePath</code> directly in the HTML.</p>
+</li>
+<li><p><strong>{$extraHeaders}</strong><br>
+These are headers that can be set by <code>RenderExtension</code>s or addins that interact with the render process.</p>
+</li>
+</ul>
+<p>Make sure these values are provided in any template changes you make as these values are set during the render process and are also accessible to Addins and RenderExtensions that customize the render process.</p>
+<h4 id="custom-themes-for-custom-preview-displays">Custom Themes for Custom Preview Displays</h4>
+<p>Some of the things you can do is create custom templates that more closely match the display of your target platform. For example, you might want to match the styling of your Blog, or your documentation engine.</p>
+<p>Here's an example of a custom template that displays documentation content:</p>
+<p><img src="/docs/images/CustomThemeWebSurgeDocumentation.png" alt="A custom Theme for Documentation"></p>
+<h4 id="creating-a-new-local-theme">Creating a new Local Theme</h4>
+<p>Local themes simply use local resources for the CSS styling as shown in the last example. The CSS is linked directly from a local resource. This is the easiest way to deal with resources.</p>
+<p>To create a new theme:</p>
+<ul>
+<li>Copy an existing folder from <code>PreviewThemes</code></li>
+<li>Rename the folder to the name you want to see in the themes dropdown</li>
+<li>Modify the <code>theme.html</code> or <code>theme.css</code> files to customize</li>
+</ul>
+<h4 id="web-theme">Web Theme</h4>
+<p>You can also reference Web resources directly. For example, you might want to use the theme from your Weblog so your preview looks exactly like the blog you're going to post from your markdown.</p>
+<p>You can simply link an external stylesheet to make that work. However, you probably will still need a little bit of extra CSS to format the base document.</p>
+<p>For example, I have a custom West Wind theme that has the following <code>Theme.html</code> page:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;!-- saved from url=(0016)http://localhost --&gt;
+&lt;html lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;    
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;link href=&quot;{$themePath}..\scripts\fontawesome\css\font-awesome.min.css&quot; rel=&quot;stylesheet&quot;/&gt;
+
+    &lt;!-- link style sheet from the site --&gt;
+    &lt;link href=&quot;https://weblog.west-wind.com/App_Themes/Standard/Standard.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;/&gt;
+    
+    &lt;!-- small amount of fixups --&gt;
+    &lt;link href=&quot;{$themePath}Theme.css&quot; style=&quot;text/css&quot; rel=&quot;stylesheet&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;MainContent&quot; &gt;
+        {$markdownHtml}
+    &lt;/div&gt;
+    &lt;script src=&quot;{$themePath}..\scripts\jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;link href=&quot;{$themePath}..\scripts\highlightjs\styles\twilight.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;script src=&quot;{$themePath}..\scripts\highlightjs\highlight.pack.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;{$themePath}..\scripts\preview.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Notice the link to the external style sheet on <a href="http://weblog.west-wind.com">weblog.west-wind.com</a>. I still use a local theme.css to style the toolbar and the main HTML page padding:</p>
+<pre><code class="language-css">html, body {
+    padding: 5px 20px 5px 10px !important;
+    margin: 0;
+    scrollbar-track-color: Whitesmoke;
+    scrollbar-arrow-color: silver;   
+    scrollbar-base-color: #ddd;
+    scrollbar-face-color: #ddd;
+    -ms-overflow-style: -ms-autohiding-scrollbar !important;
+} 
+
+@media(min-width: 970px){
+    html,body{
+        font-size: 1.1em;
+    }
+}
+</code></pre>
+<p>Very minor obviously but this ensures I get the right document margins and the nicer looking scrollbars in the preview.</p>
+<p>Another option is to simply download the remote CSS and use it locally rather than load it from the Web site and then reference the local copy:</p>
+<pre><code class="language-html">&lt;link href=&quot;{$themePath)Standard.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;/&gt;
+&lt;link href=&quot;{$themePath}Theme.css&quot; style=&quot;text/css&quot; rel=&quot;stylesheet&quot; /&gt;
+</code></pre>
+<h3 id="change-the-code-snippet-theme-in-your-preview-theme">Change the Code Snippet Theme in your Preview Theme</h3>
+<p>The previewer supports code snippets using the popular <a href="https://highlightjs.org/" target="top">highlight.js</a> and the corresponding syntax language formats. This is compatible with GitHub for common languages.</p>
+<p>If you want to alter the code theme you can change the following style link to reference one of the other code themes available in the referenced <code>highlightjs\styles</code> folder:</p>
+<pre><code class="language-html">&lt;link href=&quot;{$themePath}..\scripts\highlightjs\styles\vscodedark.css&quot; rel=&quot;stylesheet&quot; /&gt;
+</code></pre>
+<p>The default code theme used is <code>twilight</code>. Other code themes include <code>github</code>, <code>vs2015</code> (dark), <code>vs</code> (light), <code>monokai</code> (dark) and many more. Check the <code>PreviewThemes\scripts\highlightjs\styles</code> folder for more code themes.</p>
+<p>Note that Preview Themes explicitly declare a Syntax Highlight Theme so if you create a custom theme you can specifically match a Syntax Highlight Theme to your custom theme.</p>
+<h4 id="override-code-block-styling">Override Code Block Styling</h4>
+<p>In addition to replacing the Code Block theme, you can also add and override individual styles using the <code>Theme.css</code>  (or inline <code>&lt;style&gt;</code> in <code>Theme.html</code>) to override existing styles from a Code block theme.</p>
+<p>For example to change the background color of the code block rendering you could do:</p>
+<pre><code class="language-css">.hljs {
+  background: DarkGreen !important;
+}
+</code></pre>
+<blockquote>
+<p>If you use the <code>Theme.css</code> style sheet you need to use <code>!important</code> to override settings due to the ordering of the code block theme after the main styles or you can re-arrange the order in <code>Theme.css</code>.</p>
+</blockquote>
+<h3 id="script-interaction-and-the-previewupdated-event">Script Interaction and the <code>previewUpdated</code> Event</h3>
+<p>You can also add JavaScript code to the template to dynamically inject elements into the page to perform custom fixups of the document in the preview.</p>
+<p>One thing of note with this approach is the MM updates the page rendered as you type, so they page is constantly repainted and as a result you need to handle a specific <code>previewUpdated</code> event to run your script.</p>
+<p>To demonstrate, I recently got a request for displaying Image titles below an image. So with an image tag like this:</p>
+<pre><code class="language-markdown">![Markdown Monster](https://markdownmonster.west-wind.com/Images/MarkdownMonsterLogo.jpg)
+</code></pre>
+<p>the <strong>Markdown Monster</strong> text should display below the image. To do this I added  script code to the <code>Theme.html</code> page just above the <code>&lt;/body&gt;</code> tag:</p>
+<pre><code class="language-html">&lt;script&gt;
+// hookup event
+document.addEventListener(&quot;previewUpdated&quot;,figureTitles);
+
+function figureTitles() {
+  // loop through all images
+  $(&quot;img&quot;).each( function() {
+      var $img = $(this);
+      var title = $img.attr(&quot;alt&quot;);
+      
+      // if alt title is found add it after the image
+      if (title)
+         $img.after(&quot;&lt;p&gt;&lt;small&gt;&lt;b&gt;&quot; + title + &quot;&lt;/b&gt;&lt;/small&gt;&lt;/p&gt;&quot;)
+ });
+}
+figureTitles();
+&lt;/script&gt;
+&lt;/body&gt; 
+</code></pre>
+<h3 id="make-the-preview-your-own">Make the Preview your Own!</h3>
+<p>The concepts for customization is meant to be really easy to customize. You can start with an existing theme and tweak it, or go to town and create a completely new layout and theme for your Preview.</p>
+
+    </div>
+
+
+
+                </article>
+
+                <hr>
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-23
+                    <br>
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Switching and Customizing Preview Themes&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Switching%20and%20Customizing%20Preview%20Themes%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_4NN17BFIC.html">Comment or report problem with topic</a>
+                
+                <br class="clearfix">
+                <br>
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</div></body>
+</html>
+

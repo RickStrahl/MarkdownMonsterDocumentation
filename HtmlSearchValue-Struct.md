@@ -1,0 +1,1 @@
+﻿Structure that can be used to try and find a location in the browser

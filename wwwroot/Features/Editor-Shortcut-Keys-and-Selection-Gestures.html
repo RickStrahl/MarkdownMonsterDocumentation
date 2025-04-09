@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>Editor Shortcut Keys and Selection Gestures - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Editor Shortcut Keys and Selection Gestures
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Editor Shortcut Keys and Selection Gestures
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>Markdown Monster's editor is based on <a href="https://ace.c9.io/#nav=about" target="top">ACE Editor</a> and inherits the core editing features from this awesome HTML based editor. ACE provides the basic editor behavior you'd expect for a full featured text editor, and Markdown Monster adds a few additional application specific keyboard shortcuts on top of that base behavior.</p>
+<h3 id="ace-editor-keys">ACE Editor Keys</h3>
+<p>You can find a list of core ACE editor features here:</p>
+<ul>
+<li><a href="https://github.com/ajaxorg/ace/wiki/default-keyboard-shortcuts" target="top">Ace Editor Keyboard shortcuts</a></li>
+</ul>
+<h3 id="markdown-monster-application-shortcuts">Markdown Monster Application Shortcuts</h3>
+<p>Markdown Monster adds a number of additional hotkeys to access common functionality more easily. You can discover most of these hotkeys on the menus, or on the tooltips of the toolbar.</p>
+<table class="detailtable" style="width: 96%;margin-top: 20px">
+<tr>
+    <th colspan="2">
+        Preview Browser Operations
+    </th>
+</tr>
+<tr>
+  <td>Ctrl-Shift</td>
+  <td>Refresh the preview browser immediately if active</td>
+</tr>
+<tr>
+  <td>Ctrl-Shift up/down</td>
+  <td>Scroll the preview browser</td>
+</tr>
+<tr>
+  <td>Alt-V-P</td>
+  <td>Toggle the preview browser</td>
+</tr>
+<tr>
+  <td>Alt-V-B</td>
+  <td>Preview html in external browser</td>
+</tr>
+<tr>
+    <th colspan="2">
+        File and Export Operations
+    </th>
+</tr>
+<tr>
+  <td>Ctrl-N</td>
+  <td>Create new untitled document</td>
+</tr>
+<tr>
+  <td>Ctrl-O</td>
+  <td>Open a document from disk</td>
+</tr>
+<tr>
+  <td>Ctrl-S</td>
+  <td>Save active document</td>
+</tr>
+<tr>
+  <td>Ctrl-Shift-S</td>
+  <td>Save active document with new name</td>
+</tr>
+<tr>
+    <th colspan="2">
+        Markdown Conversion
+    </th>
+</tr>
+<tr>
+  <td>Ctrl-Shift-C</td>
+  <td>Copy selected Markdown text as HTML to Clipboard</td>
+</tr>
+<tr>
+  <td>Ctrl-Shift-V</td>
+  <td>Paste HTML from Clipboard as Markdown text</td>
+</tr>
+<tr>
+  <td>Ctrl-Shift-Z</td>
+  <td>Remove Markdown Formatting</td>
+</tr>
+<tr>
+    <th colspan="2">
+        Editor Operations
+    </th>
+</tr>
+<tr>
+  <td>Ctrl-B</td>
+  <td>Bold selected text</td>
+</tr>
+<tr>
+  <td>Ctrl-I</td>
+  <td>Italicize selected text</td>
+</tr>
+<tr>
+  <td>Ctrl-L</td>
+  <td>Create List from multiple lines of text</td>
+</tr>
+<tr>
+  <td>Ctrl-Q</td>
+  <td>Quote selected text</td>
+</tr>
+<tr>
+  <td>Ctrl-K</td>
+  <td>Insert or create link from selected text (dialog)</td>
+</tr>
+<tr>
+  <td>Ctrl-Shift-K</td>
+  <td>Insert or create link inline (text only)</td>
+</tr>
+<tr>
+  <td>Ctrl-J</td>
+  <td>Insert Emojii from Picker</td>
+</tr>
+<tr>
+  <td>Alt-C</td>
+  <td>Format selected text as code block</td>
+</tr>
+<tr>
+  <td>Ctrl-`</td>
+  <td>Format selected text as inline code</td>
+</tr>
+<tr>
+  <td>Alt-X</td>
+  <td>Show Extended Markdown Operations Dropdown Menu</td>
+</tr>
+<tr>
+    <th colspan="2">
+        Find
+    </th>
+</tr>
+<tr>
+  <td>Ctrl-F</td>
+  <td>Find in document</td>
+</tr>
+<tr>
+  <td>F3</td>
+  <td>Find Next</td>
+</tr>
+<tr>
+  <td>Ctrl-Shift-F</td>
+  <td>Find in Files</td>
+</tr>
+<tr>
+    <th colspan="2">
+        Other
+    </th>
+</tr>
+<tr>
+  <td>F7</td>
+  <td>Next Spellcheck Error</td>
+</tr>
+<tr>
+  <td>Shift-F7</td>
+  <td>Previous Spellcheck Error</td>
+</tr>
+<tr>
+    <th colspan="2">
+        Toggles
+    </th>
+</tr>
+<tr>
+  <td>Alt-V-W</td>
+  <td>Toggle Word Wrap</td>
+</tr>
+<tr>
+  <td>Alt-V-N</td>
+  <td>Toggle Line Numbers</td>
+</tr>
+<tr>
+  <td>Alt-V-B</td>
+  <td>Toggle the Preview Browser</td>
+</tr>
+<tr>
+<tr>
+    <th colspan="2">
+        Text Selection and Navigation
+    </th>
+</tr>
+<tr>
+  <td>Ctrl-Shift-Arrow</td>
+  <td>Select word left and right</td>
+</tr>
+<tr>
+  <td>Ctrl-Shift-Home/End</td>
+  <td>Select to beginning or end of line</td>
+</tr>
+<tr>
+  <td>Ctrl-Shift-D</td>
+  <td>Duplicate selection and paste after</td>
+</tr>
+<tr>
+  <td>Alt-Drag up and down</td>
+  <td>Block Selection across multiple line</td>
+</tr>
+<tr>
+  <td>Ctrl-Alt-Up/Down</td>
+  <td>Create multiple cursors for simultaneous input</td>
+</tr>
+<tr>
+    <th colspan="2">
+        Editor Admin
+    </th>
+</tr>
+<tr>
+  <td>Ctrl-,</td>
+  <td>Brings up Ace Editor Settings menu</td>
+</tr>
+</table>
+<h3 id="multi-select-text">Multi Select Text</h3>
+<p>ACE support multi-selection of text by using <code>Ctrl-Select</code>. Hold down the <code>Ctrl</code> key make a selection then let up. With the selection still active press <code>Ctrl</code> again and select another area of text. Both selections are now active. Repeat for additional selections.</p>
+<p>With multiple selections active you can now type and change text in all selected areas.</p>
+<h3 id="block-selections-multi-line">Block Selections (multi-line)</h3>
+<p>You can also select vertical blocks in Ace Editor. To use Block Selection hold down the <code>Ctrl</code> key and drag a rectangle to make a selection of the text in the rectangle area.</p>
+<p>With the selection active, when you type the text on each row is changed.</p>
+
+    </div>
+
+
+
+    <h4 class="outdent" id="seealso">See also</h4>
+    <div class="see-also-container">
+        <div>Shortcut Key Remapping and Custom Shortcut Operations</div>
+
+    </div>
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-24
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Editor Shortcut Keys and Selection Gestures&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Editor%20Shortcut%20Keys%20and%20Selection%20Gestures%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_4RD0XJY44.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

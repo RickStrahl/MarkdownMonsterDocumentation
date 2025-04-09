@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>The Folder Browser - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                The Folder Browser
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    The Folder Browser
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>The slide out Folder Browser allows you quickly browse, open and manipulate files and folders in the Windows file system.</p>
+<p>To access the Folder Browser use the <strong><i class="fas fa-files-o" style="font-size: 1.1em"></i>  icon</strong> on the toolbar on the right, or in the Window control box at the top left of the main window. You can also use a keyboard shortcut: <strong>Alt-a-f</strong>.</p>
+<p>Control and to create a new document because in here there's some text that I wanna copy right and I wanna paste that into another topic so I
+Here's what the Folder Browser looks like:</p>
+<p><img src="/docs/images/folderbrowser.png" alt="" /></p>
+<h3 id="opening-folders">Opening Folders</h3>
+<p>There are a number of ways to open a folder for the folder browser:</p>
+<ul>
+<li>Type a folder name into the Textbox above the list</li>
+<li>Click the  <i class="fas fa-ellipsis-h" style="font-size: 1.1em"></i>  icon to pick a folder</li>
+<li>Click the <i class="fas fa-location-arrow" style="font-size: 1.1em"></i>  icon top open the active document's parent folder</li>
+</ul>
+<h3 id="opening-files">Opening Files</h3>
+<p>You can <strong>double click</strong> or <strong>press Enter</strong> on any file to open it. If the format is one that Markdown Monster knows how to work with the document is opened in the editor. You can also simply drag a file into the editor window and it will open there if has one of the supported file extensions</p>
+<h3 id="images">Images</h3>
+<p>You can preview images clicking and displaying them in the Editor view. Images are read-only when displayed but the context menu allows you to open images in an image viewer or editor (configurable in Settings). Images can be viewed or edited using <strong>Show Image</strong> or <strong>Edit Image</strong> and you can <strong>drag images</strong> images into an open Markdown document to create an image reference in the document.</p>
+<p>Images are opened in the configured image editor (set via the <strong>ImageEditor</strong> configuration setting). jpg, png, and gif images are supported for this operation.</p>
+<h3 id="unsupported-files">Unsupported Files</h3>
+<p>All other files are sent to the standard Shell mapping and displayed in the configured viewer. Executable files are not allowed to be executed.</p>
+<h3 id="file-management">File Management</h3>
+<p>The short cut menu in the TreeView allows access to the following file operations:</p>
+<ul>
+<li>Create a new File or Folder</li>
+<li>Rename an existing file</li>
+<li>Delete a file</li>
+</ul>
+<h3 id="open-terminal-or-explorer">Open Terminal or Explorer</h3>
+<p>You can also open a Command prompt or Explorer window at the selected file location. Terminal uses the <strong>TerminalCommand</strong> and <strong>TerminalCommandArgs</strong> configuration settings to start a command prompt. The Explorer link simply opens the Windows File Explorer in the specified location.</p>
+<h3 id="find-files">Find Files</h3>
+<p>There are three ways you can find files in the Folder Browser:</p>
+<ul>
+<li>Type into the list to jump to closest match</li>
+<li>Use the <strong>Search Box</strong> above the list</li>
+<li>Use Find in Files</li>
+</ul>
+<p>The first two options search the currently visible tree and subtree. Find in files searches the entire subtree for files including contained content optionally.</p>
+<p>For more information see the Finding Files topic.</p>
+<h3 id="active-folder-navigation">Active Folder Navigation</h3>
+<p>By default the folder browser opens at its last remembered location and stays there unless you explicitly navigate to a new location. You can use the Arrow icon in the toolbar to navigate to the current document's location quickly. There are also menu options on the View Menu to activate the Folder Browser, and the Tab Context menu to show the folder browser for the active document.</p>
+<p>Alternately you can change the folder explicitly by using the folder selection box at the top of the list.</p>
+<h3 id="syncing-document-and-folder-browser">Syncing Document and Folder Browser</h3>
+<p>Some people prefer to keep the Folder Browser <strong>always in sync with the active document</strong>. You can do this via the Transfer icon on the menu bar, or a configuration settings in the Settings. When toggled on, whenever you change the active document, the folder browser immediately navigates to that folder and selects that file in the folder browser.</p>
+<p>The default for this setting is off as this constant navigation can be distracting, so you have to explicitly enable it. The setting is sticky, so it's remembered across sessions.</p>
+<h3 id="commit-to-git-and-push">Commit to Git and Push</h3>
+<p>You can also optionally commit the selected file to Git. If selected the current file only is committed and optionally pushed to the server, depending on the <code>GitCommandBehavior</code> setting (<code>CommitAndPublish</code> or <code>Commit</code>)</p>
+<h3 id="file-icons">File Icons</h3>
+<p>The browser automatically displays icons for most common types of files.</p>
+<p>You can optionally disable this feature by setting <code>FolderBrowser.ShowIcons: false</code> in the configuration file. Turning off icons can make the file browser run faster.</p>
+<p>You can also add icons for other file formats by adding a 32x32 PNG file with the extension name into the <code>Editor\fileicons</code> folder.</p>
+
+    </div>
+
+
+
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-03-12
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - The Folder Browser&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20The%20Folder%20Browser%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_4WU1CJYKA.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

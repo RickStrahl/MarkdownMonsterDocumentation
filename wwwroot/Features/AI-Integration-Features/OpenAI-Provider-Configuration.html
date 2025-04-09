@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>OpenAI Provider Configuration - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                OpenAI Provider Configuration
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    OpenAI Provider Configuration
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>In order to use the Image and Chat Completion features in Markdown Monster you have to configure the required OpenAI providers for image generation and one for chat completions. You can create multiple providers for each and switch between providers which can be useful to switch between local and online models.</p>
+<p>In order to do this you'll need one of the following:</p>
+<ul>
+<li>OpenAI Account (ApiKey, ModelId)</li>
+<li>Azure OpenAI Deployment (ApiKey, Deployment name and Site Url)</li>
+<li>Ollama with local models (ModelId)</li>
+<li>Generic OpenAI API</li>
+</ul>
+<blockquote>
+<p>Dall-E Image generation only works with the OpenAI and Azure OpenAi online models, while Chat Completions can use local models. For local Chat Completion we recommend using <a href="https://ollama.com/">Ollama</a> to expose a local OpenAI interface.</p>
+</blockquote>
+<h2 id="the-openai-provider-configuration-form">The OpenAI Provider Configuration Form</h2>
+<p>The configuration lets you configure connections to both the Image and Chat Completion providers. Both use the same interface and depending on which provider you choose to add, different options are required for each provider <em>(see provider specific configuration below)</em>.</p>
+<p><img src="/docs/images/OpenAiConfigurationNew.png" alt="" /></p>
+<p>You can make changes to the configuration which updates settings immediately. Click Save to persist settings into the configuration file and save settings across Markdown Monster sessions.</p>
+<p>When creating new providers you can choose from multiple provider types:</p>
+<p><img src="/docs/images/OpenAiConfiguration-NewProvider.png" alt="" /></p>
+<p>And you can create and switch between multiple providers for both completion and images:</p>
+<p><img src="/docs/images/OpenAiConfiguration-MultipleProviders.png" alt="" /></p>
+<p>For completions you can choose from:</p>
+<ul>
+<li>OpenAI</li>
+<li>Azure OpenAI</li>
+<li>Ollama</li>
+<li>Generic OpenAI Provider</li>
+</ul>
+<p>For images you can choose from:</p>
+<ul>
+<li>OpenAI</li>
+<li>Azure OpenAI</li>
+</ul>
+<p>More advanced users can also edit the AI Provider configuration as raw JSON using the <strong>Edit Configuration</strong> button.</p>
+<h3 id="openai-configuration-image-and-completions">OpenAI Configuration (Image and Completions)</h3>
+<p>OpenAI uses a single configuration for both images and chat completions - you specify which is used based on the model used (ie. dall-e-3 or any of the other <code>gpt-</code> models).</p>
+<p>To configure you'll need to provide:</p>
+<ul>
+<li><strong>Api Key</strong></li>
+<li><strong>Chat Model Id</strong>: gpt-4o-mini*, gpt-3.5-turbo, gpt-4 etc.</li>
+<li><strong>Image Model Id</strong>: dall-e-3</li>
+<li><strong>Endpoint</strong>: <a href="https://api.openai.com/v1/">https://api.openai.com/v1/</a></li>
+</ul>
+<blockquote>
+<p>The Endpoint and model are pre-set automatically when you create a new OpenAI connection - <code>dall-e-3</code> for images, and <code>gpt-4o-mini</code> for completions. You can change to <a href="https://platform.openai.com/docs/models">different OpenAI models</a> if you like.</p>
+</blockquote>
+<p>OpenAI Links:</p>
+<ul>
+<li><a href="https://platform.openai.com/signup">Signup</a></li>
+<li><a href="https://platform.openai.com/docs/models">Models and Model Ids</a></li>
+<li><a href="https://openai.com/api/pricing/">Model Pricing</a></li>
+</ul>
+<h3 id="azure-openai-provider-configuration-image-and-completion">Azure OpenAI Provider Configuration (Image and Completion)</h3>
+<p>Azure uses a more complex configuration for running your own models, by basically requiring you to set up a dedicated AI Web site and one or more <strong>Deployments</strong> for each model that you want to run. This means you are responsible for setting up an Azure OpenAI resource and then adding one ore more model deployments to the resource. You can test it in the Azure AI Studio.</p>
+<p>For Azure OpenAI you'll need to provide the following:</p>
+<ul>
+<li><strong>Api Key</strong></li>
+<li><strong>Site Endpoint Url</strong>: <code>https://YourAzureSiteName.openai.azure.com/</code></li>
+<li><strong>Model Id</strong>: Use the Deployment Name - Each Model runs in its own deployment</li>
+<li><strong>API Version</strong>: In Azure AI Studio you can find the Preview version in the JSON test URL<br />
+<em>we provide a default api version, but to get the latest updates you might want to change that to the current version</em></li>
+<li><strong>EndPoint Template</strong>: <code>{0}/openai/deployments/{2}/{1}?api-version={3}</code>
+<small>
+<ul>
+<li><strong>{0}</strong> - Site Endpoint Url</li>
+<li><strong>{1}</strong> - Operation Endpoint (ie. <code>/images/generation/</code> or <code>/chat/completions/</code>)</li>
+<li><strong>{2}</strong> - Deployment</li>
+<li><strong>{3}</strong> - API revision
+</small></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Note the Site Endpoint Url <strong>is not the full URL</strong> that is shown in Azure OpenAI Studio, but the <strong>Site Base Url</strong> for the Azure OpenAI Web site. It'll typically be <code>https://resourcesetname.openai.azure.com</code>.</p>
+</blockquote>
+<h3 id="ollama-local-model-configuration">Ollama Local Model Configuration</h3>
+<p>You can also run local models using the <a href="https://ollama.com/">Ollama</a> AI engine. Ollama can run models locally and exposes a local optional OpenAI service.</p>
+<p>You essentially <strong>pull</strong> down a model, and then run Ollama with a specific model by using <code>ollama serve</code> or <code>ollama run phi3</code>. Popular local models are <strong>llama3</strong>, <strong>phi3</strong>, <strong>mistral</strong>, <strong>mistral-nemo</strong> but you can find <a href="https://ollama.com/library">many more models</a> to play with from Hugging Face and other AI repositories.</p>
+<p>To run with Ollama</p>
+<ul>
+<li><strong>Pull a model:</strong> with <code>ollama pull llama3</code></li>
+<li><strong>Select a Model</strong> with <code>ollama run llama3</code></li>
+<li><strong>Start Ollama with current model:</strong> with <code>ollama serve</code> to run the OpenAI server with active model</li>
+</ul>
+<p>The Ollama server <code>model</code> parameter corresponds to the name of any of the installed and previously pulled local models.</p>
+<p>For Ollama configuration you:</p>
+<ul>
+<li><strong>Start Ollama:</strong> <code>ollama serve</code></li>
+<li><strong>Endpoint:</strong> <a href="http://127.0.0.1:11434/v1/">http://127.0.0.1:11434/v1/</a></li>
+<li><strong>Model Id:</strong> Name of any locally installed model (llama3, phi3 etc.)<br />
+<em>Use <code>ollama list</code> to see installed models</em></li>
+</ul>
+<blockquote>
+<p>The Endpoint is set automatically when you choose Ollama for a new Completion provider and local models don't require an API key.</p>
+</blockquote>
+<p>You can also use Ollama interactively using <a href="https://openwebui.com/">OpenWebUi</a> which is a Docker based local Chat UI that lets you run Ollama models using a common Web based chat interface. It also lets you select from available models, and lets you fine tune and save models interactively.</p>
+<ul>
+<li><a href="https://ollama.com/">Ollama Download</a></li>
+<li><a href="https://github.com/open-webui/open-webui">Open WebUI</a></li>
+<li><a href="https://ollama.com/library">Ollama curated Models</a></li>
+<li><a href="https://huggingface.co/models">More models at Hugging Face Models</a></li>
+</ul>
+
+    </div>
+
+
+
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-23
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - OpenAI Provider Configuration&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20OpenAI%20Provider%20Configuration%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_6Y41CLPFE.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

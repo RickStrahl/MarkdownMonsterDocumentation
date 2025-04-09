@@ -1,0 +1,15 @@
+﻿Markdown Monster can be downloaded and evaluated for free, but a [license must be purchased for continued use](https://markdownmonster.west-wind.com/purchase#License). Licenses are per user, rather than per machine, so a licensed user can use Markdown Monster on as many computers as needed. An organizational license is also available to use Markdown Monster for an unlimited number of installations within a single organization. Each individual user requires a separate license, unless an organizational license is used in which case the license is limited to members of licensed organization.
+
+> Licenses are valid for the major version for which it was purchased such as v3.0 to v3.99 with typical versions cycles between 2 and 3 years.
+>
+> Upgrades run around 50% of full pricing, and upgrade charges are waived within 1 year of purchase of a new release.
+
+More detailed license information:
+
+[Markdown Monster Licensing](https://markdownmonster.west-wind.com/purchase#License)
+
+### No Warranty
+You expressly acknowledge and agree that use of the licensed application is at your sole risk and that the entire risk as to satisfactory quality, performance, accuracy and effort is with you. To the maximum extent permitted by applicable law, the license application and any services performed or provided by the licensed application ("services") are provided "as is" and "as available," with all faults and without warranty of any kind, and application provider hereby disclaims all warranties and conditions with respect to the licensed application and any services, either express, implied or statutory, including, but not limited to, the implied warranties and/or conditions of merchantability, of satisfactory quality, of fitness for a particular purpose, of accuracy, of quiet enjoyment, and non-infringement of third party rights. Application provider does not warrant against interference with your enjoyment of the licensed application, that the functions contained in, or services performed or provided by, the licensed application will meet your requirements, that the operation of the licensed application or services will be uninterrupted or error-free, or that effects in the licensed application or services will be corrected. No oral or written information or advice given by application provider or its authorized representative shall create a warranty. Should the licensed application or services prove defective, you assume the entire cost of all necessary servicing, repair or correction.
+
+### LIMITATION OF LIABILITY
+IN NO EVENT SHALL THE AUTHOR, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR REDISTRIBUTE THIS PROGRAM AND DOCUMENTATION, BE LIABLE FOR ANY COMMERCIAL, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM INCLUDING, BUT NOT LIMITED TO, LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR LOSSES SUSTAINED BY THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS, EVEN IF YOU OR OTHER PARTIES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES

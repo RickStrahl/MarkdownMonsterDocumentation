@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">    
+    <title>Open Files from the Command Line - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css">
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet">
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic"></topictype>
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars" title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo">
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Open Files from the Command Line
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Open Files from the Command Line
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>When you install Markdown Monster the installation folder is added to your current User path. To start Markdown Monster from the command line you can do:</p>
+<pre><code class="language-powershell">markdownmonster readme.md
+</code></pre>
+<p>or simply:</p>
+<pre><code class="language-powershell">mm readme.md
+</code></pre>
+<h4 id="multiple-files">Multiple Files</h4>
+<p>Markdown Monster can also open multiple files by passing multiple filename parameters to the application:</p>
+<pre><code class="language-powershell">mm readme.md todo.md changelog.md
+</code></pre>
+<h4 id="opening-folders">Opening Folders</h4>
+<p>You can also open a folder in the <a href="#__0">FolderBrowser</a> by specifying a folder name from the command line:</p>
+<pre><code class="language-powershell">mm .
+mm .\dev\MyPoject
+</code></pre>
+<p>You can combine both opening a file and folder in the FolderBrowser like this:</p>
+<pre><code class="language-powershell">mm . readme.md
+mm c:\temp c:\temp\SampleMarkdown.md
+</code></pre>
+<h4 id="path-support">Path Support</h4>
+<p>Markdown Monster automatically figures out the current path and opens files referenced with relative paths as well as full paths.</p>
+<p>All of the following work:</p>
+<pre><code class="language-powershell">mm .\docs\Readme.md
+mm ..\Config.md
+mm c:\docs\Readme.md
+</code></pre>
+<h3 id="line-number">Line Number</h3>
+<p>You can also specify a line number to open the document on using the <code>-line 100</code> command line switch:</p>
+<pre><code class="language-powershell">mm .\docs\Readme.md -line 100
+</code></pre>
+<h3 id="open-a-new-empty-document">Open a new Empty Document</h3>
+<p>To open an empty document pass <code>untitled</code>:</p>
+<pre><code class="language-powershell">mm untitled
+</code></pre>
+<h3 id="open-a-new-document-with-pre-filled-text">Open a new Document with Pre-filled Text</h3>
+<p>To open a new untitled document with text preset you can use one of the following syntax:</p>
+<pre><code class="language-text">untitled.&lt;encoding&gt;,&lt;encodedContent&gt;
+</code></pre>
+<p>Encodings are:</p>
+<ul>
+<li><strong>base64</strong> - base64 encoded string - recommended approach</li>
+<li><strong>urlencoded</strong> - a UrlEncoded string</li>
+<li><strong>json</strong> - single line JSON string with or without quotes</li>
+<li><strong>text</strong> - plain text - recommended only for very simple one liners</li>
+</ul>
+<p>In actual shell commands this looks like this:</p>
+<pre><code class="language-powershell">mm untitled.base64,IyBIZWxsbyBXb3JsZAoKSXQncyBhICoqY3J1ZWwsIGNydWVsKiogd29ybGQu
+mm untitled.urlencoded,This%20is%20a%20test.
+mm &quot;untitled.text,This is a new document&quot;
+mm &quot;untitled.json,'This is\nmulti-line content.'&quot;
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> If you are using <code>text</code> or <code>json</code> make sure that the entire parameter is wrapped into quotes as spaces and quotes will break the OS command line parsing. Even so you may still run into issue with <code>&quot;</code> quotes <strong>inside of the text</strong>. For this reason we recommend you use <code>base64</code> or <code>urlencoded</code>.</p>
+</blockquote>
+<h3 id="open-a-document-with-pre-filled-text-from-base64-data">Open a Document with Pre-Filled Text from Base64 Data</h3>
+<p>If you need to open a new document with a large amount of multi-line text, using base64 is the preferred mechanism and there's an explicit <code>-base64text</code> command line parameter to do it:</p>
+<pre><code class="language-powershell">mm -base64text IyBIZWxsbyBXb3JsZAoKSXQncyBhICoqY3J1ZWwsIGNydWVsKiogd29ybGQu
+</code></pre>
+<h3 id="other-file-formats-supported">Other File Formats Supported</h3>
+<p>Markdown Monster also supports a ton of other file formats with Syntax Highlighting including:</p>
+<p>csharp, html, css, javascript, typescript, xml, config, powershell, foxpro, yaml, dockerfile and many more.</p>
+<p>For a complete list check the <code>EditorExtensionMappings</code> key in <strong>Tools → Settings</strong>.</p>
+<h3 id="additional-command-line-options">Additional Command Line Options</h3>
+<p>There are a number of additional Command Line Operations available that let you configure Markdown Monster. Please see the <a href="#__0">Command Line Operations</a> topic for details.</p>
+
+    </div>
+
+
+
+    <h4 class="outdent" id="seealso">See also</h4>
+    <div class="see-also-container">
+        <div>Command Line Operations</div>
+
+    </div>
+                </article>
+
+                <hr>
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-24
+                    <br>
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Open Files from the Command Line&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Open%20Files%20from%20the%20Command%20Line%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_4X313DNEU.html">Comment or report problem with topic</a>
+                
+                <br class="clearfix">
+                <br>
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</div></body>
+</html>
+

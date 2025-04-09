@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>ACE Editor JavaScript and CSS Extensions - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                ACE Editor JavaScript and CSS Extensions
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    ACE Editor JavaScript and CSS Extensions
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>The editor in Markdown Monster uses <a href="https://ace.c9.io/" target="top">ACE Editor</a> and you can extend the editor behavior by adding some JavaScript to the editor. This is useful for Addin authors or those creating Commander Addin scripts.</p>
+<p>You can extend the editor by creating:</p>
+<ul>
+<li>JavaScript Code in  <code>Editor\editor-user-extensions.js</code></li>
+<li>CSS styling in <code>Editor\editor-user-extensions.css</code></li>
+</ul>
+<h3 id="ace-editor-access-from-markdown-monster">ACE Editor Access from Markdown Monster</h3>
+<p>To access the ACE Editor wrapper in Markdown monster you use the <code>MarkdownDocumentEditor</code> instance which is accessible via <code>Model.ActiveEditor.AceEditor</code>.</p>
+<p>There are two ways to interact with the JavaScript interface:</p>
+<ul>
+<li>Use the .NET Helpers on <code>MarkdownDocumentEditor</code></li>
+<li>Use the MM JavaScript wrapper object</li>
+<li>Use ACE Editor's API directly</li>
+</ul>
+<h3 id="use-the-net-wrappers">Use the .NET Wrappers</h3>
+<p>The <code>MarkdownDocumentEditor</code> class has a number of methods that perform a few common operations on the editor. You can retrieve and set selections, you can search the document, get and set the cursor and scroll positions, replace content, restyle the editor, toggle a number of options and so on. Check the class interface on <code>MarkdownDocumentEditor</code> for what's available.</p>
+<h3 id="use-the-javascript-wrapper">Use the JavaScript Wrapper</h3>
+<p>Markdown Monster uses a fairly large wrapper interface to interact with ACE Editor. All interaction with ACE is driven through this interface which is both used internally from JavaScript, but is also accessible to call from .NET via the <code>Model.ActiveEditor.AceEditor</code> instance.</p>
+<p><code>AceEditor</code> is the JavaScript object map that provides a host of editor operations and internal interaction, which is defined in <code>editor.js</code>. This is considered internal code, but addins and Commander snippets can take advantage of this functionality as well if you're willing to do some digging into the JavaScript code.</p>
+<p>To access this object from .NET code you can use code like this:</p>
+<pre><code class="language-cs">var range = Model.ActiveEditor.AceEditor.GetSelectionRange(false);
+</code></pre>
+<blockquote>
+<h4 id="--parameterless-javascript-functions-require-a-single-parameter"><i class="fas fa-warning" style="font-size: 1.1em"></i>  Parameterless JavaScript Functions require a single Parameter</h4>
+<p>Parameterless functions called via interop on the AceEditor instance have to pass a single parameter - typically <code>false</code> - to allow the interop call to succeed. This is a quirk of COM-&gt;JavaScript interop in .NET and since you're calling directly into JavaScript without a wrapper this is required. The above method has no parameters but <code>false</code> is passed, otherwise the call fails. If methods have parameters, just parameters that you would normally pass.</p>
+</blockquote>
+<h3 id="extending-editor-functionality">Extending Editor Functionality</h3>
+<p>Markdown Monster lets you extend the editor via a custom script file you can create in:</p>
+<ul>
+<li><code>&lt;installDir&gt;\Editor\editor-user-extensions.js</code></li>
+</ul>
+<p>This file is loaded into the editor if it exists, but unlike other files, this file is not shipped with Markdown Monster nor updated in update releases, so the file stays customized with your changes.</p>
+<p>In this file you can extend the <code>window.textEditor</code> object and add methods of your own:</p>
+<pre><code class="language-javascript">var te = window.textEditor;
+
+te.helloWorld = function(message) {
+  alert(&quot;Hello...\n&quot; + message);
+}
+</code></pre>
+<p>You can then call this function from .NET code with:</p>
+<pre><code class="language-cs">Model.ActiveEditor.AceEditor.helloWorld(&quot;Customizing ACE Editor&quot;);
+</code></pre>
+<h3 id="access-ace-editor-directly">Access ACE Editor Directly</h3>
+<p>You can also access the raw ACE Editor instance directly via:</p>
+<pre><code class="language-cs">var ace = Model.ActiveEditor.AceEditor.editor;
+</code></pre>
+<p>or in JavaScript code in <code>editor-user-extensions.js</code>:</p>
+<pre><code class="language-javascript">var ace = window.textEditor.editor;
+</code></pre>
+<p>Using this instance you can access all of ACE's features defined by the ACE Editor API directly. Note that the preferred approach is to create a JavaScript wrapper function and call that from .NET rather than accessing the editor directly to keep the interface less chatty and to avoid parameter passing conflicts.</p>
+<h3 id="things-to-watch-out-for">Things to watch out for</h3>
+<h4 id="ace-editor-instantiation">ACE Editor Instantiation</h4>
+<p>The ACE instance is not immediately initialized when the document loads. Instead ACE is initialized when the .NET component loads the document and then calls it with configuration information to properly apply styles and options. For this reason code like this will not work:</p>
+<pre><code class="language-js">var te = window.textEditor;  // works
+var aceEditor = te.editor;   // ACE instance - null, not initialized yet
+
+te.myFunction = function() {
+    var aceEditor = te.editor;  // this works - ACE doc instance
+}
+</code></pre>
+<blockquote>
+<h4 id="--do-not-use-reserved-global-variable-names"><i class="fas fa-warning" style="font-size: 1.1em"></i>  Do not use Reserved Global Variable Names</h4>
+<p>There are several reserved variable names from ACE Editor and the Markdown Monster JavaScript interfaces.</p>
+<p>Do not use any of these variable names in your code:</p>
+<ul>
+<li><strong>ace</strong></li>
+<li><strong>textEditor</strong></li>
+<li><strong>spellcheck</strong> and <strong>sc</strong></li>
+</ul>
+</blockquote>
+<h4 id="passing-parameters-to-and-from-javascript">Passing Parameters to and from JavaScript</h4>
+<p>Although COM supports two-way calls of .NET → JavaScript and JavaScript → .NET, there are a few complications to watch out for.</p>
+<h4 id="parameterless-functions">Parameterless Functions</h4>
+<p>Any functions that don't have parameters have to pass a single parameter in spite of the method's parameterless signature. This is due to the way JavaScript objects expect parameters to be passed (via a parameter array) and the way COM handles this. Pass <code>false</code> as a parameter to a parameterless function.</p>
+<h4 id="object-serialization">Object Serialization</h4>
+<p>Not all parameters can marshal between .NET and JavaScript and it's best to stick to simple types rather than objects. If you do pass objects either use structures or objects that don't have custom methods. Alternately you can serialize parameters to JSON and deserialize as part of the wrapper methods you create. The latter is the most reliable for passing objects back and forth. If at all possible use simple types for parameters.</p>
+<h3 id="adding-ace-editor-css-customizations">Adding ACE Editor CSS Customizations</h3>
+<p>ACE editor can be customized to some degree using CSS to affect how portions of the editor display and behave.</p>
+<p>You can extend or override default styling by creating a new file in:</p>
+<ul>
+<li><code>Editor\editor-user-extesnsions.css</code></li>
+</ul>
+<p>This file is loaded if it exists and is not overridden during MM updates.</p>
+<p>Inside of this CSS file you can apply custom styling to affect MM styling.</p>
+<p>For example:</p>
+<pre><code class="language-css">.ace_cursor { 
+    border-left: 4px solid !important;
+}
+.ace_emphasis {
+    font-style: italic;
+    font-weight: 600;  
+    color: gold !important;
+}
+</code></pre>
+<h4 id="custom-css-and-ace-themes">Custom CSS and ACE Themes</h4>
+<p>Note that many of ACE Editors formatting options come from the various editor themes so if you are making major changes it's probably better to create a new ACE Editor theme. Also realize making changes like colors are either overriding theme colors which may not look right when applying another theme.</p>
+<p>Therefore it's best to minimize the changes you make here to behaviors (like the cursor, or highlights etc.).</p>
+<p>If you want to make major changes to a specific theme consider copying an existing theme (in <code>Editor\scripts\Ace\theme-*.js</code> files) by copying and extending and renaming an existing theme. If you rename your new theme the theme will be preserved during MM updates.</p>
+
+    </div>
+
+
+
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-24
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - ACE Editor JavaScript and CSS Extensions&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20ACE%20Editor%20JavaScript%20and%20CSS%20Extensions%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_5DU1F0STF.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

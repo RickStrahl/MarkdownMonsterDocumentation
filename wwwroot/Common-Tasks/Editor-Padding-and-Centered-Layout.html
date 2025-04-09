@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>Editor Padding and Centered Layout - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Editor Padding and Centered Layout
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Editor Padding and Centered Layout
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>When working with wide monitors it's quite common to get a feeling of <strong>too wide</strong> of a wall of text when editing. Maxing the editor on a 4k screen can really overwhelm the user with too much text. Studies show that there's an optimal width for reading text which is generally somewhere around 120 characters per line max.</p>
+<p>Markdown Monster lets you configure how wide is too wide, or lets you go full bore if want to take in all the text you can get at once.</p>
+<h3 id="layout-modes">Layout Modes</h3>
+<p>To make this easier to manage Markdown Monster has two editor layout modes:</p>
+<ul>
+<li>Full Width Layout</li>
+<li>Centered Layout</li>
+</ul>
+<p>You can toggle between Full Width Layout and Centered Layout Modes on an off using <strong>View → Toggle Centered Layout</strong> from the menu.</p>
+<p>Full Width Layout stretches the entire width of the editing surface, while Centered Layout uses a max width to limit the maximum width that the editor's content can expand to before wrapping. Any excess width is then evenly split with padding, so the actual content is in effect centered on the editor canvas.</p>
+<p>You can configure the explicit settings using the explicit configuration properties in <strong>Tools → Settings</strong>:</p>
+<ul>
+<li>Editor.Padding</li>
+<li>Editor.CenteredMode</li>
+<li>Editor.CenteredModeMaxWidth</li>
+</ul>
+<h3 id="padding">Padding</h3>
+<p>Determines the padding around text in Full Width Layout mode. This is the horizontal padding around the editor text when text fills the entire editing area. The value is a fixed pixel width and defaults to 15 pixels.</p>
+<p>Padding is ignored when using <code>CenteredMode</code> and the width of the edit panel is larger than the <code>CenteredModeMaxWidth</code>.</p>
+<p>Set with the <code>&quot;Padding&quot;: 15</code> configuration setting.</p>
+<h3 id="centeredmode-and-centeredmodemaxwidth">CenteredMode and CenteredModeMaxWidth</h3>
+<p>You can enable Centered Mode by setting the <code>&quot;CenteredMode&quot;: true</code> in the Settings. To go along with that setting you can then specify the width of the centered content using the <code>&quot;CenteredModeMaxWidth&quot;: 1080</code> property which is given in pixels. The default width is 970 pixels.</p>
+<p>The <code>CenteredModeMaxWidth</code> is used to dynamically calculate any padding that is applied to the editor surface when the width of the edit pane is larger than the max width specified. Any size that is larger is padded, effectively providing some 'white space' around the content in the editor.</p>
+<p>Here's what the Centered Mode looks like when set to 970 pixels on an approx 2k total window size (including preview/folder browser):</p>
+<p><img src="/docs/images/MaxWidthPadding.png" alt="" /></p>
+<p>Notice the padding around the text in the center which increases as you widen the window, and shrinks down to the max width. If the max width is not exceeded the editor falls back to the fixed side margins at which point the <code>Editor.Padding</code> is applied.</p>
+
+    </div>
+
+
+
+    <h4 class="outdent" id="seealso">See also</h4>
+    <div class="see-also-container">
+        <div>Split Editor View</div>
+
+    </div>
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-23
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Editor Padding and Centered Layout&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Editor%20Padding%20and%20Centered%20Layout%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_5ED0RJ891.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

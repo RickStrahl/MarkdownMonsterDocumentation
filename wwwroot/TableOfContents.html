@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />        
+    <title>Markdown Monster</title>
+    <meta http-equiv="cache-control" CONTENT="public">
+    <meta http-equiv="cache-control" CONTENT="private">
+
+    <link rel="stylesheet" type="text/css" href="_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="_kavadocs/themes/wwhelp.css" />
+
+    <script src="_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+    <script src="_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script src="_kavadocs/themes/scripts/wwhelp.js"></script>
+</head>
+<body style="overflow: auto;">
+    <div class="toc-content">
+        <div class="toc-menu">
+            <!-- HOME LINK - enable and add HREF to link back to your site -->
+            <a href="https://markdownmonster.west-wind.com/" class="btn btn-link btn-sm"><i class="fa fa-home"></i> Home</a>
+
+            <a href="javascript:helpBuilder.tocCollapseAll()" class="btn btn-link btn-sm" title="Collapse all topics"><i class="fa fa-minus-circle"></i></a>
+            <a href="javascript:helpBuilder.tocExpandAll()" class="btn btn-link btn-sm" title="Expand all topics"><i class="fa fa-plus-circle"></i></a>
+        </div>
+
+        
+        <div class="input-group m-2" >
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon" style="height: 2.4em; font-size: 0.8em"><i class="fa fa-search"></i></span>
+            </div>            
+            <input type="text" id="SearchBox"  class="form-control form-control-sm"  style="font-size: 0.75em;"
+                placeholder="Search topic headers">        
+            <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon" style="height: 2em;"><i id="SearchBoxClearButton" style="font-size: 0.8" class="fad fa-xmark-circle"></i></span>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="toc">         
+                <li>
+   <i class="fa fa-caret-{(topic.IsExpanded ? "right" : "down")}"></i>
+    <div>
+        <img src="_kavadocs/icons/index.png">
+        <a href="Markdown-Monster-Documentation.html" id="_index">Markdown Monster Documentation</a>
+    </div>
+<ul>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="https://github.com/RickStrahl/MarkdownMonster/blob/main/Changelog.md" id="_4ug0n96ns" target="_blank">What's New</a> <i class="fas fa-arrow-up-right-from-square info small"></i>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Markdown-Monster-Documentation/An-Introduction-to-Markdown.html" id="_6tb0xey49">An Introduction to Markdown</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Markdown-Monster-Documentation/Support.html" id="_4s0144w3g">Support</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Markdown-Monster-Documentation/License.html" id="_4s014echa">License</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Markdown-Monster-Documentation/Data-Privacy-in-Markdown-Monster.html" id="_5v515os5z">Data Privacy in Markdown Monster</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Markdown-Monster-Documentation/Markdown-Monster-Portable-Version.html" id="_4t90rhfy9">Markdown Monster Portable Version</a>
+    </div>
+</li>
+</ul>
+</li>
+<li>
+   <i class="fa fa-caret-{(topic.IsExpanded ? "right" : "down")}"></i>
+    <div>
+        <img src="_kavadocs/icons/header.png">
+        <a href="Features.html" id="_4rd0xigys">Features</a>
+    </div>
+<ul>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Features/Working-with-the-HTML-Preview.html" id="_4ni0v22ad">Working with the HTML Preview</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Features/Spellchecking.html" id="_4rg0wj7pb">Spellchecking</a>
+    </div>
+</li>
+<li>
+   <i class="fa fa-caret-{(topic.IsExpanded ? "right" : "down")}"></i>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Features/The-Folder-Browser.html" id="_4wu1cjyka">The Folder Browser</a>
+    </div>
+<ul>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Features/The-Folder-Browser/Folder-Browser-Preview-Document-Modes.html" id="_6bw0k5a23">Folder Browser Preview Document Modes</a>
+    </div>
+</li>
+</ul>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Features/File-and-Folder-Navigation-via-Tab-Menu.html" id="_4rg0mz918">File and Folder Navigation via Tab Menu</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Features/The-Document-OutlineTable-of-Content-Generator.html" id="_55o1bd4n1">The Document Outline/Table of Content Generator</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Features/Check-Document-Links.html" id="_72k0uwlqp">Check Document Links</a>
+    </div>
+</li>
+<li>
+   <i class="fa fa-caret-{(topic.IsExpanded ? "right" : "down")}"></i>
+    <div>
+        <img src="_kavadocs/icons/header.png">
+        <a href="Features/AI-Integration-Features.html" id="_6z50u8e3y">AI Integration  Features</a>
+    </div>
+<ul>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Features/AI-Integration-Features/OpenAI-Image-Generation.html" id="_6rz0smzc0">OpenAI Image Generation</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Features/AI-Integration-Features/OpenAI-Completion-Features.html" id="_6z50u9437">OpenAI Completion Features</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Features/AI-Integration-Features/OpenAI-Provider-Configuration.html" id="_6y41clpfe">OpenAI Provider Configuration</a>
+    </div>
+</li>
+</ul>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Features/Screen-Captures.html" id="_4nj0wbomy">Screen Captures</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Features/Git-Integration.html" id="_4xp0yygt2">Git Integration</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Features/Use-Projects-to-remember-Documents-and-Folders.html" id="_5i51e89dw">Use Projects to remember Documents and Folders</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Features/Use-Favorites-to-link-Frequently-Used-Files-and-Folders.html" id="_58u0u6bnh">Use Favorites to link Frequently Used Files and Folders</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Features/Open-Markdown-Documents-from-the-Web.html" id="_5730ywrti">Open Markdown Documents from the Web</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Features/Editor-Shortcut-Keys-and-Selection-Gestures.html" id="_4rd0xjy44">Editor Shortcut Keys and Selection Gestures</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Features/Shortcut-Key-Remapping-and-Custom-Shortcut-Operations.html" id="_59l0izpoe">Shortcut Key Remapping and Custom Shortcut Operations</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Features/Add-Custom-Icons-and-Commands-on-the-Editor-Toolbar.html" id="_5im10bjpw">Add Custom Icons and Commands on the Editor Toolbar</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Features/Voice-Dictation.html" id="_cmujr2d84a">Voice Dictation (preview)</a>
+    </div>
+</li>
+</ul>
+</li>
+<li>
+   <i class="fa fa-caret-{(topic.IsExpanded ? "right" : "down")}"></i>
+    <div>
+        <img src="_kavadocs/icons/header.png">
+        <a href="Embedding-Links-Images-Tables-and-More.html" id="_69j1049io">Embedding Links, Images, Tables and More</a>
+    </div>
+<ul>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Embedding-Links-Images-Tables-and-More/Embedding-Links.html" id="_4xs10gaui">Embedding Links</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Embedding-Links-Images-Tables-and-More/Embedding-Images.html" id="_4s01ezteq">Embedding Images</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Embedding-Links-Images-Tables-and-More/Embedding-Code-Snippets.html" id="_53e0pnhea">Embedding Code Snippets</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Embedding-Links-Images-Tables-and-More/Embedding-Tables.html" id="_53a0pfz0t">Embedding Tables</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Embedding-Links-Images-Tables-and-More/Embedding-Gists-as-Code-Snippets.html" id="_69j0zwhcr">Embedding Gists as Code Snippets</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Embedding-Links-Images-Tables-and-More/Embedding-YouTube-Videos.html" id="_69d0zwck0">Embedding YouTube Videos</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Embedding-Links-Images-Tables-and-More/Embedding-Audio-and-Video-Files.html" id="_6nv0s4fus">Embedding Audio and Video Files</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Embedding-Links-Images-Tables-and-More/Embedding-FontAwesome-Icons.html" id="_4ue01xl6q">Embedding FontAwesome Icons</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Embedding-Links-Images-Tables-and-More/Embed-Twitter-Tweet-Widgets-manual.html" id="_69e0rchvh">Embed Twitter Tweet Widgets (manual)</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Embedding-Links-Images-Tables-and-More/Using-the-Command-Palatte-to-execute-Commands.html" id="_6b10l43hf">Using the Command Palatte to execute Commands</a>
+    </div>
+</li>
+</ul>
+</li>
+<li>
+   <i class="fa fa-caret-{(topic.IsExpanded ? "right" : "down")}"></i>
+    <div>
+        <img src="_kavadocs/icons/header.png">
+        <a href="Markdown-Rendering-Extensions.html" id="_73g0o77vr">Markdown Rendering Extensions</a>
+    </div>
+<ul>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Markdown-Rendering-Extensions/Rendering-Mermaid-Charts.html" id="_5ef0x96or">Rendering Mermaid Charts</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Markdown-Rendering-Extensions/Rendering-PlantUml-Diagrams.html" id="_6x60qvpvi">Rendering PlantUml Diagrams</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Markdown-Rendering-Extensions/Admonitions-Extension.html" id="_73g0o81ge">Admonitions Extension</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Markdown-Rendering-Extensions/Rendering-Mathematics-Equations-MathTex-MML-Latex.html" id="_59l0mv2uw">Rendering Mathematics Equations (MathTex, MML, Latex)</a>
+    </div>
+</li>
+</ul>
+</li>
+<li>
+   <i class="fa fa-caret-{(topic.IsExpanded ? "right" : "down")}"></i>
+    <div>
+        <img src="_kavadocs/icons/header.png">
+        <a href="Common-Tasks.html" id="_4xs11s2gw">Common Tasks</a>
+    </div>
+<ul>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Common-Tasks/Generating-PDF-Output.html" id="_4u512gngv">Generating PDF Output</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Common-Tasks/Save-Markdown-Output-as-HTML.html" id="_57w02i1f6">Save Markdown Output as HTML</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Common-Tasks/Understanding-Previews-and-Html-Exports.html" id="_4rg0pdkj9">Understanding Previews and Html Exports</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Common-Tasks/Import-Markdown-as-HTML.html" id="_4nk02xrtk">Import Markdown as HTML</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Common-Tasks/Printing-Html-Output.html" id="_4sv1ej3zo">Printing Html Output</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Common-Tasks/Markdown-Monster-Theme-Support.html" id="_4rg0mw5c2">Markdown Monster Theme Support</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Common-Tasks/Switching-and-Customizing-Preview-Themes.html" id="_4nn17bfic">Switching and Customizing Preview Themes</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Common-Tasks/Vim-and-Emacs-Keyboard-Handlers.html" id="_4ti0sbx65">Vim and Emacs Keyboard Handlers</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Common-Tasks/Split-Editor-View.html" id="_5ea0q9ne2">Split Editor View</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Common-Tasks/Open-Document-in-New-Window-and-Drag-Drop-between-Instances.html" id="_5i10rquxc">Open Document in New Window and Drag & Drop between Instances</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Common-Tasks/Auto--Save-and-Auto--Backup-of-Topics.html" id="_4sv0nob04">Auto-Save and Auto-Backup of Topics</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Common-Tasks/Save-Encrypted-Documents.html" id="_5fd0qopxq">Save Encrypted Documents</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Common-Tasks/Editor-Display-Modes-Distraction-Free-and-Presentation-Mode.html" id="_4wn1ditb5">Editor Display Modes: Distraction Free and Presentation Mode</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Common-Tasks/Editor-Padding-and-Centered-Layout.html" id="_5ed0rj891">Editor Padding and Centered Layout</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Common-Tasks/Sharing-Configuration-Settings-on-DropBox-OneDrive-etc.html" id="_4x20odmu3">Sharing Configuration Settings on DropBox, OneDrive etc.</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Common-Tasks/Insert-Page-Breaks-into-your-Documents.html" id="_5ne1ccv4t">Insert Page Breaks into your Documents</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Common-Tasks/File-Change-Detection-in-the-Editor.html" id="_5xx0nr61g">File Change Detection in the Editor</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Common-Tasks/Searching-Files-and-Find-in-Files.html" id="_5y715t8co">Searching Files and Find in Files</a>
+    </div>
+</li>
+</ul>
+</li>
+<li>
+   <i class="fa fa-caret-{(topic.IsExpanded ? "right" : "down")}"></i>
+    <div>
+        <img src="_kavadocs/icons/header.png">
+        <a href="Addins.html" id="_6c30o12h5">Addins</a>
+    </div>
+<ul>
+<li>
+   <i class="fa fa-caret-{(topic.IsExpanded ? "right" : "down")}"></i>
+    <div>
+        <img src="_kavadocs/icons/header.png">
+        <a href="Addins/Weblog-Publishing-Addin.html" id="_4nb0ser9f">Weblog Publishing Addin</a>
+    </div>
+<ul>
+<li>
+   <i class="fa fa-caret-{(topic.IsExpanded ? "right" : "down")}"></i>
+    <div>
+        <img src="_kavadocs/icons/header.png">
+        <a href="Addins/Weblog-Publishing-Addin/Setting-up-a-Weblog.html" id="_4rg0qzg1i">Setting up a Weblog</a>
+    </div>
+<ul>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Addins/Weblog-Publishing-Addin/Setting-up-a-Weblog/WordPress-and-MetaWeblog-API-Weblogs.html" id="_4uw00nuiz">WordPress and MetaWeblog API Weblogs</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Addins/Weblog-Publishing-Addin/Setting-up-a-Weblog/Local-Jekyll-Publishing.html" id="_5rv00rx4i">Local Jekyll Publishing</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Addins/Weblog-Publishing-Addin/Setting-up-a-Weblog/Limited-Medium-Support.html" id="_4uw03tmcu">Limited Medium Support</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Addins/Weblog-Publishing-Addin/Setting-up-a-Weblog/Weblog-Publishing-Configuration-Format.html" id="_4rg0v8jpo">Weblog Publishing Configuration Format</a>
+    </div>
+</li>
+</ul>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Addins/Weblog-Publishing-Addin/Publishing-a-Blog-Post.html" id="_4rg0r0hmd">Publishing a Blog Post</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Addins/Weblog-Publishing-Addin/Updating-Blog-Posts.html" id="_4nk01b9mn">Updating Blog Posts</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Addins/Weblog-Publishing-Addin/Adding-Custom-Fields-to-a-Weblog-Post.html" id="_4wq1dbsnh">Adding Custom Fields to a Weblog Post</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Addins/Weblog-Publishing-Addin/Custom-Publish-Format-includes-Markdown-Text.html" id="_4nb0sg47p">Custom Publish Format includes Markdown Text</a>
+    </div>
+</li>
+</ul>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Addins/Snippets-Addin-Snippet-Template-Expansion.html" id="_5gs0uc49h">Snippets Addin: Snippet Template Expansion</a>
+    </div>
+</li>
+</ul>
+</li>
+<li>
+   <i class="fa fa-caret-{(topic.IsExpanded ? "right" : "down")}"></i>
+    <div>
+        <img src="_kavadocs/icons/header.png">
+        <a href="Startup-and-Command-Line-Options.html" id="_5rj1doixd">Startup and Command Line Options</a>
+    </div>
+<ul>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Startup-and-Command-Line-Options/Open-Files-from-the-Command-Line.html" id="_4x313dneu">Open Files from the Command Line</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Startup-and-Command-Line-Options/Command-Line-Operations.html" id="_5fp0xp68p">Command Line Operations</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Startup-and-Command-Line-Options/Markdown-Monster-local-Web-Server.html" id="_5s1009yx1">Markdown Monster local Web Server</a>
+    </div>
+</li>
+</ul>
+</li>
+<li>
+   <i class="fa fa-caret-{(topic.IsExpanded ? "right" : "down")}"></i>
+    <div>
+        <img src="_kavadocs/icons/header.png">
+        <a href="Configuration-Settings.html" id="_4nk01yq6q">Configuration Settings</a>
+    </div>
+<ul>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Configuration-Settings/Application-Settings.html" id="_5k40lg3ro">Application Settings</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Configuration-Settings/Window-Presets-Restore-Window-Layouts.html" id="_6d70wijgp">Window Presets: Restore Window Layouts</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Configuration-Settings/Editor-Settings.html" id="_5k40lgc6q">Editor Settings</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Configuration-Settings/Markdown-Options.html" id="_5k40lgmif">Markdown Options</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Configuration-Settings/Git-Settings.html" id="_5k40lgzhx">Git Settings</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Configuration-Settings/Folder-Browser-Settings.html" id="_5k40lh9j3">Folder Browser Settings</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Configuration-Settings/Image-Settings.html" id="_5k40lhin3">Image Settings</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Configuration-Settings/Run-External-Programs-via-Open-With.html" id="_6if1ephjm">Run External Programs via Open With...</a>
+    </div>
+</li>
+</ul>
+</li>
+<li>
+   <i class="fa fa-caret-{(topic.IsExpanded ? "right" : "down")}"></i>
+    <div>
+        <img src="_kavadocs/icons/header.png">
+        <a href="Recipes.html" id="_5ab0zt9jc">Recipes</a>
+    </div>
+<ul>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Recipes/Source-Code-Syntax-Highlighting-in-exported-HTML.html" id="_4sf0may9m">Source Code Syntax Highlighting in exported HTML</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Recipes/Custom-Attributes-on-Markdown-Tags.html" id="_61g0yzn1y">Custom Attributes on Markdown Tags</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Recipes/Customizing-Editor-Styling-CSS.html" id="_58q0pcuzk">Customizing Editor Styling CSS</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Recipes/Customizing-Configuration-Folder-Location.html" id="_4x314391i">Customizing Configuration Folder Location</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Recipes/Overriding-Configuration-Setting-in-Projects-or-Folders.html" id="_61p1709vr">Overriding Configuration Setting in Projects or Folders</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Recipes/Implementing-an-Open-in-Markdown-Monster-Behavior.html" id="_5gl0udom4">Implementing an Open in Markdown Monster Behavior</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Recipes/Configuring-Site-Relative-Base-Paths.html" id="_5fz0ozkln">Configuring Site Relative Base Paths</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Recipes/Open-from-Browser-with-markdownmonster-Protocol-Handler.html" id="_5rj1cknrj">Open from Browser with `markdownmonster:` Protocol Handler</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Recipes/Intercepting-Rendered-HTML-using-the-Commander-Addin.html" id="_5ab0zu71b">Intercepting Rendered HTML using the Commander Addin</a>
+    </div>
+</li>
+</ul>
+</li>
+<li>
+   <i class="fa fa-caret-{(topic.IsExpanded ? "right" : "down")}"></i>
+    <div>
+        <img src="_kavadocs/icons/header.png">
+        <a href="Creating-Markdown-Monster-Addins-with-NET.html" id="_4nb0se717">Creating Markdown Monster Addins with .NET</a>
+    </div>
+<ul>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Creating-Markdown-Monster-Addins-with-NET/Creating-a-Markdown-Monster-Add--in.html" id="_4ne0s0qoi">Creating a Markdown Monster Add-in</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Creating-Markdown-Monster-Addins-with-NET/Accessing-and-manipulating-the-Active-Editor-Document.html" id="_4nf02q0sz">Accessing and manipulating the Active Editor Document</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Creating-Markdown-Monster-Addins-with-NET/Addin-Lifecycle-Event-Handlers.html" id="_4ne1cgnor">Addin Lifecycle Event Handlers</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Creating-Markdown-Monster-Addins-with-NET/Bringing-up-UI-from-your-Markdown-Monster-Add--in.html" id="_4ne1ch7wa">Bringing up UI from your Markdown Monster Add-in</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Creating-Markdown-Monster-Addins-with-NET/Adding-Menu-Items-to-the-Markdown-Monster-Menu.html" id="_4zv0o3r46">Adding Menu Items to the Markdown Monster Menu</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Creating-Markdown-Monster-Addins-with-NET/Creating-a-custom-Markdown-Parser-in-an-Addin.html" id="_4ut0j7xoe">Creating a custom Markdown Parser in an Addin</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Creating-Markdown-Monster-Addins-with-NET/Create-a-Markdown-RenderExtension-to-customize-Html-output.html" id="_5i30sba89">Create a Markdown RenderExtension to customize Html output</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Creating-Markdown-Monster-Addins-with-NET/Addin-Configuration-Class.html" id="_5520tlav7">Addin Configuration Class</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Creating-Markdown-Monster-Addins-with-NET/Creating-non--Visual-Addins.html" id="_4ut0j9cm6">Creating non-Visual Addins</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Creating-Markdown-Monster-Addins-with-NET/Use-the-Statusbar-and-Console-Output-Panel-to-display-Information.html" id="_5p41dszqq">Use the Statusbar and Console Output Panel to display Information</a>
+    </div>
+</li>
+<li>
+   <i class="fa fa-caret-{(topic.IsExpanded ? "right" : "down")}"></i>
+    <div>
+        <img src="_kavadocs/icons/header.png">
+        <a href="Creating-Markdown-Monster-Addins-with-NET/Addin-Creation-FAQ.html" id="_52a19rygs">Addin Creation FAQ</a>
+    </div>
+<ul>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Creating-Markdown-Monster-Addins-with-NET/Addin-Creation-FAQ/Customizing-the-Addin-Icon-and-Menu-Button.html" id="_52a19sbgx">Customizing the Addin Icon and Menu Button</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Creating-Markdown-Monster-Addins-with-NET/Addin-Creation-FAQ/Create-a-new-Left-Sidebar-Tab.html" id="_58j1cgnqr">Create a new Left Sidebar Tab</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="Creating-Markdown-Monster-Addins-with-NET/Addin-Creation-FAQ/Attach-additional-Menu-Items-from-your-Addin.html" id="_52a1ag0pw">Attach additional Menu Items from your Addin</a>
+    </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+   <i class="fa fa-caret-{(topic.IsExpanded ? "right" : "down")}"></i>
+    <div>
+        <img src="_kavadocs/icons/header.png">
+        <a href="FAQ.html" id="_4sd0lxfq0">FAQ</a>
+    </div>
+<ul>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="FAQ/Using-Markdown-Monster-with-Long-Path-Names.html" id="_68d0r8rej">Using Markdown Monster with Long Path Names</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="FAQ/Font-Support-Monospaced-Fonts-Only.html" id="_5ea0sd8qx">Font Support - Monospaced Fonts Only</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="FAQ/Editor-Extension-Mapping.html" id="_5m80nn4hu">Editor Extension Mapping</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="FAQ/Reset-Markdown-Monster-Settings-to-Default.html" id="_53d13i1zj">Reset Markdown Monster Settings to Default</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="FAQ/Uninstalling-Markdown-Monster.html" id="_53e0ooavv">Uninstalling Markdown Monster</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="FAQ/DocFx-Support.html" id="_5750qtgr2">DocFx Support</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="FAQ/Special-Rendering-Features.html" id="_5781cv66s">Special Rendering Features</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="FAQ/Editing-Huge-Documents.html" id="_5ch1bv9en">Editing Huge Documents</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="FAQ/ACE-Editor-JavaScript-and-CSS-Extensions.html" id="_5du1f0stf">ACE Editor JavaScript and CSS Extensions</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="FAQ/Escape-Markdown-Fenced-Code-Blocks.html" id="_5eg1brc0z">Escape Markdown Fenced Code Blocks</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="FAQ/Software-Registration-and-Key-Storage.html" id="_5pl0rucqm">Software Registration and Key Storage</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="FAQ/Blank-Screen-On-Startup-DUCE-Channel-Errors.html" id="_4uj0kfglm">Blank Screen On Startup (DUCE.Channel Errors)</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="FAQ/Missing-Images-when-copying-from-HTML-Preview.html" id="_64m0mxxl7">Missing Images when copying from HTML Preview</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="FAQ/Overriding-Editor-Styling-and-Behavior.html" id="_65w0qdv1e">Overriding Editor Styling and Behavior</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="FAQ/Running-Markdown-Monster-on-Preview-Releases-of-NET.html" id="_6q00mlyqb">Running Markdown Monster on Preview Releases of .NET</a>
+    </div>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/topic.png">
+        <a href="FAQ/Limited-RegEx-Find-and-Replace-Support-No-multi--line-matches.html" id="_71j18ns1v">Limited RegEx Find and Replace Support: No multi-line matches</a>
+    </div>
+</li>
+</ul>
+</li>
+<li>
+    <div>
+        <img src="_kavadocs/icons/weblink.png">
+        <a href="https://markdownmonster.west-wind.com/docs/Class-Reference" id="_m12v0hahx5" target="_blank">Class Reference</a> <i class="fas fa-arrow-up-right-from-square info small"></i>
+    </div>
+</li>
+
+            </ul>
+        </nav>
+        <br class="clearfix" />
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+    <script>
+        if (typeof (jQuery) == 'undefined')
+            document.write(unescape("%3Cscript src='templates/scripts/jquery.js' %3E%3C/script%3E"));
+    </script>
+    <script src="_kavadocs/themes/scripts/ww.jquery.js"></script>
+    <script src="_kavadocs/themes/scripts/wwhelp.js" type="text/javascript"></script>
+    <script>
+        helpBuilder.initializeTOC();
+    </script>
+</body>
+
+</html>

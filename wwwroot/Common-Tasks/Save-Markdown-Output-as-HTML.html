@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>Save Markdown Output as HTML - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Save Markdown Output as HTML
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Save Markdown Output as HTML
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>There are a number of different ways that you can export rendered your Markdown content as rendered HTML.</p>
+<ul>
+<li>Using the <strong>File-&gt;Save To-&gt;Save To Html</strong> Dialog
+<ul>
+<li>Export the <strong>Raw Html Fragment</strong></li>
+<li>Export as <strong>Packaged HTML file</strong></li>
+<li>Export as <strong>HTML File with loose Assets</strong></li>
+<li>Export as <strong>Packaged Zip File</strong></li>
+</ul>
+</li>
+<li>Use <strong>View In Browser</strong> and <strong>Save As Html</strong> from Browser</li>
+<li>Use <strong>Copy Selection as HTML</strong> to copy selected Markdown text as HTML to the Clipboard</li>
+</ul>
+<h3 id="using-save-as-html">Using Save As HTML</h3>
+<p>This option lives at <strong>File-&gt;Save To-&gt;Save to HTML</strong> and it allows you to save your Markdown content as a rendered HTML in a few different ways:</p>
+<p><img src="/docs/images/saveashtml.png" alt="" /></p>
+<p>Here is what each of those options does:</p>
+<h4 id="save-raw-html-fragment">Save Raw HTML Fragment</h4>
+<p>The most basic way to save is to save the raw HTML output from the rendered markdown <strong>as is</strong>.</p>
+<p>Choose <code>Raw HTML output only (Html Fragment)</code> if you want just the raw rendered HTML output from your markdown and save it to file. The output contains only the output from the actual Markdown text, without the wrapping HTML document or preview formatting - it's an <strong>HTML fragment only</strong>. Images, related CSS or Javascript <strong>are not embedded or copied</strong> - this is literally just the raw HTML that was generated.</p>
+<p>This is useful for copying the raw HTML to server applications that provide their own styling or hold all relative resources on the actual Web site in file accessible folders.</p>
+<p><strong>Use Case</strong>:<br />
+<em>Raw export for use in applications that provide styling and related content - such as Weblogs, Documentation etc.</em></p>
+<h4 id="save-as-self-contained-html-page">Save as self contained HTML Page</h4>
+<p>Allows you to save the document and all of associated resources as a <strong>single large HTML file</strong> with all dependencies embedded into the HTML as inline resources. All images, scripts, CSS, fonts etc. are embedded into the document as embedded binary data. Because all resources are embedded this file can often <strong>be very large</strong> as all the support libraries like Bootstrap and FontAwesome are embedded. The output is based on the current preview theme.</p>
+<p>The packager imports local dependencies, as well as web based resources and embeds them into the document. Because the file is completely self contained in a single <code>.html</code> file you can move the file to a new location and it should still render correctly.</p>
+<p><strong>Use Case</strong>:<br />
+<em>Fully self contained file that you can email and share, or publish as a static file on a Web site. File tends to be very large as all resources are embedded.</em></p>
+<h4 id="save-as-html-page-in-folder-with-loose-assets">Save as HTML Page in Folder with Loose Assets</h4>
+<p>Allows you to save the HTML document to file, with all related dependencies copied to disk in the same folder. All images, CSS, Scripts and fonts are also created in the same folder.</p>
+<blockquote>
+<p>It's recommended that you create the generated HTML in a new empty folder so the HTML and its dependencies are easily isolated and can be zipped or moved as a group. The <strong>target folder is not cleared first</strong> if it exists.</p>
+</blockquote>
+<p><strong>Use Case</strong><br />
+<em>Useful for hosting on a static Web site or simply for archival purposes of the full content.</em></p>
+<h4 id="save-zip-package">Save Zip Package</h4>
+<p>This performs basically the same operation as the Folder with Loose Assets output, but it packages the resulting files into a packed Zip file that you can copy around more easily. To use the output, simply unpack the Zip file into a folder and the rendered HTML should find all of its dependencies to render self contained.</p>
+<p><strong>Use Case</strong><br />
+<em>Same scenario as loose files but for emailing, or moving between machines and for archival purposes.</em></p>
+<h3 id="copy-as-html">Copy As HTML</h3>
+<p>You can use the editor's Context Menu <strong>Copy As Html</strong> or <strong>ctrl-shift-c</strong> to copy the current Markdown selection as an HTML fragment to the clipboard. To select the entire document use <strong>ctrl-a</strong> then <strong>ctrl-shift-a</strong> to copy the generated HTML to the clipboard.</p>
+<p>This can be quite useful if you want to use MM as your Markdown editor for pushing content into HTML based input controls.</p>
+<h3 id="exporting-html-using-browser-save-as">Exporting HTML using Browser Save As</h3>
+<p>The above options are native to Markdown Monster itself. The following is a technique you can use with your preferred browser, which may render the HTML differently and under some circumstances may do a better job with very complex HTML output.</p>
+<p>To do this:</p>
+<ul>
+<li>Open your Markdown Document</li>
+<li>Make sure the Preview browser</li>
+<li>Use the Preview Browser's Context Menu:<br />
+<strong>Show In external Web Browser</strong> or<br />
+<strong>View-&gt;View in Web Browser</strong></li>
+<li>HTML opens in Web Browser</li>
+<li>In the external browser choose Save As...</li>
+<li>Pick a file location and save</li>
+<li>Open the <code>.html</code> file from the local folder</li>
+</ul>
+<p>Depending on the browser you get options to save a single document of just the HTML, or HTML plus all dependencies in a folder, similar to the behavior described for MM above.</p>
+
+    </div>
+
+
+
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-23
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Save Markdown Output as HTML&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Save%20Markdown%20Output%20as%20HTML%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_57W02I1F6.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

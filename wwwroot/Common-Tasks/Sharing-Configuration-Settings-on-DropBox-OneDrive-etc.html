@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>Sharing Configuration Settings on DropBox, OneDrive etc. - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Sharing Configuration Settings on DropBox, OneDrive etc.
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Sharing Configuration Settings on DropBox, OneDrive etc.
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>Markdown Monster's configuration settings are stored in a simple JSON file. The default location of the configuration file is:</p>
+<p><code>%appdata%\Markdown Monster\MarkdownMonster.json</code></p>
+<p>and the file is simply editable either directly, or by using <strong>Tools → Settings</strong>.</p>
+<p>By using a shared location you can easily share all configuration settings across multiple machines. All settings are shared including:</p>
+<ul>
+<li>Editor Styling</li>
+<li>Font choices</li>
+<li>Recent and Open Documents</li>
+<li>Window locations (MM auto adjusts if locations don't fit)</li>
+<li>many more</li>
+</ul>
+<p>Because settings include personal options like which files are open and recent, these settings are considered <strong>per user</strong>.</p>
+<h3 id="changing-configuration-folder-to-dropbox-or-onedrive">Changing Configuration Folder to DropBox or OneDrive</h3>
+<p>The best way to share configuration settings is to use a shared cloud drive like DropBox, OneDrive or Google Drive.</p>
+<p>You can change the location of the configuration folder using the <strong>CommonFolder</strong> setting in the Markdown Monster Settings at <strong>Tools → Settings</strong>.</p>
+<p>For example, you can easily set the CommonFolder to a shared location on a cloud drive like Dropbox:</p>
+<pre><code class="language-json">CommonFolder=&quot;C:\\Users\\rick\\Dropbox\\Markdown Monster Common&quot;
+</code></pre>
+<p>Save the file and exit Markdown Monster.</p>
+<blockquote>
+<h4 id="--make-sure-the-folder-exists"><i class="fas fa-info-circle" style="font-size: 1.1em"></i>  Make sure the Folder Exists</h4>
+<p>When setting a shared configuration location for the first time, make s
+sure the custom folder you configure exists by copying the old folder to the new location.</p>
+<p>The configuration folder holds all configuration settings as well as all addins that are installed, so the entire configuration can be shared.</p>
+<p>Each subsequent installation of Markdown Monster that wants to then share the common location only has to change the <code>CommonFolder</code> configuration settings.</p>
+</blockquote>
+<h3 id="how-it-works">How it works</h3>
+<p>Markdown Monster relies heavily on the <code>MarkdownMonster.json</code> configuration settings which are read when Markdown Monster starts.</p>
+<p>However, when you redirect the file, the file does not live in its <em>usual</em> location, so another file is needed to redirect it to the actual location. If the location is non-default there should be a file named:</p>
+<pre><code class="language-txt">%appdata%\Markdown Monster\CommonFolderLocation.txt
+</code></pre>
+<p>which contains a single string with the location of the actual Common folder path.</p>
+<blockquote>
+<p><code>%appdata%</code> is an environment variable, so if you're running a virtual environment (like Wine on Linux) you can set an <code>appdata</code> environment var to some known location in that environment and then put configuration data there. Make sure the folder has <strong>read/write</strong> access.</p>
+</blockquote>
+<p>If the <code>CommonFolder</code> setting is different than the default <code>%appdata%</code> location, MM writes a special file  <code>%appdata%\Markdown Monster\CommonFolderLocation.txt</code> to find the custom location of the configuration file. If this file exists when loading the configuration, MM tries to read the file from the new location and if it's found then uses the configuration settings from this location. If the file is not found, MM reverts back to the default location.</p>
+
+    </div>
+
+
+
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-24
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Sharing Configuration Settings on DropBox, OneDrive etc.&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Sharing%20Configuration%20Settings%20on%20DropBox%2C%20OneDrive%20etc.%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_4X20ODMU3.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

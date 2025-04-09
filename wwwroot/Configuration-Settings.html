@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>Configuration Settings - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="header" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/header.png">
+                Configuration Settings
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    <h1 class="content-title">
+    <img src="/docs/_kavadocs/icons/header.png">    
+    Configuration Settings
+</h1>
+
+
+
+
+<div class="content-body" id="body">
+            <p>Markdown Monster is highly configurable and you can access most configuration settings directly from the Markdown Monster UI via <strong>Tools → Settings</strong>:</p>
+<p><img src="images/SettingsForm.png" alt="" /></p>
+<h3 id="the-settings-editor">The Settings Editor</h3>
+<p>The Settings Editor provides searchable and grouped access to most configuration settings through an easy to use window interface. Type into the search box to filter the list of settings. Each option shows with information about purpose and behavior.</p>
+<p>You can make changes to most settings and see the change immediately reflected in the editor.</p>
+<h3 id="editing-raw-json-configuration">Editing Raw Json Configuration</h3>
+<p>You can also access the source configuration settings directly in raw JSON format via the <strong>Edit Json</strong> button in the above form. All settings in the form - plus a few additional ones - can be set directly in the JSON file. Any changes you make to the file are applied when you save the file.</p>
+<h3 id="live-changes">Live Changes</h3>
+<p>Any changes you make in the UI form or the file are <strong>live and immediately applied</strong>.  In JSON file mode changes are applied when you save the file, in the UI making the change immediately applies it. A handful of few settings like the Application Theme and top level template settings require a restart.</p>
+<p>For the UI form there's no undo, so be mindful. In file mode editing you can undo your changes and resave. The default location of the configuration file is:</p>
+<p><code>%appdata%\West Wind Markdown Monster\MarkdownMonster.json</code></p>
+<blockquote>
+<h4 id="--changing-configuration-folder-to-dropbox-or-onedrive"><i class="fas fa-info-circle" style="font-size: 1.1em"></i>  Changing Configuration Folder to DropBox or OneDrive</h4>
+<p>You can also change configuration folder using the <strong>CommonFolder</strong> setting in the Markdown Monster Settings at <strong>Tools → Settings</strong>. For example, you can easily set the folder to a shared location like Dropbox:
+<code>CommonFolder=&quot;C:\\Users\\rick\\Dropbox\\Markdown Monster Common&quot;</code></p>
+</blockquote>
+<p>There are a ton of configuration values available and you can find more information what each settings does in the UI form which provides detailed information for each setting.</p>
+<h3 id="messed-up-the-settings-no-problem">Messed up the Settings? No Problem</h3>
+<p>If you managed to mess up the settings to the point that MM won't start or display, you can always reset your settings by:</p>
+<ul>
+<li>Running <code>mm reset</code> from the Windows Command Line</li>
+<li>Deleting the Configuration File at <code>%appdata%\Markdown Monster\MarkdownMonster.json</code></li>
+</ul>
+<h3 id="configuration-settings">Configuration Settings</h3>
+<p>The easiest way to browse configuration settings and find out what they do is to use the Setting Form as it shows option along with the option description and behaviors.</p>
+<p>For more info you can also look at individual settings here:</p>
+<p><ul style='list-style-type:none'>
+<li><img src='/docs/_kavadocs/icons/topic.png' />
+<a href="/docs/Configuration-Settings/Application-Settings.html" >Application Settings</a>
+</li>
+<li><img src='/docs/_kavadocs/icons/topic.png' />
+<a href="/docs/Configuration-Settings/Window-Presets-Restore-Window-Layouts.html" >Window Presets: Restore Window Layouts</a>
+</li>
+<li><img src='/docs/_kavadocs/icons/topic.png' />
+<a href="/docs/Configuration-Settings/Editor-Settings.html" >Editor Settings</a>
+</li>
+<li><img src='/docs/_kavadocs/icons/topic.png' />
+<a href="/docs/Configuration-Settings/Markdown-Options.html" >Markdown Options</a>
+</li>
+<li><img src='/docs/_kavadocs/icons/topic.png' />
+<a href="/docs/Configuration-Settings/Git-Settings.html" >Git Settings</a>
+</li>
+<li><img src='/docs/_kavadocs/icons/topic.png' />
+<a href="/docs/Configuration-Settings/Folder-Browser-Settings.html" >Folder Browser Settings</a>
+</li>
+<li><img src='/docs/_kavadocs/icons/topic.png' />
+<a href="/docs/Configuration-Settings/Image-Settings.html" >Image Settings</a>
+</li>
+<li><img src='/docs/_kavadocs/icons/topic.png' />
+<a href="/docs/Configuration-Settings/Run-External-Programs-via-Open-With.html" >Run External Programs via Open With...</a>
+</li>
+</ul>
+</p>
+    
+    </div>
+
+
+
+
+
+
+
+ 
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-23
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Configuration Settings&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Configuration%20Settings%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_4NK01YQ6Q.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

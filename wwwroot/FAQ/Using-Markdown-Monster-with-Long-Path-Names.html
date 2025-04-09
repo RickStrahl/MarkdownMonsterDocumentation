@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>Using Markdown Monster with Long Path Names - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Using Markdown Monster with Long Path Names
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Using Markdown Monster with Long Path Names
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>Markdown Monster has limited support for Long Path names, but it requires some Windows configuration to enable this functionality.</p>
+<p>Windows by default does not support path names over 260 characters (<code>MAX_PATH</code>) using the standard Windows file access APIs. This means that if you try to open or save files that have paths (folder + file name) that exceed 260 characters those files can fail to open in Markdown Monster.</p>
+<h2 id="override-windows-settings-for-long-path-support">Override Windows Settings for Long Path Support</h2>
+<p>Markdown Monster has support for long file names, <strong>but it only works if the Windows operating system has been enabled for Long Paths</strong> which is done via a registry or group policy setting.</p>
+<p>This setting essentially enables Long Path support for applications that request it, using standard Windows APIs without changes. Unfortunately this is not a default setting in Windows, so it has to be manually enabled and each application has to explicitly support it. Markdown Monster does, although there are some limitations.</p>
+<p>Let's look at how to enable Long Path support in Windows.</p>
+<h3 id="using-mmcli">Using mmCli</h3>
+<p>The easiest way to enable long paths on Windows is to the use the Markdown Monster <code>mmCli</code> command. This command is globally registered via your path, so you should be able to run it from anywhere.</p>
+<p>You can use the following commands from the Markdown Monster CLI to toggle the Long Path support in Windows</p>
+<pre><code class="language-ps"># Turn on long paths
+mmcli enable-windows-longpaths
+
+# Turn them off
+mmcli disable-windows-longpaths
+</code></pre>
+<h3 id="using-the-registry">Using the Registry</h3>
+<p>If you'd rather know what's going on you can use the registry directly either via the Registry editor, <code>.reg</code> script or a Powershell command.</p>
+<p>You can save and run the following save the following text to a  <code>.reg</code> file and execute it from Explorer or the Command Line. Copy to a .reg file or manually set this registry key running as Administrator:</p>
+<pre><code class="language-text">Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]
+&quot;LongPathsEnabled&quot;=dword:00000001
+</code></pre>
+<p>or you can use Powershell from an Administrative Terminal:</p>
+<pre><code class="language-ps">Set-ItemProperty `
+  -Path HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem `
+  -Name LongPathsEnabled -Value 1
+</code></pre>
+<h3 id="using-group-policy">Using Group Policy</h3>
+<p>You can also enable this functionality via Windows Group Policy, by setting:</p>
+<p><img src="/docs/images/LongFilenameGroupPolicyEnabling.png" alt="" /></p>
+<h3 id="it-works---mostly">It Works - mostly</h3>
+<p>Once you've set one of these options restart Markdown Monster and you should now be able to open and save files that exceed 260 character paths. This applies to all file operations that open files into the editor and save files like images, PDF or HTML files etc.</p>
+<h2 id="caveats-not-everything-works">Caveats: Not everything works!</h2>
+<p>Although this setting allows you to open and save documents and related assets using long paths, <strong>other applications and related support tools and components may not work correctly with long file names</strong>. Even Windows components like Windows Explorer and Powershell have issues with long file name support, so be weary. In Markdown Monster this may mean shelling out to folders or files with long paths may not work as the external applications might not work with the long paths.</p>
+<p>In short, Markdown Monster's key features related to file operations work fine. But there are some failures, or missing features with external support tools.</p>
+<h3 id="chromium-preview-and-relative-resource-links">Chromium Preview and Relative Resource Links</h3>
+<p>Maybe the most pressing issue related to Long Path file usage is is that if you have a document with a long filename and related resources like images that are referenced as <em>relatively pathed items</em> (ie. <code>![](./myimage.png</code>), the Chromium previewer <em>(or any Chromium based browser for that matter)</em> will not render the relative path if the host page is a long filename, as the browser fails resolve the long path for the relative link.</p>
+<p>In Markdown Monster this impacts the previewer with potentially missing images, as well as image previews in the Folder Browser, Image Linking and Capture windows etc.</p>
+<blockquote>
+<h4 id="--recommendation-dont-use-long-paths-if-you-can-avoid-it"><i class="fas fa-warning" style="font-size: 1.1em"></i>  Recommendation: Don't use Long Paths if you can avoid it</h4>
+<p>While the settings described here make MM work with long paths, to avoid the side effects described above and also other OS related issues, it may be best to minimize or avoid paths that exceed the 260 character limit.</p>
+</blockquote>
+<blockquote>
+<h4 id="--long-path-alternatives"><i class="fas fa-info-circle" style="font-size: 1.1em"></i>  Long Path Alternatives</h4>
+<p>260 character paths <strong>allow for very long paths</strong> without going over the limit. If you really, really need to dig into deeply nested hierarchies, consider breaking up your folder hierarchies to be shorter, shortening names or using symbolic links or folder mapping to shorten base paths to avoid excessive path lengths.</p>
+</blockquote>
+
+    </div>
+
+
+
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-23
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Using Markdown Monster with Long Path Names&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Using%20Markdown%20Monster%20with%20Long%20Path%20Names%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_68D0R8REJ.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

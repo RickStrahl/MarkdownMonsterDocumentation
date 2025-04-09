@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">    
+    <title>Command Line Operations - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css">
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet">
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic"></topictype>
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars" title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo">
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Command Line Operations
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Command Line Operations
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>In addition to <a href="#__0">opening files and folders from the command line</a> you can also perform a few operational tasks using Markdown Monster's Command Line Interface.</p>
+<p>There are three sets of commands:</p>
+<ul>
+<li>Editor UI commands using <code>mm.exe</code> or <code>markdownmonster.exe</code></li>
+<li>Operational CLI Commands using <code>mmcli.exe</code></li>
+</ul>
+<blockquote>
+<h4 id="--available-on-the-windows-path"><i class="fas fa-info-circle" style="font-size: 1.1em"></i>  Available on the Windows Path</h4>
+<p>All <code>markdownmonster</code>, <code>mm</code> and <code>mmcli</code> are all available on the <strong>Windows Path</strong> by default, as they have been added to the User path during installation or 1st startup.</p>
+</blockquote>
+<blockquote>
+<h4 id="--launching-markdown-monster-from-wsl"><i class="fas fa-info-circle" style="font-size: 1.1em"></i>  Launching Markdown Monster from WSL</h4>
+<p>You can also launch Markdown Monster from Windows Subsystem for Linux (WSL) by using the full executable names: <code>mm.exe</code>, <code>markdownmonster.exe</code> or <code>mmcli.exe</code>. For example, to open <code>README.md</code> from a local WSL folder use: <code>mm.exe README.md</code>. Note that unlike on Windows the <code>.exe</code> extension is <strong>required</strong>.</p>
+</blockquote>
+<h3 id="editor-ui-commands---mmexe">Editor UI Commands - mm.exe</h3>
+<p>The following commands are command line switches that affect the behavior and startup of Markdown Monster's UI. They are fired using either <code>mm.exe</code> or <code>markdownmonster.exe</code> which can be used interchangeably.</p>
+<table>
+<col style="width:17.19%">
+<col style="width:82.81%">
+<thead>
+<tr>
+<th>Command/Arguments</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>-line</strong></td>
+<td>Line number when opening a document <br><code>mm .\readme.md -line 100</code><br>
+<strong>Tip</strong>: you can also use <code>c:\temp\readme.md:5</code> to specify a line number</td>
+</tr>
+<tr>
+<td><strong>-presentation</strong></td>
+<td>Flag that starts Markdown Monster in <strong>Presentation Mode</strong><br>
+<code>mm -presentation</code></td>
+</tr>
+<tr>
+<td><strong>-newwindow</strong></td>
+<td>Flag that forces a new Window to be opened regardless of the <code>SingleInstance</code> configuration Setting<br>
+<code>mm .\doc.md -newwindow</code></td>
+</tr>
+<tr>
+<td><strong>-nosplash</strong></td>
+<td>When specified won't show the splash screen.<br><code>mm -nosplash</code></td>
+</tr>
+<tr>
+<td><strong>-delay</strong></td>
+<td>When specified loads Markdown Monster with a delay. Used for updates.<br><code>mm -delay</code></td>
+</tr>
+<tr>
+<td><strong>-close</strong><br>
+fileName</td>
+<td>Closes a file that is open in the editor if found<br>
+<code>mm -close &quot;c:\temp\MyDocument.md&quot;</code></td>
+</tr>
+<tr>
+<td><strong>-autosave</strong><br>
+fileName</td>
+<td>When set forces the document(s) opened from the command line to auto-save after any typing operation.
+<code>mm &quot;c:\temp\MyDocument.md&quot; -autosave</code></td>
+</tr>
+<tr>
+<td><strong>-stdin</strong></td>
+<td>Read content from StdIn using pipe command. Opens a new 'untitled' document.<br>
+<code>DIR | markdownmonster -stdin</code></td>
+</tr>
+<tr>
+<td><strong>-base64text</strong><br>
+base64Text</td>
+<td>Opens a new 'untitled' document with the base 64 decoded text inside of it.<br>
+<code>mm -base64text VGhpcyBpcyBhIHRlc3Qgc3RyaW5nIG9mIHRleHQu</code></td>
+</tr>
+<tr>
+<td><strong>-startwebserver</strong></td>
+<td>Starts the MM internal Web Server for various remote operations<br>
+<code>mm -startwebserver</code></td>
+</tr>
+<tr>
+<td><strong>-stopwebserver</strong></td>
+<td>Stops the MM internal Web Server<br>
+<code>mm -stopwebserver</code></td>
+</tr>
+<tr>
+<td><strong>-runtimeinstall</strong></td>
+<td>Checks to see if the .NET Desktop Runtime is installed and if not offers to install it.<br>
+<code>mm -runtimeinstall</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="-line">-line</h4>
+<p>This parameter allows you to open a file on a given line. The <code>-line</code> parameter is only applied to the first file.</p>
+<p>Alternately you can also use the new syntax of <code>filename.md:11</code> where the line number is directly appended to the filename via <code>:lineNo</code>. You can <a href="https://raw.githubusercontent.com/RickStrahl/ImageDrop/master/MarkdownMonster/OpenMultipleFilesAtLine.gif">apply this syntax to multiple files</a>.</p>
+<h4 id="-presentation-mode">-presentation Mode</h4>
+<p>If you want to start Markdown Monster in presentation mode that shows the preview as a maximized view, use the <code>-presentation</code> switch. This view doesn't show the editor initially although you switch into regular editing mode. You can use this switch in addition to optional files you want to open.</p>
+<p><code>mm .\README.md -presentationmode</code> or <code>mm -presentationmode</code></p>
+<h4 id="-newwindow">-newwindow</h4>
+<p>This flag forces a new Markdown Monster window to be opened with the selected file(s) or folder to be opened, rather than opening the document in the current instance. This setting forces a new window even if the <code>SingleInstance</code> configuration setting is set to <code>true</code>. This is used internally for <strong>Open in New Window</strong>, but useful anytime when you want to open side by side windows. You can use this switch</p>
+<p><code>mm .\README.md -newwindow</code> or <code>mm -nosplash</code></p>
+<h4 id="-nosplash">-nosplash</h4>
+<p>When specified causes the startup splash screen to not be displayed. Same as the <code>DisableSplashScreen</code> configuration switch, except it's a one time operation that applies only to the current launch operation.</p>
+<p><code>mm .\README.md -nosplash</code>  or <code>mm -nosplash</code></p>
+<h4 id="-delay">-delay</h4>
+<p>Delays loading Markdown Monster during startup. Used internally when Markdown Monster is restarted for theme updates and other settings that require a restart. Delay is approximately 1.5 seconds.</p>
+<p><code>mm .\README.md -delay</code></p>
+<h4 id="-autosave">-autosave</h4>
+<p>If this switch is specified when passing in one or more filenames for opening, the files are opened in auto-save mode, which means any changes are written to disk whenever the user stops typing for a brief moment. This can be useful for external applications that want to use Markdown Monster for editing and detect changes in the editor immediately.</p>
+<p><code>mm .\README.md -autosave</code></p>
+<h4 id="-close-filename-command">-close Filename Command</h4>
+<p>This option allows you to close an already open file in the editor. If you have multiple tabs open the tab is closed and if the last tab is closed Markdown Monster is shut down. This can be useful for external applications that might want to open Markdown Monster for external Markdown editing, capture output saved to disk perhaps with the <code>-autosave</code> switch, and then close the opened editor window.</p>
+<p><code>mm .\README.md -close</code></p>
+<h4 id="-stdin">-stdin</h4>
+<p>This option allows you to capture StdIn input from another application and open the captured text in Markdown Monster as a new document. For this to work you can <strong>pipe</strong> the content of another console application into Markdown Monster using the <strong>Windows Pipe Command</strong>.</p>
+<p>Example 2:</p>
+<pre><code class="language-ps">DIR | markdownmonster -stdin
+</code></pre>
+<h4 id="-base64text">-base64text</h4>
+<p>This option creates a new, 'Untitled' document and sets the initial text to -base64text.</p>
+<pre><code class="language-powershell">mm -base64text IyBIZWxsbyBXb3JsZAoKSXQncyBhICoqY3J1ZWwsIGNydWVsKiogd29ybGQu
+</code></pre>
+<h4 id="-startwebserver---stopwebserver">-startwebserver / -stopwebserver</h4>
+<p>These commands allow you to start and stop the <a href="/docs/Startup-and-Command-Line-Options/Markdown-Monster-local-Web-Server.html">MM internal Web server</a> which can be used to remotely open and access documents.</p>
+<pre><code class="language-powershell">mm -startwebserver
+
+mm -stopwebserver
+</code></pre>
+<h4 id="-runtimeinstall">-runtimeinstall</h4>
+<p>Checks to see if the .NET Desktop Runtime required to run Markdown Monster is installed on the machine. If it isn't you are prompted to download it and install it. Optionally use <code>-silent</code> switch to avoid prompts and <em>'just do it'</em>.</p>
+<pre><code class="language-powershell">mm -runtimeinstall
+</code></pre>
+<h3 id="cli-commands---mmcliexe">CLI Commands - mmcli.exe</h3>
+<p>The following commands use a separate <code>mmcli.exe</code> to perform a number of useful automated operations using Markdown Monster's functionality.</p>
+<table>
+<col style="width:13.64%">
+<col style="width:86.36%">
+<thead>
+<tr>
+<th>Command</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>version</strong></td>
+<td>Displays Markdown Monster Version.<br>
+<code>mmcli version</code></td>
+</tr>
+<tr>
+<td><strong>reset</strong></td>
+<td>Resets Markdown Monster to its default settings.<br>
+<code>mmcli reset</code></td>
+</tr>
+<tr>
+<td><strong>errors</strong></td>
+<td>Display the Markdown Monster Error Log in the default text editor.<br>
+<code>mmcli errors</code></td>
+</tr>
+<tr>
+<td><strong>clear-errors</strong></td>
+<td>Clears the Markdown Monster Error Log.<br>
+<code>mmcli clear-errors</code></td>
+</tr>
+<tr>
+<td><strong>uninstall</strong></td>
+<td>Removes all Markdown Monster machine settings. Run after you've shut down all Markdown Monster
+instances.<br>
+<code>mmcli uninstall</code></td>
+</tr>
+<tr>
+<td><strong>install-webview</strong></td>
+<td>Runs the WebView control installer that installs the WebView runtime required to run Markdown Monster</td>
+</tr>
+<tr>
+<td><strong>cleanup-webview</strong></td>
+<td>Removes the WebView Environment Folder created when Markdown Monster runs. This folder holds the separate, application specific browser environment settings while running Markdown Monster.</td>
+</tr>
+<tr>
+<td><strong>setportable</strong></td>
+<td>Sets portable mode where settings are stored in the install folder<br>
+<code>mmcli setportable</code></td>
+</tr>
+<tr>
+<td><strong>unsetportable</strong></td>
+<td>Sets back to desktop mode with config settings to <code>%appdata</code>.<br>
+<code>mmcli unsetportable</code></td>
+</tr>
+<tr>
+<td><strong>enable-windows-longpaths</strong></td>
+<td>Enables Windows Long Path support. This is a <strong>global</strong> Windows  setting that affects all applications <em>(requires elevated rights)</em>.<br>
+<code>mmcli enable-windows-longpaths</code><br>
+<code>mmcli disable-windows-longpaths</code></td>
+</tr>
+<tr>
+<td><strong>register</strong></td>
+<td>Registers Markdown Monster installation.<br>
+<code>mmcli register licenseSerial registerEmail</code></td>
+</tr>
+<tr>
+<td><strong>markdowntohtml</strong></td>
+<td>Converts Markdown documents to HTML.<br>
+<code>mmcli markdowntohtml -i &quot;c:\temp\doc.md&quot; -o &quot;c:\temp\doc.html&quot; --theme Dharkan --rendermode packagedhtml</code></td>
+</tr>
+<tr>
+<td><strong>htmltomarkdown</strong></td>
+<td>Converts an HTML document to Markdown.<br>
+<code>mmcli htmltomarkdown -i &quot;c:\temp\doc.html&quot; -o &quot;c:\temp\doc.md&quot; -open</code></td>
+</tr>
+<tr>
+<td><strong>markdowntopdf</strong></td>
+<td>Converts a Markdown document to a PDF file.<br>
+<code>mmcli markdowntopdf -i &quot;c:\temp\doc.md&quot; -o &quot;c:\temp\doc.pdf&quot; --theme Github --page-size A4</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="version">version</h4>
+<p>Displays the Markdown Monster version in the console window.</p>
+<p><code>mmcli version</code></p>
+<h4 id="reset">reset</h4>
+<p>The reset operation resets all of Markdown Monster's settings back to its defaults by creating a new <code>MarkdownMonster.json</code> file. The reset command also creates a backup file in the same folder that you can compare against.</p>
+<p><code>mmcli reset</code></p>
+<h4 id="uninstall">uninstall</h4>
+<p>The uninstall option removes all the machine specific settings from the registry so you end up with a clean machine. This command is primarily intended for portable installs, which although it runs portably in a self-contained folder (if permissions allow), will write a few things like file associations and pathing into the registry. The <code>uninstall</code> command removes only those settings.</p>
+<p><strong>Uninstall does not remove any files or folders.</strong> If you are running a machine wide installation settings are stored in <code>%appdata%\Markdown Monster</code> and if you are sure you want to completely remove Markdown Monster you can delete this folder manually - the uninstall will not touch this folder.</p>
+<p><code>mmcli uninstall</code></p>
+<blockquote>
+<h4 id="--full-version-uninstall-use-the-full-uninstaller"><i class="fas fa-info-circle" style="font-size: 1.1em"></i>  Full Version Uninstall: Use the full Uninstaller</h4>
+<p>If you installed the full version of Markdown Monster using the Installer it's recommended you run the full Uninstall through Programs and Features or by running the <code>Uninstall.exe</code> in the install folder.</p>
+<p>The full uninstall removes the same settings as the <code>uninstall</code> switch but also removes files, folders and the shortcuts it created.</p>
+</blockquote>
+<h4 id="install-webview">install-webview</h4>
+<p>Markdown Monster relies on the Chromium WebView2 control in order to run. The installation automatically installs the WebView if it's not found. If for some reason the WebView gets uninstalled after installation you can run this command to get the WebView2 Runtime reinstalled.</p>
+<h4 id="cleanup-environment">cleanup-environment</h4>
+<p>Markdown Monster creates its own private WebView environment that's separate from the machine global WebView profile, so there's no overlap of settings. MM only browses local content with the WebView, but nevertheless the browsing environment is completely separate from the system profile. This command removes the stored, cross- session browser environment.</p>
+<h4 id="setportable--unsetportable">setportable / unsetportable</h4>
+<p>These two settings toggle between portable and full desktop install. The primary differences between a portable install and a full install is the location of the settings folder. The portable install tries to create a <code>.\PortableSettings</code> folder in the install directory and keep all settings local to that install. A portable install can be installed simply by copying files from a zip file.</p>
+<p>However, in order for a portable install to work you have to make sure you use a folder that has write permissions to allow configuration settings to be updated in this folder.</p>
+<p><code>setportable</code> allows you to switch a full install into portable mode by creating a <code>_IsPortable</code> file and creating the local <code>.\PortableSettings</code> folder if permissions allow. If permissions fail, MM will use the standard <code>%appdata%\Markdown Monster</code> location the full install uses.</p>
+<p><code>unsetportable</code> simply removes the <code>_IsPortable</code> file which makes Markdown Monster use the default <code>%appdata%\Markdown Monster</code> folder for all settings and addins.</p>
+<h4 id="register">register</h4>
+<p>This option lets you register Markdown Monster via the command line.</p>
+<p>To register you need to provide the License Serial number and the email address that was used when purchasing a license (you can find the email on your order confirmation).</p>
+<p><code>mmcli register &lt;licenseSerial&gt; &lt;email&gt;</code></p>
+<h4 id="markdowntohtml">markdowntohtml</h4>
+<p>This allows you convert a markdown document to HTML using the following syntax:</p>
+<pre><code class="language-ps">mmcli markdowntohtml -i &quot;&lt;markdownFile&gt;&quot; -o &quot;&lt;htmlFile&gt;&quot;
+      --rendermode [html|fragment|packagedhtml|zip]
+      --theme [&lt;anyAvailableTheme&gt;]
+      -open
+</code></pre>
+<p>You pass the input markdown and output HTML file to generate. If you skip either of these you'll be prompted. The <code>--open</code> parameter opens the document in Markdown Monster via <code>mm &quot;&lt;htmlfile&gt;&quot;</code> .</p>
+<p>The <code>renderMode</code> is one of the following:</p>
+<ul>
+<li><strong>html</strong> - Html document with Preview Theme wrapper document (default)</li>
+<li><strong>fragment</strong> - Just the raw Html fragment without a wrapping PreviewTheme document</li>
+<li><strong>packagedhtml</strong> - single, large HTML document with all dependencies embedded as inline resources</li>
+<li><strong>htmlfiles</strong> - Html document with dependencies in the output file folder</li>
+<li><strong>zip</strong> - Html document and dependencies packaged into a Zip file</li>
+</ul>
+<p>Note that all options except <code>fragment</code> render a complete HTML document using the current <strong>PreviewTheme</strong> configured, unless you override the <code>--theme</code> parameter where you can specify any of the installed themes.</p>
+<p>The <code>-open</code> flag if present opens the document in the browser after completion.</p>
+<h4 id="htmltomarkdown">htmltomarkdown</h4>
+<p>This allows you to convert HTML documents to Markdown using the same mechanism as <strong>Paste Html</strong> in the Markdown Monster editor view. The command line for this looks like this:</p>
+<pre><code class="language-ps">mmcli htmltomarkdown -i &quot;&lt;inputHtmlFile&gt;&quot; -o &quot;&lt;outputMarkdownFile&gt;&quot; -open
+</code></pre>
+<p>You pass an HTML file as input and a Markdown document as output. If files aren't provided MM prompts for file names. The <code>-open</code> flag opens the Markdown document in Markdown Monster after generation.</p>
+<h4 id="markdowntopdf">MarkdownToPdf</h4>
+<p>This option allows you to print a Markdown document into a PDF file.</p>
+<pre><code class="language-ps">mmcli markdowntopdf -i &quot;&lt;inputMarkdownFile&gt;&quot; -o &quot;outputPdfFile&quot; -open
+      --theme [&lt;anyAvailableTheme&gt;]  
+      --orientation [Portrait|Landscape]
+      --page-size [Letter|Legal|A4|B4]
+</code></pre>
+
+    </div>
+
+
+
+    <h4 class="outdent" id="seealso">See also</h4>
+    <div class="see-also-container">
+        <div>Open Files from the Command Line</div>
+
+    </div>
+                </article>
+
+                <hr>
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-24
+                    <br>
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Command Line Operations&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Command%20Line%20Operations%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_5FP0XP68P.html">Comment or report problem with topic</a>
+                
+                <br class="clearfix">
+                <br>
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</div></body>
+</html>
+

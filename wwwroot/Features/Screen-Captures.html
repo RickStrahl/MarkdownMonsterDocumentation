@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>Screen Captures - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Screen Captures
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Screen Captures
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>Markdown Monster supports capturing Screen Captures of Windows and Screens via both a built-in capture utility and the popular <a href="http://techsmith.com/snagit">SnagIt Screen Capture Utility from Techsmith</a>. Both provide integrated support for snapping a screen shot of a window, control or screen, save the file to disk and then reference the saved as a Markdown image link.</p>
+<ul>
+<li><a href="#PrtScn">Alt-PrtScn and Paste Image</a></li>
+<li><a href="#Built-in">Built-in Screen Capture</a></li>
+<li><a href="#SnagIt">SnagIt Screen Capture</a></li>
+</ul>
+<p><a name="PrtScn"></a></p>
+<h3 id="alt-prtscn-and-paste-image">Alt-PrtScn and Paste Image</h3>
+<p>One of the easiest ways to capture screen shots on the desktop is to use Windows' built-in screen capture tooling by using <code>Alt-PrtScn</code>:</p>
+<ul>
+<li>Select a window on the desktop</li>
+<li>Press <code>alt-PrtScn</code></li>
+<li>Goto the Markdown Monster Editor</li>
+<li>Press <code>ctrl-v</code> to paste the image into the editor</li>
+<li>Select a file name to save to</li>
+</ul>
+<p>This is a quick and easy way to embed a screen capture into your document and it works well if all you need is to display Window content.</p>
+<p>If you need to display a mouse cursor or active UI like drop downs or selections, you can use one of the other two capture options.</p>
+<p><a name="Built-in"></a></p>
+<h3 id="the-built-in-screen-capture">The Built-in Screen Capture</h3>
+<p>The native screen capture form is a simple utility that lets you capture desktop windows into screen shot images:</p>
+<p><img src="/docs/images/screencaptureform.png" alt="" /></p>
+<p>There are two configuration options for the capture:</p>
+<ul>
+<li><p><strong>Capture Delay</strong><br />
+You can specify a delay before the capture starts to allow you to manipulate the UI before capture. Capture delays are great if you need to highlight a control or show dropdown list etc. When a capture timeout is set the capture is delayed, showing a count down timer in the lower right corner of your main screen.</p>
+</li>
+<li><p><strong>Capture Mouse Cursor</strong><br />
+You can optionally capture the mouse cursor with your capture.</p>
+</li>
+</ul>
+<p>Both of these options are a good reason to use a dedicated capture over using <code>Alt-PrtScn</code> window captures.</p>
+<h3 id="doing-a-screen-capture">Doing a Screen Capture</h3>
+<p>To start a screen capture click on the <strong>Click to Start</strong> button.   The capture highlights whatever window the mouse cursor is over and you can click to select the window to capture.</p>
+<p><img src="/docs/images/ClassicScreenCapture.gif" alt="" /></p>
+<p>Once selected the capture content is displayed in the capture form. From there you can save it and/or open it in your configured editor.</p>
+<p>To save the image click on the <strong>Save</strong> toolbar button, to write out the image to disk and embed it into your Markdown text as you exit the capture form.</p>
+<p>You can also click on <strong>Save and Edit</strong> which performs the same teps of saving and embedding, but also opens the saved image file in the configured <strong>ImageEditor</strong>.</p>
+<p>The screen capture form also includes a few additional features, like the ability to paste an image from the clipboard, copy a captured image to the clipboard, and opening the saved image in the configured <strong>ImageEditor</strong>.</p>
+<p><a name="SnagIt"></a></p>
+<h3 id="snagit-screen-cature">SnagIt Screen Cature</h3>
+<p>In order to use the SnagIt screen capture features, make sure you enable it first:</p>
+<ul>
+<li>Click on the Down Arrow next to the Screen Capture Icon</li>
+<li>Select Screen Capture Configuration</li>
+<li>Check <strong>Use SnagIt when available</strong></li>
+</ul>
+<p><img src="/docs/images/snagitcaptureaddin.png" alt="" /></p>
+<p>To start a screen capture click on the Capture icon (the monitor icon in the toolbar) to bring up SnagIts capture UI:</p>
+<p><img src="/docs/images/SnagItScreenCapture.gif" alt="" /></p>
+<p>SnagIt offers a number of different capture options. The most useful is the <strong>All in One</strong> feature which lets you capture windows, objects or free form rectangular selections. Other options include windows, menus, scrolling windows, totally freeform shapes and even printer output.</p>
+<p>The options are pretty self explanatory.</p>
+<p>Click <strong>Save</strong> or <strong>Capture</strong> depending on whether you have the preview or configuration option and go.</p>
+<h3 id="snagit-editor-preview">SnagIt Editor Preview</h3>
+<p>If you have the <strong>Show Preview Window</strong> option enabled the captured image is shown in the SnagIt Editor. In the editor you can crop and modify the image, add annotations, shadows, perspective and otherwise apply effects and features to the image.</p>
+<p>Here is an example of an image that is marked up with annotations:</p>
+<p><img src="/docs/images/SnagItEditor.png" alt="" /></p>
+<p>When done click the <strong>Finish</strong> or <strong>Cancel</strong> button to embed or abort the captured image.</p>
+<h3 id="image-embedding">Image Embedding</h3>
+<p>Images for either capture type are embedded as standard Markdown images in the format of:</p>
+<pre><code class="language-Markdown">![](/images/screenshot.png)
+</code></pre>
+<p>using <strong>relative paths to the image</strong> if the path can be expressed as a right side relative path. Otherwise the full path is used.</p>
+<p>You can edit the embedded markdown as necessary to add a title or modify the path.</p>
+
+    </div>
+
+
+
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-23
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Screen Captures&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Screen%20Captures%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_4NJ0WBOMY.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

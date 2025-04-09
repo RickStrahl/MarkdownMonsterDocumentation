@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">    
+    <title>Accessing and manipulating the Active Editor Document - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css">
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet">
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic"></topictype>
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars" title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo">
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Accessing and manipulating the Active Editor Document
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Accessing and manipulating the Active Editor Document
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>Inside your Markdown Monster Addin you have full access to he active Markdown Document as well as the entire UI of the application.</p>
+<p>The Addin interface exposes a number of useful methods that abstract some common operations such as accessing the selection points in the document to read and write content, retrieve and set the entire Markdown document, Create new documents, close documents and so on.</p>
+<h3 id="manipulating-the-selected-editor-text">Manipulating the selected Editor Text</h3>
+<p>One of the most common things you do in an Addin is manipulate the text of the document. You can use the <code>.GetSelection()</code> and <code>.SetSelection()</code> methods of the Addin object you are subclassing to extract the selected text, modify it and paste it back out.</p>
+<p>For example the following Addin <code>OnExecute()</code> implementation wraps the selected text into an underline HTML block:</p>
+<pre><code class="language-csharp">public override async Task OnExecute(object sender)
+{                       
+    var editor = Model.
+    string sel = await GetSelection();
+
+    if (string.IsNullOrEmpty(sel))
+        return;
+    
+    sel = &quot;&lt;u&gt;&quot; + sel + &quot;&lt;/u&gt;&quot;;
+    SetSelection(sel);
+
+    // show status message that goes away after 4 secs
+    ShowStatus(&quot;Text underlined...&quot;,4000);
+
+    // Set focus back to editor
+    await SetEditorFocus();
+
+    // update the preview if active
+    UpdatePreview();
+}
+</code></pre>
+<p>The code captures the selection, then wraps the HTML <code>&lt;ul&gt;</code> tag around the selected text and then simply sets the selection of the document which effectively updates the current selection with the new value.</p>
+<p>It's that easy to manipulate the document.</p>
+<p>Notice also that this code calls <code>SetEditorFocus()</code> which refocuses the editor after the edit operation  - not so important in this example because we're not bring up custom UI, but if you do you'll want to make sure the editor is refocused. It also calls <code>UpdatePreview()</code> which forces the Preview window to refresh if it is open. Finally <code>ShowStatus()</code> is used to update the Status bar to let the user know that something happened. The method takes a second timeout parameter which resets the status bar to its default message after the timeout.</p>
+<p>There are many other things you can do:</p>
+<h3 id="getting-entire-document">Getting entire Document</h3>
+<p>You can get and set the entire document with <code>GetMarkdown()</code> and <code>SetMarkdown()</code>. Use this when you manipulate the entire document and you need to replace it.</p>
+<h3 id="opening-and-closing-tabs">Opening and Closing Tabs</h3>
+<p>If you need to open a new document or close an existing tab, you can do so using the <code>OpenTab()</code> and <code>CloseTab()</code> methods. <code>OpenTab()</code> takes an optional file name or <code>untitled</code> to open a new blank tab.</p>
+<h3 id="accessing-the-markdown-document">Accessing the Markdown Document</h3>
+<p>You can access the Markdown Document using <code>Model.ActiveDocument</code> which holds information about the document. You can get the <code>Filename</code>,<code>CurrentText</code>,<code>IsDirty</code> status, the <code>HtmlRenderFileName</code> used for previews and you can call methods like <code>RenderHtml()</code> and <code>RenderHtmlToFile()</code> to create HTML from your Markdown.</p>
+<h3 id="accessing-the-markdown-editor">Accessing the Markdown Editor</h3>
+<p>You can also gain access to the <code>Model.ActiveEditor</code> which gives access to the underlying Editor control in the UI. Here you get access to the raw editor WebBrowser instance and the underlying JavaScript Ace Editor instance that the editor is based on. There are is ton of low level  functionality exposed in this object that gives you fine grained control over the editor.</p>
+<p>There are methods like <code>MarkupMarkdown()</code> that let you trigger operations like <code>bold</code>, <code>italic</code>, <code>image</code>, <code>code</code> etc that match the toolbar operations. There's <code>SpecialKey()</code> which lets you trigger most of the hotkeys that Markdown Monster uses like Ctrl-n, Ctrl-s, Ctrl-O etc. You can also switch the Editor's syntax highlighting to a different language (it's <code>markdown</code> by default) but you can switch to <code>csharp</code> for example and then display a <code>.cs</code> file. You can call the <code>SetDirty()</code> method to force the document to be marked as dirty (or not dirty).</p>
+<h3 id="accessing-the-markdown-editor-javascript-editor">Accessing the Markdown Editor JavaScript Editor</h3>
+<p>The Editor also has an <code>AceEditor</code> property that references the JavaScript Editor wrapper instance. This object is a wrapper JavaScript object that wraps the underlying AceEditor control Markdown Monster uses and you can access the methods of this object.</p>
+<pre><code class="language-csharp">var editor = Model.ActiveEditor.AceEditor;
+
+editor.settheme(&quot;github&quot;,17,true);
+editor.setLanguage(&quot;csharp&quot;)
+editor.enablespellchecking(true,&quot;de_DE&quot;);
+</code></pre>
+<p>You can call functions defined in the <code>Editor\editor.js</code> file on the main <code>textEditor</code> instance.</p>
+<p>Markdown Monster uses Ace Editor for it's main editing component and you can get access to the underlying Ace Editor JavaScript object instance via</p>
+<pre><code class="language-javascript">var ace = Model.ActiveEditor.AceEditor.editor;
+</code></pre>
+<h3 id="accessing-the-main-window">Accessing the Main Window</h3>
+<p>You can also gain access to the Main UI window of Markdown Monster by using <code>Model.Window</code>. This is the top level window and it gives you access to a large list of Methods to manipulate the UI including all subcontrols etc. This is an advanced feature and if you plan to do this you're on your own for drilling into the object model, but you do have access the full UI through this interface.</p>
+<p><a href="#__0">Window Documentation</a></p>
+
+    </div>
+
+
+
+                </article>
+
+                <hr>
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-24
+                    <br>
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Accessing and manipulating the Active Editor Document&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Accessing%20and%20manipulating%20the%20Active%20Editor%20Document%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_4NF02Q0SZ.html">Comment or report problem with topic</a>
+                
+                <br class="clearfix">
+                <br>
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</div></body>
+</html>
+

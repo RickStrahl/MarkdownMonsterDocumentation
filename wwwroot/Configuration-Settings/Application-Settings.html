@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>Application Settings - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Application Settings
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Application Settings
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <h4 id="applicationtheme">ApplicationTheme</h4>
+<p>The application theme determines the application major theme for the window and controls.</p>
+<ul>
+<li>Dark</li>
+<li>Light</li>
+</ul>
+<blockquote>
+<p><i class="fas fa-exclamation-circle" style="font-size: 1.1em"></i>  Any changes made to the ApplicationTheme requires a restart of Markdown Monster to properly render all the theme changes.</p>
+</blockquote>
+<h4 id="editortheme">EditorTheme</h4>
+<p>The theme used by the Markdown editor. A variety of themes can be used including <code>twilight</code>,<code>visualstudio</code>,<code>github</code>,<code>monokai</code>, <code>mono_industrial</code>.  You can also change the editor theme via the drop down on the bottom right of the form. These themes are stored in the <code>Editor\scripts</code> folder with a <code>theme-</code>.</p>
+<h4 id="previewtheme">PreviewTheme</h4>
+<p>The theme used by the HTML Preview browser. Several themes are available including <code>Dharkan</code>, <code>Blackout</code>, <code>GitHub</code>, <code>Hipster</code>. You can also change the preview theme via the drop down on the bottom right of the form. These themes are fairly simple plain HTML themes and can be easily created or modified to match whatever style you want to see in the previewer. Look in the <code>PreviewThemes</code> folder.</p>
+<h4 id="previewsyncmode">PreviewSyncMode</h4>
+<p>Determines if and how the Preview window is synced with the editor. The following values can be used:</p>
+<ul>
+<li>EditorToPreview</li>
+<li>PreviewToEditor</li>
+<li>EditorAndPreview</li>
+<li>None</li>
+</ul>
+<h4 id="usesinglewindow">UseSingleWindow</h4>
+<p>If <code>true</code> opens all documents in a single window. This is the default and preferred mode to operation Markdown Monster, but you can also force MM to open every opened externally in a new instance of Markdown Monster.</p>
+<blockquote>
+<p>Note if running without SingleWindow mode you may see inconsistent behavior in the <strong>Recent Documents</strong> list if multiple instances are open.</p>
+</blockquote>
+<h4 id="openinpresentationmode">OpenInPresentationMode</h4>
+<p>If set to <code>true</code> starts the editor in presentation mode that displays the rendered HTML in full screen mode.</p>
+<h4 id="previewhttplinksexternal">PreviewHttpLinksExternal</h4>
+<p>If set the <code>true</code> all preview links that are <code>http://</code> or <code>https://</code> links are opened externally in your default system Web browser. If <code>false</code> links open in the previewer. We recommend you leave the default of <code>true</code>.</p>
+<h4 id="showfulldocumentpathintitlebar">ShowFullDocumentPathInTitleBar</h4>
+<p>If <code>true</code> displays the full path to the open file. Default is <code>false</code>.</p>
+<h4 id="distractionfreemodehideoptions">DistractionFreeModeHideOptions</h4>
+<p>This flag lets you configure what UI components are hidden in distraction free mode as well as a couple of mode settings (<strong>maximized</strong> and <strong>maxwidth:width</strong>). Distraction free mode is accessed via the <i class="fas fa-arrows-alt" style="font-size: 1.1em"></i>  icon on the Window bar or via <strong>Alt-Shift-Enter</strong>.</p>
+<p>This option takes a comma delimited list of the following values you can hide:</p>
+<pre><code class="language-text">&quot;toolbar,statusbar,menu,preview,tabs,maximized,maxwidth:970&quot;
+</code></pre>
+<p>Each of the items included is <strong>hidden</strong> (except for maximized and maxwidth obviously). Any of these values included hide the corresponding UI item. Any option can be left out to not hide that item.</p>
+<p><strong>maximized</strong> when provided maximizes the window, <strong>maxwidth:970</strong> allows you to specify a maxwidth for the editor's content area which allows you to optionally provide lots of whitespace around text as is common in distraction free modes. The number is the width in pixels.</p>
+<h4 id="autosavedocuments">AutoSaveDocuments</h4>
+<p>If <code>true</code> automatically saves documents to disk as you type. Document and file are always nearly in sync (except for the 1 second or so no-typing delay before text is updated). This setting overrides the <strong>AutoSaveBackups</strong> option if set. No backups are created if this option is <code>true</code>.</p>
+<h4 id="autosavebackups">AutoSaveBackups</h4>
+<p>Set this option to <code>true</code> to backup your working files while you are working, but before they are saved. In case of a crash the backup document is opened in addition to the actual document so you can compare or choose the recovered content. No backups are created if <strong>AutoSaveDocuments</strong> is <code>true</code>.</p>
+<h4 id="alwaysusepreviewrefresh">AlwaysUsePreviewRefresh</h4>
+<p>Determines whether the Preview is always refreshed fully or (default) just replacing the existing content. The default behavior of content replacement is quicker with less flicker, but cannot update embedded scripts or other dynamic content.</p>
+<p>If you are embedding dynamic content that includes script tags or expanding widgets set this flag to <code>true</code>.</p>
+<h4 id="imageeditor">ImageEditor</h4>
+<p>Lets you specify an image editor to edit images. Used for right clicking on images in your Markdown text, or via the Folder Browser. Defaults to <strong>Paint.NET</strong> if installed, otherwise falls back to <strong>Paint</strong> as the default.</p>
+<h4 id="imageviewer">ImageViewer</h4>
+<p>Optionally lets you specify an external image viewer. Defaults to <code>null</code> which uses the system viewer (Photos typically). Note that MM automatically previews images in the editor as you click on them so this is not required often.</p>
+<h4 id="webbrowserpreviewexecutable">WebBrowserPreviewExecutable</h4>
+<p>This allows you to explicitly specify a Web Browser executable to launch an external preview. If this value is <code>null</code> it'll use the system default. Defaults to discovered location of Chrome or FireFox if installed, otherwise <code>null</code>.</p>
+<h4 id="openfoldercommand">OpenFolderCommand</h4>
+<p>Determines the executable used to open a folder or folder file location in Windows. Defaults to <code>Explorer.exe</code> but can be any other Explorer replacement shell you use.</p>
+<h4 id="terminalcommand-and-terminalcommandargs">TerminalCommand and TerminalCommandArgs</h4>
+<p>The <strong>TerminalCommand</strong> is the command interpreter used which defaults to <strong>Powershell</strong>. The arguments are the stock arguments to open the shell in a specific folder.</p>
+<p><strong>Powershell</strong></p>
+<pre><code class="language-json">  &quot;TerminalCommand&quot;: &quot;powershell.exe&quot;,
+  &quot;TerminalCommandArgs&quot;: &quot;-noexit -command \&quot;cd '{0}'\&quot;&quot;,
+</code></pre>
+<p><strong>Command</strong></p>
+<pre><code class="language-json">  &quot;TerminalCommand&quot;: &quot;cmd.exe&quot;,
+  &quot;TerminalCommandArgs&quot;: &quot;/k cd /D \&quot;{0}\&quot;&quot;,
+</code></pre>
+
+    </div>
+
+
+
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-24
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Application Settings&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Application%20Settings%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_5K40LG3RO.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">    
+    <title>Setting up a Weblog - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css">
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet">
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="header"></topictype>
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars" title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo">
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/header.png">
+                Setting up a Weblog
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    <h1 class="content-title">
+    <img src="/docs/_kavadocs/icons/header.png">    
+    Setting up a Weblog
+</h1>
+
+
+
+
+<div class="content-body" id="body">
+            <p>The first thing you need to do is set up one or more Web sites for your blog. In order to publish to the Weblog your blog has to support:</p>
+<ul>
+<li><p><strong><a href="#__0">WordPress API (classic)</a></strong><br>
+This API is used by any WordPress blog. MM accesses WordPress via the old XmlRpc API since we only use basic features for posting and retrieving posts. This API uses a common endpoint (usually <strong>XmlRpc.php</strong>) and username and password authentication to send requests.</p>
+</li>
+<li><p><strong><a href="#__0">MetaWebLog API</a></strong><br>
+This API is commonly supported by 3rd party Weblog engines. Functionally it's very similar to WordPress's core API as it uses the same base XmlRpc structures. It uses username and password authentication with each request, but unlike WordPress, the endpoint URL is different for each configuration.</p>
+</li>
+<li><p><strong><a href="#__0">Medium</a></strong><br>
+Medium is a popular online blogging platform and Medium provides its own <strong>very limited API</strong> that only allows for <strong>one time posting</strong> of new <em>Stories</em> (posts). The <a href="https://github.com/Medium/medium-api-docs">Medium API</a> has no support for re-posting, downloading or even loading existing posts. Still initial publishing support is very useful for getting initial content to Medium.</p>
+</li>
+<li><p><strong><a href="#__0">Jekyll Local Folder Publishing</a></strong><br>
+Jekyll is a popular static site generator used on Github and it has support for hosting Weblogs. This mechanism is a local file publishing mechanism that publishes a MM Weblog Post into the Jekyll folder structure copying both the Markdown content as well as the associated assets. It can optionally also build the Jekyll site and preview content.</p>
+</li>
+</ul>
+<h3 id="add-edit-delete-weblogs">Add, Edit, Delete Weblogs</h3>
+<p>The Weblogs Tab allows you to create, edit and delete multiple Weblogs that you want to publish to.</p>
+<p><img src="/docs//images/CreateEditWebLog.png" alt=""></p>
+<p>For each blog you need to provide a Blog name, a Blog ID (some identifier the blog engine provides), an Endpoint URL where requests are received, and either a username and password, or access token to authenticate requests.</p>
+<h3 id="adding-a-new-weblog">Adding a new Weblog</h3>
+<p>To create a new Weblog entry:</p>
+<ul>
+<li>Click on the <i class="fas fa-rss" style="font-size: 1.1em"></i>  icon on the toolbar</li>
+<li>Go to the Web Logs tab</li>
+<li>Click New</li>
+<li>Fill out the form</li>
+</ul>
+<p>The form is going to look slightly different depending on the blog type. MetaWeblog and Wordpress will have username and password inputs, while Medium has an API token instead.</p>
+<h3 id="configuration-fields">Configuration Fields</h3>
+<h5 id="name">Name</h5>
+<p>This is the display name for the blog you see in the dropdown for blog selection.</p>
+<h5 id="blog-id--publication-id">Blog Id / Publication Id</h5>
+<p>Blogs have a blog Id or Publication Id associated with them. This is primarily used for blog engines that host many blogs, but even single site blogs use this value. If you know this value you can type it into the textbox.</p>
+<p>The dropdown button attempts to download available blogs/publications and lets you interactively choose from a list <strong>if your Blog engine supports it</strong>.</p>
+<blockquote>
+<p>In order to look up blogs make sure username/password or the access token and Api Url fields are set first. Otherwise you can't connect to the API to get this data.</p>
+</blockquote>
+<h5 id="api-endpoint-url">Api Endpoint Url</h5>
+<p>This is the most important value, which holds the API endpoint URL which responds to requests. If you know the full endpoint URL to the API - great, just type it in.</p>
+<p>To auto-discover the Endpoint URL enter your Weblog's home page Url and click on the <i class="fas fa-gear" style="font-size: 1.1em"></i>  button to test or discover your endpoint URL. This button attempts to discover the endpoint Url. When it's done it displays its result on the status bar of the window.</p>
+<p>Most public blog engines support <strong>RSD (Real Simple Discovery)</strong> which lets Markdown Monster discover the actual API Endpoint. If RSD is supported by your Blog engine, it retrieves the <strong>Api Url</strong> and <strong>BlogId</strong> and fill those values for you. Yay!</p>
+<p>If the endpoint search fails, you have to figure out your API endpoint. If you're currently using third party software to publish posts, check the documentation to see what URL is used to send API requests.</p>
+<h5 id="blog-type">Blog Type</h5>
+<p>Determines what type your blog is. This is important for MM to know how API requests need to be processed as each type uses a different API.</p>
+<h5 id="usernamepassword">Username/Password</h5>
+<p>Wordpress and MetaWeblog API require username and password to connect to the API service. This value is sent on every request.</p>
+<p>The username and password are stored in encrypted form in the configuration using machine specific encryption keys.</p>
+<blockquote>
+<p><strong>Important</strong>: Username and password are sent with each request, so make sure you use SSL (https://) requests to your server to encrypt request data sent to the server.</p>
+</blockquote>
+<h5 id="access-token">Access Token</h5>
+<p>Medium uses a User Access Token to validate users.</p>
+<p>To get a User Access token for Medium:</p>
+<ul>
+<li>Log into Medium</li>
+<li>Click on your Profile Picture</li>
+<li>Click on Settings</li>
+<li>Scroll down to Integration Tokens</li>
+<li>Enter a name for your Token</li>
+<li>Click on <em>Get integration token</em></li>
+<li>Copy the integration token</li>
+<li>Paste into the Access Token field of the Weblog Configuration form</li>
+<li></li>
+</ul>
+<p>The access token is stored in encrypted form in the configuration using machine specific encryption keys.</p>
+<h3 id="more-info-on-providing-your-weblog-api-endpoint">More info on providing your Weblog API Endpoint</h3>
+<p>In order to access a Weblog and post new and updated posts to the Weblog, you have to provide</p>
+<ul>
+<li>Blog Type (Wordpress or MetaWeblogApi)</li>
+<li>An API Endpoint Url</li>
+<li>A username and password</li>
+</ul>
+<h3 id="the-weblog-api-endpoint-url">The Weblog API Endpoint Url</h3>
+<p>The key item on this page is the <strong>Api Url</strong> which is the final endpoint where the API listens for incoming API requests.</p>
+<p>If you know that final obscure Endpoint Url for your Weblog API- awesome, you're done!</p>
+<p>For the rest of us a little help is needed.</p>
+<h3 id="discovering-the-weblog-api-endpoint-url">Discovering the Weblog API Endpoint Url</h3>
+<p>To discover the Endpoint URL, rather than putting in an Endpoint URL, enter your Weblog's home page Url and click on the <i class="fas fa-gear" style="font-size: 1.1em"></i>  button to test or discover your endpoint URL. This button goes out and tries to discover the endpoint Url. When it's done it displays its result on the status bar of the window.</p>
+<p>Most public blog engines support <strong>RSD (Real Simple Discovery)</strong> which lets Markdown Monster discover the actual API Endpoint. If RSD is supported by your Blog engine, it will retrieve the <strong>Api Url</strong> and <strong>BlogId</strong> and fill those values for you. You're left with username and password to fill out.</p>
+<p>If the endpoint search fails, you will have to figure out your API endpoint. If you're currently using some other software to publish posts, check there to see what URL is used to send API requests or use a tool like Fiddler to via the API traffic and see what the URL is where Weblog API requests are made.</p>
+    
+    </div>
+
+
+
+
+
+
+
+ 
+                </article>
+
+                <hr>
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-23
+                    <br>
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Setting up a Weblog&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Setting%20up%20a%20Weblog%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_4RG0QZG1I.html">Comment or report problem with topic</a>
+                
+                <br class="clearfix">
+                <br>
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</div></body>
+</html>
+

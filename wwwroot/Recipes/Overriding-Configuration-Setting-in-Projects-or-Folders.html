@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>Overriding Configuration Setting in Projects or Folders - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Overriding Configuration Setting in Projects or Folders
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Overriding Configuration Setting in Projects or Folders
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>Markdown Monster by default uses <strong>global configuration</strong> settings that are stored in <code>%appdata%\Markdown Monster\markdownmonster.json</code>. These global settings can be set directly in the JSON configuration file, via the Configuration Settings window, or by setting various values in the User interface via menu or status bar options.</p>
+<p>The global settings apply to all open documents and folders and projects and for the most part the single set of global settings are sufficient. But in some cases you might want to use <strong>different settings</strong> for a particular project or files located in a specific subfolder. For example, you might want to apply separate Markdown parsing features in a specific project or folder, or use custom PreviewTheme for a specific project or folder.</p>
+<h3 id="customizing-global-settings-by-project-or-folder">Customizing Global Settings by Project or Folder</h3>
+<p>You can override the global settings in one of two ways:</p>
+<ul>
+<li><p><strong>.markdownmonster` Folder File</strong><br />
+This file in the root of a project applies overridden settings <strong>to all files in the current folder and downward hierarchy</strong>.</p>
+</li>
+<li><p><strong>Markdown Monster <code>.mdproj</code> Project File</strong><br />
+When you have a Markdown Monster project open, the overridden settings you set here are applied <strong>to all open files</strong> until you close the project.</p>
+</li>
+</ul>
+<h3 id="the-markdownmonster-folder-file">The .markdownmonster Folder File</h3>
+<p>You can place a <code>.markdownmonster</code> file into the root folder of a project. If you place an empty file, that file marks the 'rendering root' of the project that is checked for path resolution when referencing URLs in documents with <code>/</code> or <code>~/</code> start paths. MM searches up the hierarchy to check for the <code>.markdownmonster</code> file and if it finds it uses the folder it lives in as the project root for root folder resolution.</p>
+<p>In addition, you can also place <strong>JSON configuration values</strong> into this file. Using keys that map the same structure as found in the <code>markdownmonster.json</code> configuration file you can <strong>override any settings</strong> from the base global configuration.</p>
+<p>For example you can override themes and font information like this in <code>.markdownmonster</code>:</p>
+<pre><code class="language-json">{
+    &quot;EditorTheme&quot;: &quot;vscodelight&quot;,
+    &quot;PreviewTheme&quot;: &quot;Blackout&quot;,
+    &quot;Editor&quot;: {
+      &quot;FontSize&quot;: 18,
+      &quot;PrintMargin&quot;: 80,
+      &quot;ShowPrintMargin&quot;: true
+    },
+    &quot;Markdown&quot;: {
+        &quot;GenericAttributes&quot;: true,
+        &quot;SmartyPants&quot;: true
+    }
+},
+</code></pre>
+<p>You can override any root object properties and any of the properties in the <code>Editor</code> and <code>Markdown</code> sub-configurations. All other settings are ignored as they are global in nature.</p>
+<blockquote>
+<h4 id="--markdownmonster-configuration-folder-scope"><i class="fas fa-warning" style="font-size: 1.1em"></i>  .markdownmonster Configuration: Folder Scope</h4>
+<p>The <code>.markdownmonster</code> marker file settings are <strong>applied only to files in the hierarchy at or below the folder level of the <code>.markdownmonster</code> file.</strong> Files loaded outside of the file hierarchy use the global, non-overridden settings.</p>
+</blockquote>
+<p>Here's what this looks like:</p>
+<p><img src="https://github.com/RickStrahl/ImageDrop/raw/master/MarkdownMonster/HierchicalSettings.gif" alt="" /></p>
+<h3 id="configuration-settings-an-mdproj-project-file">Configuration Settings an .mdproj Project File</h3>
+<p>If you open an <code>.mdproj</code> Project file in Markdown Monster you can apply custom configuration settings via the <code>.mdproj</code> file and it's JSON <code>.Configuration</code> key. Any values applied override the same values in <code>markdownmonster.json</code> from the global configuration.</p>
+<p>To configure custom settings, add a <code>Configuration</code> JSON key to the root object in the <code>.mdproj</code> file:</p>
+<pre><code class="language-json">&quot;Configuration&quot;: {
+    &quot;EditorTheme&quot;: &quot;vscodelight&quot;,
+    &quot;PreviewTheme&quot;: &quot;Blackout&quot;,
+    &quot;Editor&quot;: {
+      &quot;FontSize&quot;: 18,
+      &quot;PrintMargin&quot;: 80,
+      &quot;ShowPrintMargin&quot;: true
+    },
+    &quot;Markdown&quot;: {
+        &quot;GenericAttributes&quot;: true,
+        &quot;SmartyPants&quot;: true
+    }
+},
+</code></pre>
+<p>You can override any root object properties and any of the properties in the <code>Editor</code> and <code>Markdown</code> sub-configurations. All other settings are ignored as they are global in nature.</p>
+<blockquote>
+<h4 id="--project-file-configuration-all-open-files-scope"><i class="fas fa-warning" style="font-size: 1.1em"></i>  Project File Configuration: All Open Files Scope</h4>
+<p>The custom settings only work when the project is open in Markdown Monster. While the project is open <strong>all open files use the overridden configuration settings</strong>. Global settings are applied when you close the project.</p>
+</blockquote>
+<h3 id="override-behavior-no-ui---json-settings-only">Override Behavior: No UI - JSON Settings Only</h3>
+<p>Both of these configuration overrides are applied <strong>ontop of the global settings</strong>, and the values <strong>can only be set in the configuration files not through the User Interface</strong>. The User Interface only shows the global values, and if you change any of the values in the User Interface only the global values are updated, but which won't have any effect on any overridden values from the custom configuration.</p>
+<h3 id="settings-may-reqiure-reloading-or-reactivating-documents">Settings May Reqiure Reloading or Reactivating Documents</h3>
+<p>Most settings are applied as soon as you set them and save the JSON file. A few settings however may require that explicitly re-activate the document either by switching document tabs or reloading the document.</p>
+<p>There are a few settings that can't be changed. For example, you can't change the full application theme in this way as theme changes require a restart. Editor and Preview Theme changes work fine however and are immediately reflected.</p>
+
+    </div>
+
+
+
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-24
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Overriding Configuration Setting in Projects or Folders&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Overriding%20Configuration%20Setting%20in%20Projects%20or%20Folders%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_61P1709VR.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

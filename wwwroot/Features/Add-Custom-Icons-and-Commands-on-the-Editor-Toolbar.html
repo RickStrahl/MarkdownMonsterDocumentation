@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">    
+    <title>Add Custom Icons and Commands on the Editor Toolbar - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css">
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet">
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic"></topictype>
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars" title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo">
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Add Custom Icons and Commands on the Editor Toolbar
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Add Custom Icons and Commands on the Editor Toolbar
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>The Editor toolbar at the top of the Window allows embedding of common Markdown markup on the selected text. The toolbar is kept relatively simple and so it doesn't wrap all operations that are supported.</p>
+<p>It's possible to extend the toolbar with custom operations:</p>
+<ul>
+<li>Adding additional built-in commands</li>
+<li>Adding custom HTML markup commands</li>
+</ul>
+<p>You can do this by using the <code>Configuration.Editor.AdditionalToolbarIcons</code> which is a collection of an icon name plus a an action name. For example:</p>
+<pre><code class="language-json">&quot;Editor&quot;: {
+    &quot;AdditionalToolbarIcons&quot;: {
+      // internal MM Editor Commands
+      &quot;Pencil&quot;: &quot;mark&quot;,
+      &quot;ArrowDown&quot;: &quot;small&quot;,
+      // html tag wrapping
+      &quot;Coffee&quot;: &quot;html|cite&quot;,
+      // template for text selection
+      &quot;Bolt&quot;: &quot;html|&lt;b&gt;&lt;i&gt;{0}&lt;/i&gt;&lt;/b&gt;&quot;
+    },
+</code></pre>
+<p><img src="/docs/images/AddCustomIcons.png" alt=""></p>
+<p>The item in each map is a <strong>FontAwesome Icon</strong> to be used as an icon, the second is the name of an existing command. The last (Coffee) example, uses <code>html|cite</code> as the value which results in custom tag created around the text as <code>&lt;cite&gt;text&lt;/cite&gt;</code>.</p>
+<h3 id="built-in-commands">Built-in Commands</h3>
+<p>Built in commands handle the visible toolbar operations, plus a few additional ones that are not actually shown on the toolbar. The following 3 commands are not already on the toolbar:</p>
+<ul>
+<li><code>small</code> - adds text in <code>&lt;small&gt;txt&lt;/small&gt;</code></li>
+<li><code>mark</code> - adds textin <code>&lt;mark&gt;txt&lt;/mark&gt;</code></li>
+<li><code>numberedlist</code> - formats lines of text as a numbered list</li>
+<li><code>pagebreak</code> - inserts an HTML pagebreak into the document</li>
+</ul>
+<p>All available commands can be found in the source code in:</p>
+<p><a href="https://github.com/RickStrahl/MarkdownMonster/blob/master/MarkdownMonster/_Classes/MarkdownDocumentEditor.cs#L508">MarkdownDocumentEditor::MarkupMarkdown()</a></p>
+<blockquote>
+<p>You can also create custom addins that extend the default markup 'commands' by implmenting <a href="#__0">MarkdownMonsterAddin.OnEditorCommand</a> and creating your own commands.</p>
+</blockquote>
+<h3 id="custom-html-tag-wrapping">Custom HTML Tag Wrapping</h3>
+<p>You can also create a custom HTML commands that wrap the selected text into an HTML element tag. For example:</p>
+<pre><code class="language-json">&quot;AdditionalToolbarIcons&quot;: {
+   &quot;Pencil&quot;: &quot;html|cite&quot;
+}
+</code></pre>
+<pre><code class="language-html">&lt;cite&gt;selected text&lt;/cite&gt;
+</code></pre>
+<p>This gives you access to formatting just about any HTML markup.</p>
+<h3 id="template-content">Template Content</h3>
+<p>Additionally you can also create custom HTML output using a simple 'wrapping' template where you use <code>{0}</code> to signify the selection.  For example:</p>
+<pre><code class="language-json">&quot;AdditionalToolbarIcons&quot;: {
+    &quot;Bolt&quot;: &quot;html|&lt;b&gt;&lt;i&gt;{0}&lt;/i&gt;&lt;/b&gt;&quot;
+}
+</code></pre>
+<p>Which renders:</p>
+<pre><code class="language-html">&lt;b&gt;&lt;i&gt;selected Text&lt;/i&gt;&lt;/b&gt;
+</code></pre>
+<h3 id="custom-operations">Custom Operations</h3>
+<p>If you need to add toolbar buttons with more control you can also use either the <a href="https://github.com/RickStrahl/Commander-MarkdownMonster-Addin">Commander Addin</a> or a <a href="#__0">full Addin</a>.</p>
+<pre><code class="language-cs">// Font Awesome Icon
+public void AddEditToolbarIcon(string iconName, string markdownActionCommand, 
+                               ToolBar toolbar = null, ICommand command = null )
+                               
+// Image Source Icon (sized to 16 high)
+public void AddEditToolbarIcon(ImageSource icon, string markdownActionCommand, 
+                               ToolBar toolbar = null, ICommand command = null)
+</code></pre>
+<p>For example using the Commander Addin you could use the following:</p>
+<pre><code class="language-cs">Model.Window.AddEditToolbarIcon(&quot;Microphone&quot;, &quot;html|speak&quot;);
+</code></pre>
+<p>which can be triggered off a hotkey (or by running the script).</p>
+<p>Using a full addin gives you the added capability of loading icon on application startup without requiring an explicit hotkey.</p>
+<blockquote>
+<p>Note: You can also pass completely custom commands to the <code>AddEditToolbarIcon()</code> method using an addin so you can completely take over custom button processing.</p>
+</blockquote>
+
+    </div>
+
+
+
+                </article>
+
+                <hr>
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-23
+                    <br>
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Add Custom Icons and Commands on the Editor Toolbar&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Add%20Custom%20Icons%20and%20Commands%20on%20the%20Editor%20Toolbar%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_5IM10BJPW.html">Comment or report problem with topic</a>
+                
+                <br class="clearfix">
+                <br>
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</div></body>
+</html>
+

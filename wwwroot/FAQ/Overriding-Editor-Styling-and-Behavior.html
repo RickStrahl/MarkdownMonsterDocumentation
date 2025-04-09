@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>Overriding Editor Styling and Behavior - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Overriding Editor Styling and Behavior
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Overriding Editor Styling and Behavior
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>You can override some editor styling features as well as code behavior by creating one of two override files in the <code>Editor</code> folder of the Markdown Monster installation:</p>
+<ul>
+<li><strong>editor-user-extensions.css</strong> - CSS Style overrides</li>
+<li><strong>editor-user-extensions.js</strong> - JS Editor code overrides</li>
+<li><strong>.NET Addins</strong> - more sophisticated integration</li>
+</ul>
+<p>Both of these options require a bit of inside knowledge about how ACE Editor works and is likely only going to be useful for developers or for customizations suggested by support.</p>
+<h2 id="style-overrides-css">Style overrides (CSS)</h2>
+<p>Style overrides let you override the visual aspects of the editor, which uses general ACE Editor styling along with specific editor themes. Any override you make in <code>editor-user-extensions.css</code> are applied at the end of the CSS hierarchy so you can override any pre-existing behaviors.</p>
+<p>An example might be to remove underlines from hyper links in <code>[link](https://site.com/hyperlink)</code> syntax which can be overridden via the <code>ace_underline</code> style:</p>
+<pre><code class="language-css">span.ace_markup.ace_underline {
+    text-decoration: none;
+}
+</code></pre>
+<h2 id="code-overrides-js">Code overrides (JS)</h2>
+<p>This is a developer feature  that is likely useful only to a few people who want to tinker with the inner behavior of the editor. You can refer to the editor integration code in <code>Editor\editor.js</code> for more insight into how the editor operates. Any override you make in <code>editor-user-extensions.js</code> are applied after the other editor scripts have loaded.</p>
+<p>Code overrides let you customize the behavior of the editor outside of the Markdown Monster default initialization sequence. This script is fired at the end of the script loading sequence and you can have access to:</p>
+<ul>
+<li><code>textEditor</code> - MM's wrapper around ACE editor</li>
+<li><code>textEditor.editor</code> - ACE Editor instance</li>
+</ul>
+<p>Common things that you can do is change editor settings and behavior that you can gleam by looking at the <code>configureAceEditor()</code> and <code>setEditorStyle()</code> functions in the editor wrapper object. You can gain access to all of these settings through the <code>textEditor</code> or <code>textEditor.editor</code> instances and customize behavior.</p>
+<h2 id="markdown-monster-addins-net">Markdown Monster Addins (.NET)</h2>
+<p>To interface with editor <strong>behavior</strong> you will be better off using a Markdown Monster Addin at the host level instead as the host has access to these same objects. There are a number of behaviors exposed that you can hook into using Addins, both via exposed .NET event hooks and editor behavior access.</p>
+
+    </div>
+
+
+
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-24
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Overriding Editor Styling and Behavior&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Overriding%20Editor%20Styling%20and%20Behavior%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_65W0QDV1E.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

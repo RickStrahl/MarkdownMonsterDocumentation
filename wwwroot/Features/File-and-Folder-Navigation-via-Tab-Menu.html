@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>File and Folder Navigation via Tab Menu - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                File and Folder Navigation via Tab Menu
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    File and Folder Navigation via Tab Menu
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>The <strong>Tab context menu</strong> and also the <strong>Tools menu</strong> provides a number of useful options for working in the active document's folder and accessing the theme and configuration folders.</p>
+<p>Here's what the tab context menu looks like:</p>
+<p><img src="/docs/images/TabContextMenu.png" alt="" /></p>
+<p>And here's what the Tools Menu looks like:</p>
+<p><img src="/docs/images/toolsmenu.png" alt="" /></p>
+<p>Here's what all the options do:</p>
+<h5 id="open-folder">Open Folder</h5>
+<p>Opens the active document's folder in Windows Explorer. This makes it easy to see and edit related documents like images or make changes to filenames etc.</p>
+<h5 id="open-terminal">Open Terminal</h5>
+<p>Opens a Windows Command Prompt in the active document's folder. This can be useful if you need to do a Git Commit on documentation files or a blog post hosted through Git for example.</p>
+<h5 id="commit-and-push-to-git">Commit and Push To Git</h5>
+<p>Click this menu option to commit the active document to Git and then push it to the configured Git origin. Assumes that Git is available globally (git.exe) and that the Git is already configured for the document's containing folder.</p>
+<h5 id="open-configuration-folder">Open Configuration Folder</h5>
+<p>This opens the Markdown Monster global configuration folder where you find configuration files for Markdown Monster and most addins. The main configuration is <code>MarkdownMonster.json</code> which contains the same configuration setting you can set with the <strong>Settings</strong> menu option. You also have access to <code>WeblogAddin.json</code>, and <code>ScreenCaptureAddin.json</code> their respective configuration settings. Third party addins also tend to store their JSON configuration files in this folder.</p>
+<h6 id="open-preview-themes-folder">Open Preview Themes Folder</h6>
+<p>This opens the Preview Themes folder, where preview themes are defined. Preview themes consist of a folder that has a <code>Theme.html</code> and <code>Theme.css</code> files.</p>
+<p><img src="/docs/images/PreviewThemeFolder2.png" alt="" /></p>
+<p>To create a new theme simply copy one of the existing themes and modify the files - most likely only the <code>theme.css</code> file. Any new folders you create will show up in the Preview Theme list next time you restart Markdown Monster.</p>
+<h5 id="settings">Settings</h5>
+<p>This opens the <code>MarkdownMonsterSettings.json</code> file in Markdown Monster. You can make changes to this document and the changes are applied as soon as you save the document.</p>
+
+    </div>
+
+
+
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-23
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - File and Folder Navigation via Tab Menu&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20File%20and%20Folder%20Navigation%20via%20Tab%20Menu%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_4RG0MZ918.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

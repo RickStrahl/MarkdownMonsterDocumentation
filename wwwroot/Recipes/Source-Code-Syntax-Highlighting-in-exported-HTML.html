@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />    
+    <title>Source Code Syntax Highlighting in exported HTML - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css" />
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic" />
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars"
+                   title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo" />
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Source Code Syntax Highlighting in exported HTML
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Source Code Syntax Highlighting in exported HTML
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>Markdown by design doesn't create HTML with embedded source code formatting, as it generates just a block of HTML. Unless you exported HTML with all assests that you see in the preview, the output doesn't automatically show syntax coloring.</p>
+<h3 id="markdown-code-output">Markdown Code Output</h3>
+<p>Markdown dictates that code blocks are exported as plain <code>&lt;pre&gt;&lt;code&gt;</code> blocks into HTML, and it's up to the hosting page or application to provide the syntax highlighting.</p>
+<p>MM's previewer includes the logic via JavaScript to render the code blocks as highlighted HTML using the <a href="https://highlightjs.org/" target="top">highlightJS</a> Javascript library.</p>
+<p>For example a block of HTML code that is highlighted like this:</p>
+<pre><code class="language-html">&lt;nav class=&quot;nav-header&quot;&gt;
+    &lt;a href=&quot;#home&quot; class=&quot;nav-button&quot;&gt;Home&lt;/a&gt;
+    &lt;a href=&quot;#article&quot; class=&quot;nav-button&quot;&gt;Articles&lt;/a&gt;
+&lt;/nav&gt;
+</code></pre>
+<p>is actually rendered in the underlying HTML like this:</p>
+<pre><code class="language-html">&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;nav class=&amp;quot;nav-header&amp;quot;&amp;gt;
+    &amp;lt;a href=&amp;quot;#home&amp;quot; class=&amp;quot;nav-button&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;a href=&amp;quot;#article&amp;quot; class=&amp;quot;nav-button&amp;quot;&amp;gt;Articles&amp;lt;/a&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
+<p>HighlightJS then turn this HTML into nicely syntax colored text you see in the first code sample. There are a number of other JavaScript based Syntax Highlighters available, but highlightJs is amongst the easiest and fastest rendering ones so that's what we provide.</p>
+<p>Note that code is HTML encoded so it's safe to display without script injection, but the actual code is not in any way marked up for syntax coloring other than using the start tags that identitify the optional syntax in use:</p>
+<pre><code class="language-html">&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;
+&lt;!--...code here...--&gt;
+&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
+<h3 id="example-using-highlightjs">Example using HighlightJs</h3>
+<p>Markdown Monster uses <a href="https://highlightjs.org/" target="top">HighlighJs</a> for syntax highlighting in the previewer and for full HTML exports, and you can see how the default highlighting works in the HTML Preview Pane of Markdown Monster's UI. HighlightJs is open source and you can easily add HighlightJs on your Web site with just a script and css reference, plus couple of lines of JavaScript code.</p>
+<blockquote>
+<h4 id="--other-highlighters"><i class="fas fa-info-circle" style="font-size: 1.1em"></i>  Other Highlighters</h4>
+<p>You can use any kind of JavaScript based highlighter. For example, MM originally used AceEditor for highlighting. The integration syntax might be slightly different, but the process is usually quite easy to set up similar to what we show here for HighlightJs.</p>
+</blockquote>
+<p>To integrate HighlightJS into your own Website or Weblog:</p>
+<ul>
+<li>Add the highlightJS JavaScript and CSS Styles to your page</li>
+<li>Add a small snippet of script code into your HTML page</li>
+</ul>
+<h4 id="highlightjs-example">HighlightJs Example</h4>
+<p>In order to use HighlightJs you can copy the following folder:</p>
+<p><strong><MM Install Folder>PreviewThemes\scripts\highlightjs</strong></p>
+<p>You can add the following to your HTML document to enable syntax coloring:</p>
+<pre><code class="language-html">&lt;link href=&quot;scripts/highlightjs/styles/github-gist.css&quot; rel=&quot;stylesheet&quot; /&gt;
+&lt;script src=&quot;scripts/highlightjs/highlight.pack.js&quot;&gt;&lt;/script&gt;
+
+&lt;!--&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css&quot;&gt;--&gt;
+&lt;!--&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js&quot;&gt;&lt;/script&gt;--&gt;
+
+&lt;script&gt;
+function highlightCode() {
+    var pres = document.querySelectorAll(&quot;pre&gt;code&quot;);
+    for (var i = 0; i &lt; pres.length; i++) {
+        hljs.highlightBlock(pres[i]);
+    }
+}
+highlightCode();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>The first CSS style-sheet is the code style - in this case <code>github-gist</code>. Choose from any of the other styles available in the <code>styles</code> folder.</p>
+<p>Note that you can also use the online CDN link that commented out in the code above:</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css&quot;&gt;
+&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h3 id="syntax-style-themes">Syntax Style Themes</h3>
+<p>The stylesheet link determines the code highlight theme above it's <strong>github-gist</strong>. You can choose from others defined in the <code>highlightjs/styles</code> folder.</p>
+<p>Some other popular ones:</p>
+<h5 id="dark-themes">Dark Themes</h5>
+<ul>
+<li>vs2015   (Visual Studio Dark or VSCode Dark)</li>
+<li>twilight</li>
+<li>monokai</li>
+<li>monokai-sublime</li>
+<li>darkula</li>
+</ul>
+<h5 id="light-themes">Light Themes</h5>
+<ul>
+<li>vs  (Visual Studio)</li>
+<li>github</li>
+<li>github-gist</li>
+<li>textmate</li>
+<li>xcode</li>
+</ul>
+<p>You can also copy and customize any of these themes to match your exact needs.</p>
+<h3 id="syntax-languages-for-fenced-code-blocks">Syntax Languages for Fenced Code Blocks</h3>
+<p>The following is a list of languages supported for fenced code blocks. You can use either of the formats shown.</p>
+<h4 id="common-built-in">Common Built In</h4>
+<ul>
+<li>html</li>
+<li>xml</li>
+<li>css</li>
+<li>scss</li>
+<li>less</li>
+<li>js javascript</li>
+<li>cs csharp</li>
+<li>java</li>
+</ul>
+<h4 id="custom">Custom</h4>
+<ul>
+<li>typescript</li>
+<li>fsharp</li>
+<li>vbnet vb</li>
+<li>foxpro prg</li>
+<li>markdown md</li>
+<li>powershell ps</li>
+<li>batch bat</li>
+<li>dockerfile docker</li>
+<li>dos bat cmd</li>
+<li>swift</li>
+<li>objectivec</li>
+<li>dns</li>
+<li>txt none</li>
+<li>http</li>
+<li>yaml</li>
+<li>ini</li>
+<li>diff patch</li>
+<li>pgsql postgres</li>
+<li>python</li>
+<li>go</li>
+<li>rust</li>
+</ul>
+
+    </div>
+
+
+
+                </article>
+
+                <hr />
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"/></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-24
+                    <br />
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Source Code Syntax Highlighting in exported HTML&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Source%20Code%20Syntax%20Highlighting%20in%20exported%20HTML%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_4SF0MAY9M.html">Comment or report problem with topic</a>
+                </di>
+                <br class="clearfix" />
+                <br />
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</body>
+</html>
+

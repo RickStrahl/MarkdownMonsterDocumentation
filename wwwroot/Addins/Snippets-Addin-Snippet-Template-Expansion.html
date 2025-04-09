@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">    
+    <title>Snippets Addin: Snippet Template Expansion - Markdown Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/scripts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/docs/_kavadocs/themes/kavadocs.css">
+
+    <script src="/docs/_kavadocs/themes/scripts/jquery/jquery.min.js"></script>
+
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs/highlight.pack.js"></script>
+    <script src="/docs/_kavadocs/themes/scripts/highlightjs-badge.min.js"></script>
+    <link href="/docs/_kavadocs/themes/scripts/highlightjs/styles/vs2015.css" rel="stylesheet">
+
+    <script src="/docs/_kavadocs/themes/scripts/ww.jquery.min.js"></script>
+    <script>        
+        window.page = {};
+        window.page.basePath = "/docs/";      
+    </script>
+    <script src="/docs/_kavadocs/themes/scripts/kavadocs.js"></script>
+    
+
+    <topictype value="topic"></topictype>
+
+    <script id="MermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>    
+        $(document).ready(function () {
+            helpBuilder.initializeLayout();
+            // expand all top level topics
+            setTimeout(helpBuilder.tocExpandTop, 5);
+        });
+    </script>
+    <style>
+        .toc li .fa-arrow-up-right-from-square {
+            font-size: 0.7em;
+            color: goldenrod;
+            margin-left: 0.1em;
+        }
+    </style>
+
+    </head>
+<body>    
+    <!-- Markdown Monster Content -->
+    <div class="flex-master">
+        <div class="banner">
+
+            <div class="float-start sidebar-toggle">
+                <i class="fa fa-bars" title="Show or hide the topics list"></i>
+            </div>
+            <img src="/docs/images/logo.png" class="banner-logo">
+         
+            	<div class="projectname"> Markdown Monster</div>
+
+            <div class="byline">                
+                <img src="/docs/_kavadocs/icons/topic.png">
+                Snippets Addin: Snippet Template Expansion
+            </div>
+        </div>
+        <div class="page-content">
+            <div id="toc" class="sidebar-left toc-content">
+                <nav class="visually-hidden">
+                    <a href="/docs/tableofcontents.html">Table of Contents</a>
+                </nav>
+            </div>
+
+            <div class="splitter">
+            </div>
+
+            <nav class="topic-outline">
+                <div class="topic-outline-header">On this page:</div>
+                <div class="topic-outline-content"></div>
+            </nav>
+
+            <div id="MainContent" class="main-content">
+                <!-- Rendered Content -->
+                <article class="content-pane">
+                    
+
+<h2 class="content-title">
+    <img src="/docs/_kavadocs/icons/topic.png">
+    Snippets Addin: Snippet Template Expansion
+</h2>
+
+
+
+
+<div class="content-body" id="body">
+            <p>The Snippets Addin allows for Text Template Expansion, optionally enhanced with C# code expressions to dynamically add content to the snippet. Using this tool lets create reusable Text Snippets that you can easily embed into your currently open document.</p>
+<p>Snippets can be:</p>
+<ul>
+<li>Expanded into text from an <em>Expansion String</em></li>
+<li>Triggered by an assignable <em>Keyboard shortcut</em></li>
+<li>Interactively launched from the Snippets Editor</li>
+</ul>
+<p>The C# Scripting allows for:</p>
+<ul>
+<li>Expressions - <code>{{ expression }}</code></li>
+<li>Code blocks - <code>{{% code block }}</code></li>
+<li>Editor Selection Text - <code>@@@</code></li>
+</ul>
+<p>You can create, manage and execute snippets from the snippet editor which opens from the Addins Toolbar:</p>
+<p><img src="https://github.com/RickStrahl/ImageDrop/raw/master/MarkdownMonster/SnippetsAddin.gif" alt=""></p>
+<p>The example demonstrate two common use cases:</p>
+<ul>
+<li>A large static Text Template - a bug report to be filled out</li>
+<li>A helper to create some dynamic content - a FrontMatter header in this case</li>
+</ul>
+<p>Other use cases:</p>
+<ul>
+<li><p><strong>Preformatted Text Templates</strong><br>
+If you commonly create new documents or sections in your documents that use the same text, you can create a template that expands this repetitive text from a text template.<br>
+<em><small>Examples: A bug template or FrontMatter Blog Header.</small></em></p>
+</li>
+<li><p><strong>Text Transformations</strong><br>
+Want to create custom markup operations of selected text? You can easily create template expansions that let you expand the current selection.<br>
+<em><small>Example: <code>&lt;div class='note'&gt;@@@&lt;/div&gt;</code>  (<code>@@@</code> = active selection)</small></em></p>
+</li>
+<li><p><strong>Embed Dynamic Data</strong><br>
+If you need to embed dynamic content into your editor you can use C# code to retrieve dynamic content using Handlebars like syntax (<code>{{ expression }}</code> and <code>{{% code block }}</code>). This an be as simple as embedding the current date or embedding a friendly date, or might be something more complex such as retrieving a version number from a Git repository or other resource and embedding that content into the page.<br>
+<em><small>Example: <code>{{DateTime.Now.ToString(&quot;MMMM dd, yyyy - HH:mm tt&quot;)}}</code></small></em></p>
+</li>
+<li><p><strong>Aid with structured Markup</strong><br>
+Sometimes it's useful to create shortcuts for more complex Markdown structures such as figure or code captions, icons embedded or commands that might be easy to forget like Mermaid charts or MathMl Markdown wrappers.</p>
+</li>
+</ul>
+<h2 id="snippets-template-driven-text-expansion">Snippets: Template Driven Text Expansion</h2>
+<p>Template Expansion has two modes of operation:</p>
+<ul>
+<li>Static Text Expansion</li>
+<li>C# Code Execution</li>
+</ul>
+<h3 id="text-expansion">Text Expansion</h3>
+<p>The key feature of the Snippets Addin is template text expansion, which simply means that the text of the snippet can be inserted at the current document's editor position.</p>
+<h4 id="plain-text-snippet-examples">Plain Text Snippet Examples</h4>
+<p>Text expansions can be plain text and simply expand text as is into the editor. While this is pretty basic <em>text copying</em> operation, it's quite useful for many use cases like pre-defined document templates similar to the Bug Template example in the screen cast.</p>
+<p>The following example, is an example of a footer that I use in all of my blog posts. It's an HTML fragment, which is rendered in Markdown as HTML and it's nothing more than a plain text expansion:</p>
+<pre><code class="language-html">&lt;div style=&quot;margin-top: 30px;font-size: 0.8em;
+            border-top: 1px solid #eee;padding-top: 8px;&quot;&gt;
+    &lt;img src=&quot;https://markdownmonster.west-wind.com/favicon.png&quot;
+         style=&quot;height: 20px;float: left; margin-right: 10px;&quot;/&gt;
+    this post created and published with 
+    &lt;a href=&quot;https://markdownmonster.west-wind.com&quot; 
+       target=&quot;top&quot;&gt;Markdown Monster&lt;/a&gt; 
+&lt;/div&gt;
+</code></pre>
+<p><strong>Expansion string:</strong>  <code>cwmm</code></p>
+<p>With this snippet setup I can now type <code>cwmm</code> into the editor, and as soon as I do, the <code>cwmm</code> text is replaced with the expanded template.</p>
+<p><img src="https://github.com/RickStrahl/ImageDrop/raw/master/MarkdownMonster/SnippetExpansion.gif" alt=""></p>
+<h4 id="text-with-c-expressions">Text with C# Expressions</h4>
+<p>You can also embed C# expressions into your text templates. This allows you to access any C# language features - expressions and even structured code blocks - as well as access Markdown Monster's application Model that gives you access to the current document, the editor, and even the user interface.</p>
+<p>The following example snippet creates a FrontMatter blog post header that picks up the current document title and today's date using C# expressions:</p>
+<pre><code class="language-markdown">---
+title: {{ Model.ActiveDocument.Title }}
+date: {{ DateTime.Now.ToString(&quot;yyyy-MM-dd&quot;) }}
+tags: 
+- ~
+
+---
+</code></pre>
+<p><strong>Expansion String:</strong> frontmatter</p>
+<p>In this snippet notice the expressions using <code>{{  }}</code> to delineate C# expressions that are expanded. Above:</p>
+<p><code>{{ DateTime.Now.ToString(&quot;yyyy-MM-dd&quot;) }}</code></p>
+<p>embeds the date in the format that FrontMatter requires for example. You can also access the <code>Model</code> which is <a href="#__0">Markdown Monster's Application Model</a> which gives you access to a number of other objects:</p>
+<ul>
+<li><a href="#__0">ActiveDocument</a></li>
+<li><a href="#__0">ActiveEditor</a></li>
+<li><a href="_67613zqba">JavaScriptInterop</a> <small>(low level editor access)</small></li>
+<li><a href="#__0">OpenDocuments</a></li>
+<li><a href="#__0">OpenEditors</a></li>
+</ul>
+<p>and much more.</p>
+<p>You can also invoke methods on various objects. For example you can retrieve the current selection like this:</p>
+<p><code>{{ await Model.ActiveEditor.GetSelection() }}</code></p>
+<p>Retrieve the current line number and text:</p>
+<p><code>{{ await Model.ActiveEditor.GetLineNumber() }}. {{ await Model.ActiveEditor.GetCurrentLine() }}</code></p>
+<blockquote>
+<p>Note that many editor operations are <code>async</code> hence the <code>await</code> for these calls. But not all methods that can be called require <code>await</code> - check the documentation for <code>Task</code> results which indicate that <code>await</code> is required.</p>
+</blockquote>
+<h4 id="special-characters">Special Characters</h4>
+<p>There are two special expressions that access common functionality:</p>
+<ul>
+<li><code>@@@</code> - the same as <code>{{ await Model.ActiveEditor.GetSelection() }}</code></li>
+<li><code>~</code> - denotes the location of the cursor after insertion</li>
+</ul>
+<h4 id="expanding-the-active-selection">Expanding the Active Selection</h4>
+<p>A common task that snippets are good for is text expansion of the current selection in the editor. This is similar to the way MM already expands many common operations like Bold, Italic, Lists etc. by taking the current selection and marking it up with additional text for formatting.</p>
+<p>The following creates a custom HTML fragment to embed into a Markdown document to display a box using an application specific CSS class.</p>
+<pre><code class="language-html">&lt;div class='breaking-changes'&gt;{{ await Model.ActiveEditor.GetSelection()}}&lt;/div&gt;
+</code></pre>
+<p>Because <code>.GetSelection()</code> is a common item there's a string shortcut for it in a template using <code>@@@</code>. So the following produces the same output:</p>
+<pre><code class="language-html">&lt;div class='breaking-changes'&gt;@@@&lt;/div&gt;
+</code></pre>
+<p>Note that you can't use a expansion string for these types of text expansions that work of a selection, as a selection has to be active and you can't do that when also typing an expansion string.</p>
+<h3 id="c-code-execution">C# Code Execution</h3>
+<p>Snippets support full C# program creation using the script syntax which is based on Handlebars using <code>{{ }}</code> brackets. Two types of code execution are supported:</p>
+<p><strong>Expressions</strong></p>
+<pre><code>{{ Model.ActiveDocument.Filename }}
+</code></pre>
+<pre><code>&lt;sub&gt;{{ await Model.ActiveEditor.GetSelection() }}&lt;/sub&gt;
+</code></pre>
+<p><strong>Simple Code Blocks</strong></p>
+<pre><code>{{% 
+var wc = new WebClient(); 
+var version=wc.DownloadString&quot;(&quot;https://west-wind.com/files/MarkdownMonster_Version.xml&quot;); }}`
+}}
+</code></pre>
+<p><strong>Structured Code Blocks</strong></p>
+<pre><code>{{% if(true)  { }}
+    true
+{{% } else { }}
+    false
+{{% } }}
+</code></pre>
+<blockquote>
+<h4 id="async-support">Async Support</h4>
+<p>Expressions and code block support are execute in an <code>async</code> context, so you can use <code>await</code> to call async methods from your expressions and code block. Note that <strong>most operations that affect the text editor async</strong>. For example <code>{{ await Model.ActiveEditor.GetCurrentLine() }}</code>.</p>
+</blockquote>
+<h4 id="how-code-execution-works">How Code Execution works</h4>
+<p>Any code expressions and code blocks are expanded by compiling into an executable method that is dynamically invoked - the entire snippet is essentially turned into a text generating output method that returns a string.</p>
+<p>Text is transformed into string literals that are written into the output stream, and expressions <code>{{ }}</code> are inlined into the and evaluated between these text literals.</p>
+<p>Code Blocks <code>{{% }}</code> are raw C# code blocks that are generated as raw C# commands into the generated code output.</p>
+<h4 id="examples-of-code-execution">Examples of Code Execution</h4>
+<p>Let's look at a few examples.</p>
+<p>The first example, is a small example that uses a bit of C# code to dynamically download the latest version number for Markdown Monster from the Internet and embeds it into a string to be embedded.</p>
+<p><strong>Code Block and Expression</strong></p>
+<pre><code class="language-cs">{{%
+var url = &quot;https://west-wind.com/files/MarkdownMonster_version.xml&quot;;
+
+var wc = new WebClient();
+string xml = wc.DownloadString(url);
+string version =  StringUtils.ExtractString(xml,&quot;&lt;Version&gt;&quot;,&quot;&lt;/Version&gt;&quot;);
+}}
+# Markdown Monster v{{version}}
+</code></pre>
+<p>The result of this script is a string and the value is the Markdown Monster version header:</p>
+<pre><code class="language-markdown"># Markdown Monster v2.5.4
+</code></pre>
+<p>This means you can write:</p>
+<ul>
+<li>C# Expressions (single values or method calls)</li>
+<li>C# Code Blocks (single self-contained block of code)</li>
+<li>C# Structured Statements (<code>if</code>, <code>for</code>, <code>while</code> etc. with text or expressions or other code in between)<br>
+<em><small>Structured statement blocks can embed other text or single expressions, but can not embed additional nested code blocks.</small></em></li>
+</ul>
+<p>We haven't seen the last item yet - the code above uses a single block of C# code to handle the Web retrieval.</p>
+<p>Structured statements tend to be conditional or iteration commands like <code>if</code>, <code>for</code> or <code>while</code> that have a start and end bracket.</p>
+<p>The following example is contrived: It displays a list of all the open documents in Markdown Monster and it uses <code>foreach()</code> to do so.</p>
+<p><strong>Structure Code Blocks</strong></p>
+<pre><code class="language-cs">{{% 
+int count = 0;
+foreach(var document in Model.OpenDocuments) 
+{
+   count++;
+}}
+
+{{count}}. {{ Path.GetFileName(document.Filename) }}
+
+{{% } }}
+</code></pre>
+<p>This produces a list of open documents like this:</p>
+<pre><code class="language-text">1. Changelog.md
+
+2. Readme.md
+
+3. Todo.md
+</code></pre>
+<blockquote>
+<p>Note that whitespace is tricky with Structure Code Blocks because the <code>}}</code> and any following space/line break is part of the rendered template.  This means if you want a tight list the actual command looks like this:</p>
+</blockquote>
+<pre><code class="language-cs">{{% 
+int count = 0;
+foreach(var document in Model.OpenDocuments) 
+{
+   count++;
+}}{{count}}. {{ Path.GetFileName(document.Filename) }}
+{{% } }}
+</code></pre>
+<pre><code class="language-text">1. Changelog.md
+2. Readme.md
+3. Todo.md
+</code></pre>
+<h3 id="debugging-templates-in-interactive-mode">Debugging Templates in Interactive Mode</h3>
+<p>If you are creating templates with C# code, it's very likely that you might create some errors in the expressions or code blocks you use. Maybe you're using the wrong name for a object, property or method or maybe your logic simply has a type or missing symbol.</p>
+<p>Luckily you can run your templates interactively in the Snippets Form by selecting your snippet and clicking on the <strong>Test Snippet</strong> button. This runs the snippet but rather than embedding the result into the document the snippet is displayed in a dialog:</p>
+<p><img src="/docs/images/SnippetsAddin.png" alt=""></p>
+<p>If an error occurs a dialog is displayed with the compilation error along with the generated source code, so you can review the code if the message on its own is not obvious:</p>
+<p><img src="/docs/images/SnippetsAddinErrors.png" alt=""></p>
+<h3 id="using-the-api-documentation-to-access-markdown-monster-features">Using the API Documentation to Access Markdown Monster Features</h3>
+<p>If you're using the C# features to access functionality in Markdown Monster you'll want to definitely take a look at the documentation site:</p>
+<ul>
+<li><a href="https://markdownmonster.west-wind.com/docs">Main Documentation Site</a></li>
+<li><a href="https://markdownmonster.west-wind.com/docs/_55o1dxzia.htm">API Documentation</a></li>
+</ul>
+<p>Some key object you'll likely want to access:</p>
+<ul>
+<li><a href="#__0">ActiveDocument</a></li>
+<li><a href="#__0">ActiveEditor</a></li>
+<li><a href="_67613zqba">JavaScriptInterop</a> <small>(low level editor access)</small></li>
+<li><a href="#__0">OpenDocuments</a></li>
+<li><a href="#__0">OpenEditors</a></li>
+</ul>
+
+    </div>
+
+
+
+                </article>
+
+                <hr>
+                <div class="float-end">
+                    <a href="http://helpbuilder.west-wind.com" target="_blank"><img src="/docs/_kavadocs/images/docmonster.png" style="height: 2.5em"></a>
+                </div>
+
+                <div style="font-size: 0.75em">
+                     &copy; West Wind Technologies, 2025 &bull;
+                    updated: 2025-02-23
+                    <br>
+                                        <a href="mailto:support@west-wind.com?subject=Support: Markdown Monster - Snippets Addin: Snippet Template Expansion&body=Project%3A%20Markdown%20Monster%0ATopic%3A%20Snippets%20Addin%3A%20Snippet%20Template%20Expansion%0A%0AUrl%3A%0Ahttps%3A%2F%2Fmarkdownmonster.west-wind.com%2Fdocs%2F_5GS0UC49H.html">Comment or report problem with topic</a>
+                
+                <br class="clearfix">
+                <br>
+                <!-- End Rendered Content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Markdown Monster Content -->
+</div></body>
+</html>
+
