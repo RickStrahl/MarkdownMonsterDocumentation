@@ -1,1 +1,1 @@
-﻿Tell me a story that I've never heard before.
+﻿

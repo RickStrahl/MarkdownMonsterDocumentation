@@ -53,9 +53,11 @@
     <br/>
 {{% } }}
 
-{{% if (!string.IsNullOrEmpty(Topic.SeeAlso))  { }}
-    <h3 class="outdent" id="seealso">See also</h3>
-    {{! HtmlUtils.DisplayMemo(Topic.SeeAlso) }}
+{{% if (!string.IsNullOrEmpty(Model.Topic.SeeAlso)) { }}
+    <h4 class="outdent" id="seealso">See also</h4>
+    <div class="see-also-container">
+        {{ Helpers.FixupSeeAlsoLinks(Topic.SeeAlso) }}
+    </div>
 {{% } }}
 
 

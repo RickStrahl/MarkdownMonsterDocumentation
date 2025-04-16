@@ -8,6 +8,6 @@ You can find the published online documentation at:
 
 * [Markdown Monster Online Documentation](https://markdownmonster.west-wind.com/docs/)
 
-This repo holds the source documents - mostly Markdown topic content plus an index/metadata json file - that are used to generate the documentation using [Documentation Monster](https://documenationmonster.com/). 
+This repo holds the source documents - mostly Markdown topic content plus an index/metadata json file - that are used to generate the documentation using [Documentation Monster](https://documentationmonster.com/). 
 
 

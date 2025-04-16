@@ -30,14 +30,14 @@ The data recorded both for usage telemetry and error logging is not explicitly l
 > Error information in exceptions may reveal file locations for I/O errors. We don't use this information, but it comes as part of the exception information for certain errors.
 
 ### How we use this data and how long it is held
-We use both the telemetry data and error log for basic usage statistics and for discovering repeating bugs in the software. Reports are run for the last 3 days' worth of data and are only used for online review and error triageing.
+We use both the telemetry data and error log for basic usage statistics and for discovering repeating bugs in the software. Reports are run for the last 3 days' worth of data and are only used for online review and error triage.
 
 The telemetry uses [Microsoft's Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) Analytics service for recording and storing the telemetry and error data which stores the data on Microsoft Azure servers. This service stores data for 3 months on Azure servers, although we only access a few days' worth of that data at any time for our online usage and error reports. Any data older than 3 days is never accessed by our reporting operations.
 
 ### Disabling Telemetry and Error Reporting
 The telemetry and error reporting described above provides us with very useful anonymous usage statics. The error reporting in particular has been invaluable in helping make Markdown Monster a better application by identifying application problems and bugs early and fixing them quickly.
 
-So we hope you'll leave telemetry enabled.
+> We hope you'll leave telemetry enabled - it helps us make Markdown Monster better!
 
 But we understand you might want to turn off any data telemetry for privacy concerns, and you can do this easily in Markdown Monster via a simple configuration switch in Markdown Monster's settings. 
 

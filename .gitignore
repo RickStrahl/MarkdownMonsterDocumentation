@@ -1,0 +1,7 @@
+*.bak
+*.tmp
+*.saved.md
+~*.*
+__*.*
+wwwroot/
+kavadocs-*/

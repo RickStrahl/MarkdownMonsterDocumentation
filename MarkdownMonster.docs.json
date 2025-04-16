@@ -36,30 +36,9 @@
           "remarks": "",
           "example": "",
           "isLink": true,
-          "sortOrder": 60,
+          "sortOrder": 50,
           "updated": "2025-02-24T16:38:20.5404247-10:00",
           "helpId": "1124",
-          "classInfo": {
-            "assembly": "",
-            "contract": "",
-            "exceptions": ""
-          }
-        },
-        {
-          "id": "_6TB0XEY49",
-          "parentId": "_INDEX",
-          "title": "An Introduction to Markdown",
-          "slug": "Markdown-Monster-Documentation/An-Introduction-to-Markdown",
-          "link": "Markdown-Monster-Documentation/An-Introduction-to-Markdown.md",
-          "displayType": "topic",
-          "type": "markdown",
-          "keywords": "",
-          "seeAlso": "",
-          "remarks": "",
-          "example": "",
-          "sortOrder": 50,
-          "updated": "2025-03-06T22:36:48.2297308-10:00",
-          "helpId": "16912",
           "classInfo": {
             "assembly": "",
             "contract": "",
@@ -88,6 +67,27 @@
           }
         },
         {
+          "id": "_6TB0XEY49",
+          "parentId": "_INDEX",
+          "title": "An Introduction to Markdown",
+          "slug": "Markdown-Monster-Documentation/An-Introduction-to-Markdown",
+          "link": "Markdown-Monster-Documentation/An-Introduction-to-Markdown.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "keywords": "",
+          "seeAlso": "",
+          "remarks": "",
+          "example": "",
+          "sortOrder": 30,
+          "updated": "2025-03-06T22:36:48.2297308-10:00",
+          "helpId": "16912",
+          "classInfo": {
+            "assembly": "",
+            "contract": "",
+            "exceptions": ""
+          }
+        },
+        {
           "id": "_4S014ECHA",
           "parentId": "_INDEX",
           "title": "License",
@@ -99,7 +99,7 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "sortOrder": 30,
+          "sortOrder": 20,
           "updated": "2025-03-06T10:56:36.6932628-10:00",
           "helpId": "367",
           "classInfo": {
@@ -120,8 +120,8 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "sortOrder": 20,
-          "updated": "2025-02-24T00:00:00Z",
+          "sortOrder": 10,
+          "updated": "2025-04-09T15:59:41.0937704-10:00",
           "helpId": "13648",
           "classInfo": {
             "assembly": "",
@@ -141,8 +141,7 @@
           "seeAlso": "",
           "remarks": "",
           "example": "",
-          "sortOrder": 10,
-          "updated": "2025-02-24T00:00:00Z",
+          "updated": "2025-04-15T11:02:36.3378926-10:00",
           "helpId": "375",
           "classInfo": {
             "assembly": "",
@@ -940,7 +939,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 70,
-      "updated": "2025-02-23T14:15:27.068237-10:00",
+      "updated": "2025-04-09T16:01:05.3462879-10:00",
       "helpId": "2972",
       "classInfo": {
         "assembly": "",
@@ -1230,10 +1229,11 @@
           "displayType": "topic",
           "type": "markdown",
           "keywords": "",
-          "seeAlso": "Split Editor View\r",
+          "seeAlso": "Split Editor View",
           "remarks": "",
           "example": "",
           "sortOrder": 50,
+          "isExpanded": true,
           "updated": "2025-02-23T14:15:27.0697897-10:00",
           "helpId": "8483",
           "classInfo": {
@@ -2401,7 +2401,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 10,
-      "updated": "2025-03-12T12:02:07.6138013-10:00",
+      "updated": "2025-04-11T16:22:21.2318379-10:00",
       "helpId": "369",
       "classInfo": {
         "assembly": "",
@@ -2795,7 +2795,7 @@
       "webSiteUrl": "https://markdownmonster.west-wind.com/docs/",
       "openWebSite": true,
       "username": "rstrahl",
-      "maxUploadConnections": 5
+      "maxUploadConnections": 10
     }
   }
 }

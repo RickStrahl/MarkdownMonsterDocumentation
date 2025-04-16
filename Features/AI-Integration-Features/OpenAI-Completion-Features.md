@@ -1,4 +1,4 @@
-Markdown Monster offers a few simple AI based text completion features:
+﻿Markdown Monster offers a few simple AI based text completion features:
 
 * Text Summarization
 * Language Translation
