@@ -163,7 +163,8 @@
       "remarks": "",
       "example": "",
       "sortOrder": 100,
-      "updated": "2025-03-12T12:00:52.0407241-10:00",
+      "isExpanded": true,
+      "updated": "2025-04-15T22:32:45.9679423-10:00",
       "helpId": "356",
       "classInfo": {
         "assembly": "",
@@ -226,6 +227,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 130,
+          "isExpanded": true,
           "updated": "2025-03-12T11:46:43.0881236-10:00",
           "helpId": "1965",
           "classInfo": {
@@ -833,6 +835,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 80,
+      "isExpanded": true,
       "updated": "2025-02-24T18:55:19.4412138-10:00",
       "helpId": "16919",
       "classInfo": {
@@ -854,7 +857,8 @@
           "remarks": "",
           "example": "",
           "sortOrder": 40,
-          "updated": "2025-04-03T11:48:38.977974-10:00",
+          "isExpanded": true,
+          "updated": "2025-04-17T11:35:47.4610044-10:00",
           "helpId": "8484",
           "classInfo": {
             "assembly": "",
@@ -939,6 +943,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 70,
+      "isExpanded": true,
       "updated": "2025-04-09T16:01:05.3462879-10:00",
       "helpId": "2972",
       "classInfo": {
@@ -1086,7 +1091,7 @@
           "remarks": "",
           "example": "",
           "sortOrder": 120,
-          "updated": "2025-02-23T14:15:27.0690909-10:00",
+          "updated": "2025-04-17T14:08:04.830136-10:00",
           "helpId": "354",
           "classInfo": {
             "assembly": "",
@@ -2401,6 +2406,7 @@
       "remarks": "",
       "example": "",
       "sortOrder": 10,
+      "isExpanded": true,
       "updated": "2025-04-11T16:22:21.2318379-10:00",
       "helpId": "369",
       "classInfo": {

@@ -1,10 +1,10 @@
-﻿Preview Themes control how the Preview Window renders your Markdown text into HTML. Because Markdown is a text representation of an HTML document, some sort of engine has to render the Markdown into HTML and then apply HTML and CSS styling to render that HTML into what you see in the browser.
+Preview Themes control how the Preview Window renders your Markdown text into HTML. Because Markdown is a text representation of an HTML document, some sort of engine has to render the Markdown into HTML and then apply HTML and CSS styling to render that HTML into what you see in the browser.
 
 This process **may vary significantly** depending on where you display your Markdown. For example, GitHub renders Markdown very differently than BitBucket. If you're using Markdown on your blog, you probably also have some very custom styling and potentially use a completely different Markdown parser to parse Markdown into HTML.
 
 While there will always be some differences between Markdown implementations on different platforms, Preview Themes can help you create or use themes that more closely match your target Markdown platform's layout and styling.
 
-### Changing Preview Themes
+## Changing Preview Themes
 In Markdown Monster you can easily change themes in the editor's UI by using the status bar theme selector on the lower right:
 
 ![](https://github.com/RickStrahl/ImageDrop/raw/master/MarkdownMonster/PreviewThemes.gif)
@@ -19,19 +19,22 @@ Theme settings are stored in the configuration under:
 }
 ```
 
-You can easily flip between the provided themes which include `Github`, `Github Dark`, `Dharkan`, `Blackout`, `Medium`, `Westwind` and `Hipster`. It's also quite easy to create custom themes by copying and modifying existing Preview Themes.
+You can easily flip between the provided themes which include `Github`, `Github Dark`, `Dharkan`, `Blackout`, `Medium`, `Westwind` and `Hipster`. It's also quite easy to create **custom themes** by copying and modifying existing Preview Themes.
 
 > ##### @icon-info-circle If you Customize create a new Theme!
 > Default themes are installed and updated with Markdown Monster releases, so if you make changes in any of the default themes, any changes can and will be overwritten by updates. 
 >
 > To avoid this issue, **always** create a new theme from an existing one by copying the theme to a new folder. Give it a descriptive name and it will show up in the drop down list next time you restart. 
 >
-> Any custom themes you create are not overwritten on updates.  
+> Any custom themes should be created in the `%appdata%\Markdown Monster\PreviewThemes` folder.  
 
-### Theme Customization
+## Theme Customization
 A theme is nothing more than a sub-folder in the `PreviewThemes` folder of your **Markdown Monster installation path** which typically is `c:\Program Files\Markdown Monster\PreviewThemes\Theme-Name` (*the base folder may vary depending on where MM is installed*). 
 
-The easiest way to find the folder is by using the Previewer's context menu and using the Edit Preview Theme option:
+> #### @icon-warning Customized Themes should go into your Settings Folder
+> For your own custom themes you create or extend, there's a separate folder in the Markdown Monster configuration folder which typically lives in `%appdata%\Markdown Monster\PreviewThemes\Theme-Name`.
+
+The easiest way to find files for the active Preview Theme is by using the Previewer's right click Context Menu and the Edit Preview Theme menu item:
 
 ![](/images/PreviewThemeFromContextMenu.png)
 
@@ -43,7 +46,7 @@ Here's what the PreviewThemes folder looks like:
 
 You can easily create custom Preview Themes or change existing themes by simply changing the HTML and CSS files that are provided.
 
-#### How Themes work
+### How Themes work
 Themes are found based on the folder name in the `PreviewThemes` folder. Any sub-folder in the `PreviewThemes` folder will be available in the Preview theme selector:
 
 ![](/images/PreviewThemeSelections.png)
@@ -104,24 +107,26 @@ These are headers that can be set by `RenderExtension`s or addins that interact 
 
 Make sure these values are provided in any template changes you make as these values are set during the render process and are also accessible to Addins and RenderExtensions that customize the render process.
 
-#### Custom Themes for Custom Preview Displays
+### Custom Themes for Custom Preview Displays
 Some of the things you can do is create custom templates that more closely match the display of your target platform. For example, you might want to match the styling of your Blog, or your documentation engine. 
 
 Here's an example of a custom template that displays documentation content:
 
 ![A custom Theme for Documentation](/images/CustomThemeWebSurgeDocumentation.png)
 
-#### Creating a new Local Theme
+### Creating a new Local Theme
 Local themes simply use local resources for the CSS styling as shown in the last example. The CSS is linked directly from a local resource. This is the easiest way to deal with resources.
 
 To create a new theme:
 
-* Copy an existing folder from `PreviewThemes`
-* Rename the folder to the name you want to see in the themes dropdown
+* Copy an existing folder from `<install folder>\PreviewThemes`
+* Copy the folder to the Markdown Monster Common folder at:  
+  `%appdata%\Markdown Monster\PreviewThemes` (or a custom location if you chose one)
+* Rename the folder to a new name - that name is displayed in the themes dropdown
 * Modify the `theme.html` or `theme.css` files to customize
 
-#### Web Theme
-You can also reference Web resources directly. For example, you might want to use the theme from your Weblog so your preview looks exactly like the blog you're going to post from your markdown.
+### Web Themes
+You can also reference Web resources directly from your `Theme.html` page. For example, you might want to use the theme from your Weblog so your preview looks exactly like the blog you're going to post from your markdown so you can link in the CSS stylesheet from your site. Note that you probably still want to use the default CSS style sheet to handle some formatting that is not covered by your online style sheet, but if it is to display your markdown the CSS should have most of the same functionality.
 
 You can simply link an external stylesheet to make that work. However, you probably will still need a little bit of extra CSS to format the base document.
 
@@ -136,7 +141,7 @@ For example, I have a custom West Wind theme that has the following `Theme.html`
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link href="{$themePath}..\scripts\fontawesome\css\font-awesome.min.css" rel="stylesheet"/>
 
-    <!-- link style sheet from the site -->
+    <!-- link style sheet from the Web site -->
     <link href="https://weblog.west-wind.com/App_Themes/Standard/Standard.css" type="text/css" rel="stylesheet"/>
     
     <!-- small amount of fixups -->
@@ -159,16 +164,18 @@ Notice the link to the external style sheet on [weblog.west-wind.com](http://web
 html, body {
     padding: 5px 20px 5px 10px !important;
     margin: 0;
-    scrollbar-track-color: Whitesmoke;
-    scrollbar-arrow-color: silver;   
-    scrollbar-base-color: #ddd;
-    scrollbar-face-color: #ddd;
-    -ms-overflow-style: -ms-autohiding-scrollbar !important;
 } 
+body::-webkit-scrollbar {
+  width: 0.7em;    
+}
+body::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 0.2em;
+}
 
 @media(min-width: 970px){
     html,body{
-        font-size: 1.1em;
+        font-size: 1.05em;
     }
 }
 ```

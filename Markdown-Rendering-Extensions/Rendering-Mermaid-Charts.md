@@ -1,28 +1,26 @@
 You can embed <a href="https://mermaidjs.github.io/" target="top">Mermaid Charts</a> content into a Markdown document in Markdown Monster using either a Mermaid Markdown Code Snippet or using their Raw Html Syntax. Markdown Monster can preview the resulting chart in the previewer.
 
-Here's what the **Mermaid Markdown Syntax** looks like:
+Here's what the [Mermaid Markdown Syntax](https://mermaid.js.org/intro/) looks like:
 
 ~~~~markdown
  ```mermaid
- graph LR
-   A --- B
-   B-->C[fa:fa-ban forbidden ]
-   B-->D(fa:fa-spinner)
-   B-->E(Done!)
+sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+    Alice-)John: See you later!
  ```
 ~~~~
-<small>***Note:** There's an extra leading space in Markdown examples to avoid rendering the code block into Mermaid.*</small>
+<small>***Note:** There's an extra leading space in Markdown examples to avoid rendering the code block into Mermaid. Leave out that leading space.*</small>
 
 
 
 which renders:
 
 ```mermaid
-graph LR
-  A --- B
-  B-->C[fa:fa-ban forbidden ]
-  B-->D(fa:fa-spinner)
-  B-->E(Done!)
+sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+    Alice-)John: See you later!
 ```
 
 Alternately you can use the **Raw Html Syntax** that Mermaid natively uses:
@@ -54,7 +52,7 @@ In order to enable or disable Mermaid diagram rendering in Markdown Monster you 
 * Enable **Mermaid Rendering** (**Tools | Settings | Mermaid Diagrams**)
 * You have to **restart Markdown Monster** for the change in settings to take
 
-![](/images/MermaidConfiguration.png)
+![Mermaid Configuration](../images/MermaidConfiguration.png)
 
 > #### @icon-info-circle Specify Mermaid Script Version  
 > You can specify a **specific version of Mermaid** using the `MermaidDiagramsUrl` configuration setting. By default MM uses the latest, un-numbered version. 
@@ -147,3 +145,111 @@ To use this feature:
 * Pick a file name to save to
 
 If you choose self-contained the file will be **very large** due to the size of the Mermaid library. If you choose loose files all the files will be stored in a folder, or a zip file if you chose the Zip file option.
+
+### Mermaid Theming
+Mermaid's default themes are unfortunately not very adaptable to light and dark themes. 
+
+* [Mermaid Theming Documentation](https://mermaid.js.org/config/theming.html)
+
+Mermaid supports two ways for theme customization:
+
+* Choosing one of several built in themes
+* Completely customizing the theming
+
+#### Built-in Themes
+Mermaid has a very short list of built-in themes:
+
+* neutral (default)
+* default
+* dark
+* forest
+* base (for custom theming only)
+
+Out of these only the **neutral** theme works reasonably well both for light and dark preview themes and this is the default that MM uses. If you change the theme you'll need to reload the active document (tabbing to another document, changing preview theme or Refreshing the preview).
+
+You can set this value through the MM configuration and the `Markdown.MermaidTheme` configuration value.
+
+##### Custom Theming
+Mermaid also supports customization via custom theme value configuration which allows setting individual colors and line widths etc. This functionality is fairly limited but it's possible to create customized theme values [as described here](https://mermaid.js.org/config/theming.html#customizing-themes-with-themevariables).
+
+### Customized Mermaid Initialization
+In addition to specifying the theme, you can also take over Mermaid's initialization process via a custom **Intializer** provided via JavaScript. Among other things you can use a custom initializer to completely customize theme rendering, but it can also provide for things like addins, security of the libary and more.
+
+I'll use theming here as the customization used for the example initializer.
+
+In order to use custom initialization you need to effectively override the default behavior with JavaScript code provided in the Markdown Monster Preview Template. 
+
+This process involves:
+
+* Customizing the `Theme.html` Html Preview Template
+* Creating a `window.mermaidInitializer` object in a `<script>` block
+
+To open Theme.html and customize it:
+
+* In the Previewer right click and choose **Edit Preview Theme**
+* Go to the folder in Explorer **and copy the folder**
+* Give the folder a new name for your custom theme
+* Open `Theme.html` in the new theme folder
+* Add a custom initializer as shown below
+* Reload the current page by navigating to a different page 
+  or using Reload in the Previewer
+* [more Theme Customization info](dm-topic://_4NN17BFIC)
+
+The reason to create a new theme is so that changes you make aren't overwritten by updates. Any stock themes are overwritten
+
+
+Here's what this looks like for theme customization in `theme.html`:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="{$docPath}" />
+    <title>{$docTitle}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="{$themePath}..\scripts\fontawesome\css\font-awesome.min.css" rel="stylesheet" />
+    <link href="{$themePath}Theme.css" rel="stylesheet" />
+
+    <script src="{$themePath}..\scripts\jquery.min.js"></script>
+    <link href="{$themePath}..\scripts\highlightjs/styles/vs2015.css" rel="stylesheet" />
+    <script src="{$themePath}..\scripts\highlightjs/highlight.pack.js"></script>
+    <script src="{$themePath}..\Scripts\highlightjs-badge.js"></script>
+    <script src="{$themePath}..\scripts\preview.js" id="PreviewScript"></script>
+
+
+    <!-- This -->
+    <script>
+        // theme customization
+        // https://mermaid.js.org/config/theming.html#customizing-themes-with-themevariables
+        window.mermaidInitializer = {
+            'theme': 'base',
+            'themeVariables': {
+                'primaryColor': '#BB2528',
+                'primaryTextColor': '#555',
+                'primaryBorderColor': '#BB2528',
+                'lineColor': '#F8B229',
+                'secondaryColor': '#006100',
+                'tertiaryColor': '#222'
+            }   
+        };
+    </script>
+    <!-- End -->
+    
+    {$extraHeaders}
+</head>
+<body>
+<div id="MainContent">
+    <!-- Markdown Monster Content -->
+    {$markdownHtml}
+    <!-- End Markdown Monster Content -->
+</div>
+</body>
+</html>
+```
+
+The `window.mermaidInitializer` instance is then used to initialize Mermaid. 
+
+In this case I'm using it for theme customization, but the initializer can be used to customize many aspects of Mermaid's rendering process.

@@ -1,10 +1,8 @@
-﻿This section highlights many of Markdown Monster's features and several common usage scenarios.
+This section highlights many of Markdown Monster's features and several common usage scenarios.
 
 {{ Helpers.ChildTopicsList("topic") }}
-
-We'll do it with a topic but it won't do it if there's a whole bunch of stuff in there
-
 ---
+
 
 ## High Level Features
 Markdown Monster provides many useful features both for direct markdown editing and for support functionality:
