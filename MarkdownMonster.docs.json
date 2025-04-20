@@ -163,7 +163,6 @@
       "remarks": "",
       "example": "",
       "sortOrder": 100,
-      "isExpanded": true,
       "updated": "2025-04-15T22:32:45.9679423-10:00",
       "helpId": "356",
       "classInfo": {
@@ -227,7 +226,6 @@
           "remarks": "",
           "example": "",
           "sortOrder": 130,
-          "isExpanded": true,
           "updated": "2025-03-12T11:46:43.0881236-10:00",
           "helpId": "1965",
           "classInfo": {
@@ -835,7 +833,6 @@
       "remarks": "",
       "example": "",
       "sortOrder": 80,
-      "isExpanded": true,
       "updated": "2025-02-24T18:55:19.4412138-10:00",
       "helpId": "16919",
       "classInfo": {
@@ -943,7 +940,6 @@
       "remarks": "",
       "example": "",
       "sortOrder": 70,
-      "isExpanded": true,
       "updated": "2025-04-09T16:01:05.3462879-10:00",
       "helpId": "2972",
       "classInfo": {
@@ -2406,7 +2402,6 @@
       "remarks": "",
       "example": "",
       "sortOrder": 10,
-      "isExpanded": true,
       "updated": "2025-04-11T16:22:21.2318379-10:00",
       "helpId": "369",
       "classInfo": {

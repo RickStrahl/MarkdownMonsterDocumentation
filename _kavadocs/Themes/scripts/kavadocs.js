@@ -17,7 +17,12 @@ var helpBuilder = null;
         highlightCode: highlightCode,
         updateDocumentOutline: updateDocumentOutline,
         refreshDocument: refreshDocument,
-        configureAceEditor: null // set in aceConfig
+        configureAceEditor: null, // set in aceConfig
+        search: { 
+            mode: "detailed",
+            results: [],
+            searchText: ""            
+        }
     };    
     
     //var tocConfig = {
@@ -213,6 +218,7 @@ var helpBuilder = null;
         $(".toc").on("click", "li a", loadTopicAjax);
 
         initializeTOC();
+        
         return false;
     }
 
@@ -232,10 +238,8 @@ var helpBuilder = null;
             a$ = get$Link(topic);  // getUrlEncodedKey("topic");
 
             if (a$ && a$.length > 0) {
-                var id = a$[0].id;                
-                //expandTopic(id);
-                expandParents(id);
-                //loadTopicAjax(id + ".htm");                
+                var id = a$[0].id;                                
+                expandParents(id);           
             }
             else 
             {
@@ -260,35 +264,153 @@ var helpBuilder = null;
 
         });
 
+                
+        var searchKeyupFunc = debounce(function() {   
+            var $searchBox = $(this);
+            var searchText = $searchBox.val();
+            helpBuilder.search.searchText = searchText;
 
-        function searchFilterFunc(target) {
-            target.each(function () {
-                var $a = $(this).find("div>a");             
-                if ($a.length > 0) {
-                    const url = $a.attr('href');  
-                    const id = $a.attr('id');                         
-                    if (!url.startsWith("file:") && !url.startsWith("http")) {                        
-                        expandParents($a[0].id, true);
-                    }
-                }
+            var $toc = $(".toc");
+            var $searchPane = $(".search-results");
 
-                // keep selected item in the view when removing filter
-                setTimeout(function() {
-                    var $sel = $(".toc .selected");
+            var mode = $("#SearchAdvanced").val();
+            if (searchText)
+                if (mode.toLowerCase() === "simple")
+                    simpleSearch(searchText);
+                else
+                    advancedSearch(searchText);
+            else
+                clearSearchPane();
+            
+        },200);
+        $("#SearchBox").on("keyup",searchKeyupFunc);
 
-                    if ($sel.length > 0)
-                        $sel[0].scrollIntoView();    
-                },200);
-                    
+    }
+
+    function loadSearchIndex() {
+        var pxhr = $.getJSON(window.page.basePath + "SearchIndex.js")
+        .done( function (documents) {        
+            // build the index
+            var idx = lunr(function () {
+                this.ref('id')
+                this.field('keywords')
+                this.field('title')
+                this.field('body')
+                this.field('id')
+
+                this.metadataWhitelist = ['id']
+
+                documents.forEach(function (doc) {
+                    this.add(doc)
+                }, this)
             });
-        }
+            console.dir(idx);
 
-        $("#SearchBox").searchFilter({
-            targetSelector: ".toc li",
-            charCount: 3,
-            onSelected: debounce(searchFilterFunc, 200)
+            // save the index and docs so we don't have to reload for each search
+            helpBuilder.searchIndex = idx;
+
+            advancedSearch(helpBuilder.search.searchText, true); // load the index and search
+        })
+        .fail(function() { 
+            $("#SearchOptions").hide();
+            clearSearchPane();
+            return;
         });
     }
+
+    function advancedSearch(searchText, dontLoadIfNotPresent = false) {
+
+        if (!helpBuilder.searchIndex) {
+            loadSearchIndex();
+            return;
+        }
+        var pxhr = $.getJSON(window.page.basePath + "SearchIndex.js")
+        .done( function (documents) {
+            if(!helpBuilder.searchIndex) {
+                // build the index
+                var idx = lunr(function () {
+                    this.ref('id')
+                    this.field('keywords')
+                    this.field('title')
+                    this.field('body')
+                    this.field('id')
+
+                    this.metadataWhitelist = ['id']
+
+                    documents.forEach(function (doc) {
+                        this.add(doc)
+                    }, this)
+                })
+                console.dir(idx);
+
+                // save the index and docs so we don't have to reload for each search
+                helpBuilder.searchIndex = idx;
+            }
+
+            var res = helpBuilder.searchIndex.search(searchText);                  
+            $aList = [];
+            for (let index = 0; index < res.length; index++) {
+                        var id =  res[index].ref;
+                        var $a = $("#" + id.toLowerCase() );
+                        $aList.push($a);
+            };
+            $aList = $($aList); // convert to jQuery object
+            searchFilterFunc($aList);                        
+        })
+        .fail(function() { 
+            $("#SearchOptions").hide();
+            clearSearchPane();
+            return;
+        });
+    }
+   
+    function simpleSearch(searchText) {  
+        if (!searchText) 
+        {
+            clearSearchPane(); 
+            return;
+        }         
+        var $aList = $(".toc li:containsNoCase(" + JSON.stringify(searchText) + ")"); // hide all sublists
+        searchFilterFunc($aList);    
+    }        
+    function clearSearchPane() {
+        $(".toc li, .toc ul").show(); // show all sublists
+    }
+
+    // list of li or list of a
+    function searchFilterFunc(target) {            
+        $(".toc li").hide(); // hide all sublists
+
+        target.each(function () {
+            var $a = $(this);                
+            var $li = $a;
+            if ($a[0].tagName != "A")                     
+                $a = $(this).find("div>a"); // div->a                
+            else
+                $li = $a.parent().parent(); // div->li
+
+            
+            if ($a.length > 0) {
+                const url = $a.attr('href');  
+                const id = $a.attr('id');
+                $li.show();
+
+                if (!url.startsWith("file:") && !url.startsWith("http")) {                              
+                    expandParents(id, true);
+                }
+            }        
+        });
+
+        
+        // keep selected item in the view when removing filter
+        setTimeout(function() {
+            var $sel = $(".toc .selected");
+
+            if ($sel.length > 0)
+                $sel[0].scrollIntoView();    
+        },200);
+    }
+    
 
     function hideSidebar() {
         var $sidebar = $(".sidebar-left");
@@ -330,7 +452,7 @@ var helpBuilder = null;
             return;
 
         var $node = $("#" + id);        
-        $node.parents("ul").show();
+        $node.parents("ul, li").show();
 
         if (noFocus)
             return;
@@ -368,15 +490,13 @@ var helpBuilder = null;
     }
 
     function tocClearSearchBox() {  
+        debugger;
         var val = $("#SearchBox").val();       
         if (!val)
             return;  // already empty
     
         $("#SearchBox").val("");
         clearSearchPane();
-
-        // make all visible
-        $(".toc li").show();
 
         tocExpandAll();
                 
@@ -393,15 +513,7 @@ var helpBuilder = null;
             $("#SearchBox")[0].focus();
         },150);
     }
-    function clearSearchPane() {
-        var $toc = $(".toc.topic-tree")
-        var $searchPane = $(".toc.search-results");
-
-        $toc.show();
-        $searchPane.hide();
-        $searchPane.html('');
-    }
-
+    
     function tocCollapseAll() {
         var $uls = $("ul.toc li ul:visible");        
         $uls.each(function () {            
@@ -478,6 +590,13 @@ var helpBuilder = null;
             window.highlightJsBadge();
     }
 
+
+
+
+
+
+
+
     function CreateHeaderLinks() {
         var $h3 = $(".content-body>h2,.content-body>h3,.content-body>h4,.content-body>h1");
 
@@ -513,7 +632,7 @@ var helpBuilder = null;
 
         });
 
-    }
+    }    
 
     function updateDocumentOutline(){
         var navbar$ = $(".topic-outline-content");                       
@@ -526,8 +645,7 @@ var helpBuilder = null;
             $(".content-pane").removeClass("topic-outline-visible");
             $(".topic-outline-header").hide(false);
             return;
-        }                
-        debugger;
+        }                        
         for (var index = 0; index < headers$.length; index++) {
             var el = headers$[index];
             var id = el.id;

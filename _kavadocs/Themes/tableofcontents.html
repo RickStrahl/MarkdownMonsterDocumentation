@@ -26,16 +26,38 @@
         </div>
 
         
-        <div class="input-group m-2" >
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon" style="height: 2.4em; font-size: 0.8em"><i class="fa fa-search"></i></span>
-            </div>            
-            <input type="text" id="SearchBox"  class="form-control form-control-sm"  style="font-size: 0.75em;"
-                placeholder="Search topic headers">        
-            <div class="input-group-append">
-                <span class="input-group-text" id="basic-addon" style="height: 2em;"><i id="SearchBoxClearButton" style="font-size: 0.8" class="fad fa-xmark-circle"></i></span>
-            </div>
+        <div class="input-group input-group-sm mt-2 mr-2 mb-2" style="margin-right: 4em !important; padding: 0 0.2em;">
+
+    
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa fa-search" style="font-size: 0.8em;"></i>
+                  <span id="SearchMode" class="small">Simple</span> <span class="caret"></span>
+            </button>
+            
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#searchSimple" onclick="searchModeSelection('Simple')" title="Searches topic titles for exact search text.">Simple</a></li>
+              <li id="SearchDetailed"><a class="dropdown-item" href="#searchAdvanced" onclick="searchModeSelection('Detailed')" title="Detailed topic search: 
+        * Loads a potentially large index on first search.
+        * Searches title, body, id and keywords.
+        * Returns weighted results and supports wildcard searches.
+        * Tends to be slower on first search.">Detailed</a></li>
+                </ul>				
+        
+                <!-- <i id="SearchBoxClearButton" class="fa fa-times-circle toc-search-cleartext-icon"></i> -->
+                <input type="text" id="SearchBox" class="form-control form-control-sm" placeholder="Search topic headers">
+        
+                <span class="input-group-text" id="basic-addon"><i id="SearchBoxClearButton" style="font-size: 0.8" class="fad fa-xmark-circle"></i></span>        
         </div>
+        <input type="hidden" id="SearchAdvanced" name="SearchAdvanced" value="Simple">
+        <script>
+            function searchModeSelection(mode) {            
+                $("#SearchAdvanced").val(mode);
+                $("#SearchMode").text(mode);
+                $("#SearchBox").triggerHandler("keyup");
+                
+                helpBuilder.search.mode = mode.toLowerCase();
+            }
+        </script>
 
         <nav>
             <ul class="toc">         
